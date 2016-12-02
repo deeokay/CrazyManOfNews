@@ -25,7 +25,9 @@ class mineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.TB.register(UINib.init(nibName: "preferencesCell", bundle: nil), forCellReuseIdentifier: "preferencesCell")
         headimgBGView.theme_backgroundColor = ThemeColorPicker.init(colors: "#FFF","#AAA")
         headImg.layer.borderWidth = 2
-        self.headImg.layer.cornerRadius = self.headImg.frame.width / 2
+        self.headImg.layer.cornerRadius = 20
+        self.headImg.layer.masksToBounds = true
+        print(headImg.frame.size.width)
         getUserInfo(platForm: SSDKPlatformType.init(rawValue: UInt.init(UserDefaults.standard.integer(forKey: currentPlatform)))!, num: UserDefaults.standard.integer(forKey: currentPlatform))
 
     }
@@ -36,9 +38,8 @@ class mineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-            if indexPath.row == 0{
+        if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mineCell") as! mineCell
-            
             cell.function1.theme_backgroundColor = ThemeColorPicker(colors: "#FAFFFF","#B8B8B8")
             cell.function2.theme_backgroundColor = ThemeColorPicker(colors: "#FAFFFF","#B8B8B8")
             cell.function3.theme_backgroundColor = ThemeColorPicker(colors: "#FAFFFF","#B8B8B8")
@@ -111,21 +112,21 @@ class mineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             return cell
         }
         else{
-            var cell = tableView.dequeueReusableCell(withIdentifier: "none")
-            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "none")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "preferencesCell") as! preferencesCell
+            cell.switch.isHidden = true
             switch indexPath.row {
             case 4:
-                cell?.textLabel?.text = "清除缓存"
+                cell.label.text = "清除缓存"
             case 5:
-                cell?.textLabel?.text = "用户反馈"
+                cell.label.text = "用户反馈"
             case 6:
-                cell?.textLabel?.text = "使用帮助"
+                cell.label.text = "使用帮助"
             case 7:
-                cell?.textLabel?.text = "关于"
+                cell.label.text = "关于"
             default:
                 break
             }
-            return cell!
+            return cell
         }
 
     }
@@ -189,7 +190,7 @@ class mineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var externalPlatformNum:UInt = 0
     func getUserInfo(platForm:SSDKPlatformType,num:Int) -> Void {
         do {
-                try ShareSDK.getUserInfo(platForm, onStateChanged: { (state, user, err) in
+            try ShareSDK.getUserInfo(platForm, onStateChanged: { (state, user, err) in
                 switch state.rawValue {
 
                 case 1:print("成功")
@@ -263,9 +264,9 @@ class mineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         GPUImageContext.sharedFramebufferCache().purgeAllUnassignedFramebuffers()
-
+        
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "author"{
             let vc = segue.destination as! platformAuth
