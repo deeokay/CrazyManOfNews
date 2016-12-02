@@ -19,8 +19,9 @@ UITableViewDataSource,UITableViewDelegate {
     @IBOutlet var TB: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.fullScreen = false
-        self.TB.frame = CGRect.init(x: 0, y: 64, width: UIwidth/414*85, height: UIheight-112)
+        self.TB.frame = CGRect.init(x: 0, y: 64, width: UIwidth*0.2, height: UIheight-112)
         TBOrginalRect = self.kindsOfNews.frame
         appDelegate = UIApplication.shared.delegate as? AppDelegate
         loadList()
@@ -174,6 +175,7 @@ UITableViewDataSource,UITableViewDelegate {
 
     var fullScreen = false{
         didSet{
+            self.FSbtn.isEnabled = false
             if fullScreen{ //进入全屏
                 UIView.animate(withDuration: 0.5, animations: {
                     self.TB.alpha = 0
@@ -193,7 +195,7 @@ UITableViewDataSource,UITableViewDelegate {
                     self.TB.alpha = 1
                     self.TB.frame.origin = CGPoint.init(x: 0, y: 64)
                     self.view.addSubview(self.TB)
-                    self.kindsOfNews.frame = CGRect.init(x: self.TB.frame.width , y: 64, width:UIwidth - self.TB.frame.width, height: UIheight - 64)
+                    self.kindsOfNews.frame = CGRect.init(x: UIwidth*0.2 , y: 64, width:UIwidth - UIwidth*0.2, height: UIheight - 64)
                 }, completion: ({(finish) in
                     self.FSbtn.isEnabled = true
                     self.FSbtn.title = "隐藏频道"
@@ -216,6 +218,7 @@ UITableViewDataSource,UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "channelcell") as! ChannelCell
         let model = kindList.object(at: indexPath.row) as! PageModel
         cell.channel.setTitle(model.name!, for: .normal)
+        cell.channel.titleLabel?.font = UIFont.systemFont(ofSize: (appDelegate?.fontSize)!)
         cell.event = {
             self.currentPage = indexPath.row
             self.pageViewControllers.setViewControllers([self.controllers[self.currentPage]], direction: .forward, animated: true, completion: nil)

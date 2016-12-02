@@ -22,11 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     var appID : String?
     var secret : String?
     var dic:NSMutableDictionary?
+    var fontSize:CGFloat = 13
+    var newsTitle:CGFloat = 18
+    var newsSubTitle:CGFloat = 15
     enum colorMode {
         case red,blue,darkGray
     }
     var vc : UITabBarController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        if UIwidth <= 320{
+            print("已优化小屏设备字体显示~")
+            self.fontSize = 11
+             self.newsTitle = 15
+             self.newsSubTitle = 12
+        }
         print(NSHomeDirectory())
         vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as! TabbarVC
         dic =  ["showapi_appid":APPID,"showapi_sign":SECRET]

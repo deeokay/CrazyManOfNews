@@ -85,20 +85,28 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
             switch count {
             case 1:
                 let   cell = tableView.dequeueReusableCell(withIdentifier: "Style2")  as! Style2
+                cell.Title.font = UIFont.systemFont(ofSize: (appDelegate?.newsTitle)!)
+                cell.subText.font = UIFont.systemFont(ofSize: (appDelegate?.newsSubTitle)!)
                 cell.model = model
                 return cell
             case 2:
                 let   cell = tableView.dequeueReusableCell(withIdentifier: "Style3")  as! Style3
+                cell.Title.font = UIFont.systemFont(ofSize: (appDelegate?.newsTitle)!)
+                cell.subText.font = UIFont.systemFont(ofSize: (appDelegate?.newsSubTitle)!)
                 cell.model = model
                 return cell
             default:
                 let   cell = tableView.dequeueReusableCell(withIdentifier: "Style4")  as! Style4
+                cell.Title.font = UIFont.systemFont(ofSize: (appDelegate?.newsTitle)!)
+                cell.subText.font = UIFont.systemFont(ofSize: (appDelegate?.newsSubTitle)!)
                 cell.model = model
                 return cell
             }
         }
         else{
             let  cell = tableView.dequeueReusableCell(withIdentifier: "Style1")  as! Style1
+            cell.title.font = UIFont.systemFont(ofSize: (appDelegate?.newsTitle)!)
+            cell.subText.font = UIFont.systemFont(ofSize: (appDelegate?.newsSubTitle)!)
             cell.model = model
             return cell
         }
