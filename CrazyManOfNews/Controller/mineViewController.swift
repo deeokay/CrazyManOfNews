@@ -35,8 +35,10 @@ class mineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0{
+
+            if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mineCell") as! mineCell
+            
             cell.function1.theme_backgroundColor = ThemeColorPicker(colors: "#FAFFFF","#B8B8B8")
             cell.function2.theme_backgroundColor = ThemeColorPicker(colors: "#FAFFFF","#B8B8B8")
             cell.function3.theme_backgroundColor = ThemeColorPicker(colors: "#FAFFFF","#B8B8B8")
