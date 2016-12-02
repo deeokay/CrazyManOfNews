@@ -18,7 +18,6 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
         super.viewDidLoad()
         loadNews()
         appDelegate = UIApplication.shared.delegate as? AppDelegate
-
         AFNetworkReachabilityManager.shared().setReachabilityStatusChange { (status) in
             if status.rawValue == 0{
                 self.TB.mj_footer.endRefreshingWithNoMoreData()
@@ -31,7 +30,6 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
         let header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: nil)
         header?.setTitle("用力拉用力拉!!!", for: .idle)
         header?.setTitle("没有任何数据可以刷新!!!", for: .noMoreData)
-        header?.setTitle("松手就脱裤子!!!", for: .pulling)
         header?.setTitle("服务器都快炸了!!!!", for: .refreshing)
         header?.refreshingBlock = {
             self.TB.reloadData()
@@ -78,46 +76,60 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
         let url = NSString.init(format: urlString as NSString, pageCount)
         let dic = NSDictionary()
         request.requestPOST(url: url as String, dic: dic, success: { (data) in
-            let Data = try! JSONSerialization.jsonObject(with: data , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-            let result = Data.value(forKey: "result") as! NSDictionary
-            let list = result.object(forKey: "list") as! NSArray
-            for i in list
-            {
-                let model = WeChatJXModel()
-                let tmp = i as! NSDictionary
-                model.setValuesForKeys(tmp as! [String: AnyObject])
-                self.modelArr.add(model)
+            do {
+                let Data = try JSONSerialization.jsonObject(with: data , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+                let result = Data.value(forKey: "result") as! NSDictionary
+                let list = result.object(forKey: "list") as! NSArray
+                let totalPage = result.object(forKey: "totalPage") as! Int
+                for i in list
+                {
+                    let model = WeChatJXModel()
+                    let tmp = i as! NSDictionary
+                    model.setValuesForKeys(tmp as! [String: AnyObject])
+                    self.modelArr.add(model)
+                }
+                if totalPage == self.pageCount{
+                    self.TB.mj_footer.endRefreshingWithNoMoreData()
+                }
+                else{
+                    self.TB.mj_footer.endRefreshing()
+                }
+                self.pageCount += 1
+                self.TB.reloadData()
+                self.TB.mj_footer.endRefreshing()
+
+            } catch  {
+                print("解释错误或超时!")
             }
-            self.pageCount += 1
-            self.TB.reloadData()
-            self.TB.mj_footer.endRefreshing()
+
         }, fail: { (error) in
             print(error)
         }, Pro: { (pro) in
-            print(pro)
+            //            print(pro)
         })
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = modelArr[indexPath.row] as! WeChatJXModel
         let VC = storyboard?.instantiateViewController(withIdentifier: "details") as! Details
-            if let link = model.url
-            {
-                VC.webStr = link
-                VC.tt = model.title
-                DispatchQueue.global().async {
-                    VC.shareUrl = model.url!
-                    VC.shareTitle = model.source!
-                    VC.shareDescr = model.title!
-                    VC.shareThumImage = UIImage.animatedImage(withAnimatedGIFURL: URL.init(string: model.firstImg!))
-                }
-                self.navigationController?.pushViewController(VC, animated: true)
+        if let link = model.url
+        {
+            VC.webStr = link
+            VC.tt = model.title!
+            DispatchQueue.global().async {
+                VC.date = "来自微信精选"
+                VC.channelName = model.source!
+                VC.shareDescr = model.title!
+                VC.picImg = model.firstImg
+                VC.shareThumImage = UIImage.animatedImage(withAnimatedGIFURL: URL.init(string: model.firstImg!))
+            }
+            self.navigationController?.pushViewController(VC, animated: true)
         }
     }
-
-
-
-
+    
+    
+    
+    
 }
 
 

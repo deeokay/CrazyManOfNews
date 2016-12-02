@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class OnboardPage1: UIViewController {
 
     override func viewDidLoad() {

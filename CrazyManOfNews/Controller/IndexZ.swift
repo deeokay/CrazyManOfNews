@@ -9,7 +9,8 @@
 import UIKit
 import AFNetworking
 import MJRefresh
-class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControllerDelegate,UITableViewDataSource,UITableViewDelegate {
+class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControllerDelegate,
+UITableViewDataSource,UITableViewDelegate {
     var pageViewControllers: UIPageViewController!
     var kindList = NSMutableArray()
     var appDelegate : AppDelegate?
@@ -19,9 +20,25 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fullScreen = false
-        self.TB.frame = CGRect.init(x: 0, y: 64, width: UIwidth/414*85, height: UIheight-64)
+        self.TB.frame = CGRect.init(x: 0, y: 64, width: UIwidth/414*85, height: UIheight-112)
         TBOrginalRect = self.kindsOfNews.frame
         appDelegate = UIApplication.shared.delegate as? AppDelegate
+        loadList()
+        self.TB.mj_header = MJRefreshHeader.init(refreshingBlock: {
+            self.TB.mj_header.endRefreshing()
+        })
+
+        let pinch = UIPinchGestureRecognizer.init(target: self, action: #selector(self.pincToFullScreen(pinch:)))
+        self.view.addGestureRecognizer(pinch)
+    }
+    func pincToFullScreen(pinch:UIPinchGestureRecognizer) -> Void {
+        if pinch.state == UIGestureRecognizerState.ended
+        {
+            self.fullScreen = !self.fullScreen
+        }
+    }
+
+    func loadList() -> Void {
         let DIC = appDelegate?.dic
         let urlString = "https://route.showapi.com/109-34"
         request.requestPOST(url: urlString, dic: DIC! as NSDictionary, success: { (data) in
@@ -38,17 +55,16 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
             self.pageSet()
             self.TB.reloadData()
             self.selectedRow()
+            DeeShareMenu.messageFrame(msg: "加载频道成功!", controller: self)
+            self.refreshButton.isEnabled = true
         }, fail: { (error) in
+            self.refreshButton.isEnabled = true
             print(error)
         }, Pro: { (pro) in
-            print(pro)
-        })
-        self.TB.mj_header = MJRefreshHeader.init(refreshingBlock: {
-            self.TB.mj_header.endRefreshing()
+//            print(pro)
         })
 
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,6 +80,7 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
             page.channel = model.name!
             controllers.append(page)
         }
+        
         let  TT = controllers[currentPage]
         pageViewControllers = self.childViewControllers.first as! UIPageViewController
         pageViewControllers.dataSource = self
@@ -99,46 +116,39 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
                 }
                 if  pageViewController.viewControllers?.first?.restorationIdentifier == lastModel.name{
                     currentPage -= 1
-
-
                 }
                 else if  pageViewController.viewControllers?.first?.restorationIdentifier == nextModel.name{
                     currentPage += 1
-
-
                 }
             }
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-
-    }
 
     func selectedRow() -> Void {
         self.TB.selectRow(at: IndexPath.init(item: currentPage, section: 0), animated: true, scrollPosition: .middle)
         self.navigationItem.title = pageViewControllers.viewControllers?.first?.restorationIdentifier!
     }
 
+    @IBOutlet var refreshButton: UIBarButtonItem!
 //MARK: 刷新表格
     var refreshTargetTB = {Void()}
-    var search = {Void()}
     @IBAction func refreshAllTB(_ sender: Any) {
-        let targetPage = pageViewControllers.viewControllers?.first as! toutiao
-        targetPage.ClearTBData()
+        kindList.removeAllObjects()
+        loadList()
+        self.refreshButton.isEnabled = false
 
     }
 
 
     @IBAction func searchNews(_ sender: Any) {
-         search()
     }
 
 
 
 
     var currentPage = 0 {
-        willSet {
+        didSet {
             selectedRow()
             self.navigationItem.title = pageViewControllers.viewControllers?.first?.restorationIdentifier!
         }
@@ -173,7 +183,7 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
                     self.TB.isHidden = true
                     self.TB.removeFromSuperview()
                     self.FSbtn.isEnabled = true
-                    self.FSbtn.title = "退出全屏"
+                    self.FSbtn.title = "展开频道"
                 })
                 )
             }
@@ -186,7 +196,7 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
                     self.kindsOfNews.frame = CGRect.init(x: self.TB.frame.width , y: 64, width:UIwidth - self.TB.frame.width, height: UIheight - 64)
                 }, completion: ({(finish) in
                     self.FSbtn.isEnabled = true
-                    self.FSbtn.title = "进入全屏"
+                    self.FSbtn.title = "隐藏频道"
                 })
                 )
             }
@@ -199,7 +209,6 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
 
     }
     @IBOutlet var FSbtn: UIBarButtonItem!
-
 
 
 
@@ -219,4 +228,7 @@ class IndexZ: UIViewController,UIPageViewControllerDataSource,UIPageViewControll
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return kindList.count
     }
+
+
+
 }

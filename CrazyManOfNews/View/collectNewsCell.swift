@@ -10,6 +10,10 @@ import UIKit
 
 class collectNewsCell: UITableViewCell {
 
+    @IBOutlet var date: UILabel!
+    @IBOutlet var sourceName: UILabel!
+    @IBOutlet var label: UILabel!
+    @IBOutlet var img: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

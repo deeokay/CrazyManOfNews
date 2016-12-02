@@ -10,4 +10,6 @@ import UIKit
 
 class collectPicCell: UICollectionViewCell {
     
+    @IBOutlet var label: UILabel!
+    @IBOutlet var img: UIImageView!
 }

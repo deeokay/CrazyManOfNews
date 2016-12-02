@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class mineCell: UITableViewCell {
     @IBOutlet var function1: UIButton!
     @IBOutlet var function2: UIButton!
@@ -16,20 +15,19 @@ class mineCell: UITableViewCell {
     var function2Event = {Void()}
     var function3Event = {Void()}
 
+    @IBOutlet var bgView: UIView!
+
+
+    @IBAction func function1Click(_ sender: Any) {
+        function1Event()
+    }
 
     @IBAction func function2Click(_ sender: Any) {
         function2Event()
     }
 
-    @IBAction func function1Click(_ sender: Any) {
-        function1Event()
-
-    }
-
     @IBAction func function3Click(_ sender: Any) {
         function3Event()
-        print("aaaaa")
-
     }
 
 

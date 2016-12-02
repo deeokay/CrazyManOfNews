@@ -7,3 +7,16 @@
 //
 
 import Foundation
+class SolvePic {
+
+    class func setAnimation(imgView:UIImageView){
+        let animation = CATransition.init()
+        animation.duration = 0.5
+        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionLinear)
+        animation.type = kCATransitionPush  
+        animation.subtype = kCATransitionPush
+        imgView.layer.add(animation, forKey: "Reveal")
+    }
+
+
+}

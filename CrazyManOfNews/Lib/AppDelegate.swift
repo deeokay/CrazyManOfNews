@@ -10,18 +10,25 @@ import UIKit
 import CoreData
 import UserNotifications
 import AFNetworking
+import SwiftTheme
+import Onboard
 let UIwidth = UIScreen.main.bounds.size.width
 let UIheight = UIScreen.main.bounds.size.height
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate {
-    var supportSharePlatform = NSArray.init(objects: SSDKPlatformType.typeQQ,SSDKPlatformType.subTypeQZone,SSDKPlatformType.typeMail,SSDKPlatformType.typeSinaWeibo,SSDKPlatformType.typeAliPaySocial)
-    var nameArr = ["QQ","QQ空间","Email","新浪微博","支付宝"]
+    var supportSharePlatform = NSArray.init(objects: SSDKPlatformType.typeQQ,SSDKPlatformType.subTypeQZone,SSDKPlatformType.typeMail,SSDKPlatformType.typeSinaWeibo,SSDKPlatformType.typeTencentWeibo)
+    var nameArr = ["QQ","QQ空间","Email","新浪微博","腾讯微博"]
     var window: UIWindow?
     var appID : String?
     var secret : String?
     var dic:NSMutableDictionary?
+    enum colorMode {
+        case red,blue,darkGray
+    }
+    var vc : UITabBarController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         print(NSHomeDirectory())
+        vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as! TabbarVC
         dic =  ["showapi_appid":APPID,"showapi_sign":SECRET]
         let center = UNUserNotificationCenter.current()
         center.delegate = self
@@ -31,12 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         center.getNotificationSettings { (settings) in
             //           print(settings)
         }
-        //share
+//        NotificationCenter.default.addObserver(self, selector:#selector(self.changeTheme(not:)) , name: NSNotification.Name(rawValue: ThemeUpdateNotification), object: nil)
+
+
         ShareSDK.registerApp("18606234031bc", activePlatforms:[
             SSDKPlatformType.typeSinaWeibo.rawValue,
             SSDKPlatformType.typeTencentWeibo.rawValue,
             SSDKPlatformType.typeWechat.rawValue,
-            SSDKPlatformType.typeQQ.rawValue],
+            SSDKPlatformType.typeQQ.rawValue,
+            SSDKPlatformType.typeMail.rawValue],
                              onImport: { (platform : SSDKPlatformType) in
                                 switch platform
                                 {
@@ -45,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                                 case SSDKPlatformType.typeWechat:
                                     ShareSDKConnector.connectWeChat(WXApi.classForCoder())
                                 case SSDKPlatformType.typeQQ:
+                                    ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
+                                case SSDKPlatformType.typeTencentWeibo:
                                     ShareSDKConnector.connectQQ(QQApiInterface.classForCoder(), tencentOAuthClass: TencentOAuth.classForCoder())
                                 default:
                                     break
@@ -55,23 +67,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             switch platform
             {
             case SSDKPlatformType.typeSinaWeibo:
-                //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
                 appInfo?.ssdkSetupSinaWeibo(byAppKey: "938586463",
                                             appSecret : "457cd5fdce9efe88ee7e8552c01b7492",
                                             redirectUri : "http://sns.whalecloud.com/sina2/callback",
                                             authType : SSDKAuthTypeBoth)
 
             case SSDKPlatformType.typeWechat:
-                //设置微信应用信息
                 appInfo?.ssdkSetupWeChat(byAppId: "wx4868b35061f87885", appSecret: "64020361b8ec4c99936c0e3999a9f249")
 
             case SSDKPlatformType.typeTencentWeibo:
-                //设置腾讯微博应用信息，其中authType设置为只用Web形式授权
                 appInfo?.ssdkSetupTencentWeibo(byAppKey: "801307650",
                                                appSecret : "ae36f4ee3946e1cbb98d6965b0b2ff5c",
                                                redirectUri : "http://www.sharesdk.cn")
             case SSDKPlatformType.typeQQ:
-                //设置QQ应用信息
                 appInfo?.ssdkSetupQQ(byAppId: "1105779622",
                                      appKey : "ZkM2Eum8aCsmaCGp",
                                      authType : SSDKAuthTypeWeb)
@@ -83,21 +91,96 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             })
         }
 
+
+
+        var message = "欢迎新用户!愿您浏览愉快!"
+        if(!UserDefaults.standard.bool(forKey: everLaunched)){
+            UserDefaults.standard.set(true, forKey: everLaunched)
+            UserDefaults.standard.set(true, forKey: firstLaunch)
+            UserDefaults.standard.set(true, forKey: shankeShare)//摇一摇分享
+            UserDefaults.standard.set(false, forKey: nightMode)//夜间模式
+            UserDefaults.standard.set(false, forKey: saveMode)//省流量模式
+            UserDefaults.standard.set(0, forKey: currentPlatform)//分享平台
+            UserDefaults.standard.synchronize()
+        }
+        else{
+            UserDefaults.standard.set(false, forKey: firstLaunch)
+            UserDefaults.standard.synchronize()
+            if UserDefaults.standard.bool(forKey: nightMode){
+                ThemeManager.setTheme(index: 1)
+            }
+            else{
+                ThemeManager.setTheme(index: 0)
+            }
+            message = "继续你的浏览之旅吧!"
+            print("读取用户偏好")
+        }
+//        window = UIWindow.init(frame: UIScreen.main.bounds)
+//        let firstPage = OnboardingContentViewController(title: "Page Title", body: "Page body goes here.", image: UIImage(named: "icon"), buttonText: "Text For Button") { () -> Void in
+//            // do something here when users press the button, like ask for location services permissions, register for push notifications, connect to social media, or finish the onboarding process
+//        }
+//        let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "PS"), contents: [firstPage])
+//        window?.rootViewController = vc
+//        window?.makeKeyAndVisible()
+
+        DeeShareMenu.messageFrame(msg: message, controller: (window?.rootViewController)!)
+        setTheme()
+
         return true
     }
 
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        print("回调1:",TencentOAuth.handleOpen(url))
-        //        return TencentOAuth.handleOpen(url)
-        return true
+//    func changeTheme(not:NSNotification) -> Void {
+//        DeeShareMenu.messageFrame(msg: "切换主题成功!", controller: (window?.rootViewController)!)
+//    }
+
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        var page = 0
+        switch shortcutItem.localizedTitle {
+        case "微信精选":
+            page = 1
+        case "看图开车":
+            page = 2
+        case "个人中心":
+            page = 3
+        default:
+            break
+        }
+        window?.rootViewController = vc
+        vc?.selectedViewController = vc?.viewControllers?[page]
+
+
     }
 
-    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        print("回调2:",TencentOAuth.handleOpen(url))
-        //        return TencentOAuth.handleOpen(url)
-        return true
+    func setTheme() -> Void {
+        _ = UINavigationBar.appearance().theme_barTintColor = ThemeColorPicker(colors: "#FF0000","#555550")
+        _ = UINavigationBar.appearance().theme_tintColor = ThemeColorPicker(colors: "#000000","#FFFFF5")
+        _ = UITableView.appearance().theme_backgroundColor = ThemeColorPicker(colors: "#FCFFF4","#999999")
+        _ = UIWebView.appearance().theme_backgroundColor = ThemeColorPicker(colors: "#FFFFF5    ","#555550")
+        _ = UITabBar.appearance().theme_barTintColor = ThemeColorPicker(colors: "#FF0000","#555550")
+        _ = UITableViewCell.appearance().theme_backgroundColor = ThemeColorPicker(colors: "#FFF", "#999999")
+        _ = UISegmentedControl.appearance().theme_tintColor = ThemeColorPicker(colors: "#FF0000", "#B8B8B8")
+        _ = UISegmentedControl.appearance().theme_backgroundColor = ThemeColorPicker(colors: "#FFFFF5", "#686868")
+        _ = UIToolbar.appearance().theme_barTintColor = ThemeColorPicker(colors: "#FF0000","#555550")
+
 
     }
+
+
+
+
+    //    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    //        print("回调1:",TencentOAuth.handleOpen(url))
+    //        //        return TencentOAuth.handleOpen(url)
+    //        return true
+    //    }
+    //
+    //    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+    //        print("回调2:",TencentOAuth.handleOpen(url))
+    //        //        return TencentOAuth.handleOpen(url)
+    //        return true
+    //
+    //    }
 
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -173,8 +256,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             }
         }
     }
-    
-    
-    
 }
 

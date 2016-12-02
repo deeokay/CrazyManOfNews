@@ -9,6 +9,7 @@
 import UIKit
 import AFNetworking
 import MJRefresh
+import SwiftTheme
 class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var channel = "新闻频道"
     var modelArr = NSMutableArray()
@@ -29,19 +30,11 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 self.TB.mj_footer.resetNoMoreData()
             }
         }
-
-        //        print(self.restorationIdentifier)
         loadNews()
-//        TB.mj_header = MJRefreshHeader.init(refreshingBlock: {
-//            self.TB.mj_header.endRefreshing()
-//            print("下拉刷新")
-//
-//        })
 
         let header = MJRefreshNormalHeader.init(refreshingTarget: self, refreshingAction: nil)
         header?.setTitle("用力拉用力拉!!!", for: .idle)
         header?.setTitle("没有任何数据可以刷新!!!", for: .noMoreData)
-        header?.setTitle("松手就脱裤子!!!", for: .pulling)
         header?.setTitle("服务器都快炸了!!!!", for: .refreshing)
         header?.refreshingBlock = {
             self.TB.reloadData()
@@ -57,17 +50,7 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
             footer?.endRefreshing()
         }
         TB.mj_footer = footer
-
-
-
-
     }
-
-
-    func testFun() -> Void {
-        print("hhhahahahahaha")
-    }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -137,6 +120,7 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
             let showapi_res_body = Data.value(forKey: "showapi_res_body") as! NSDictionary
             let  pagebean = showapi_res_body.object(forKey: "pagebean")  as! NSDictionary
             let contentlist = pagebean.object(forKey: "contentlist") as! NSArray
+            let allPages = pagebean.object(forKey: "allPages") as! Int
             for i in contentlist
             {
                 let model = toutiaoModel()
@@ -144,7 +128,12 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 model.setValuesForKeys(tmp as! [String: AnyObject])
                 self.modelArr.add(model)
             }
-
+            if allPages == self.pageCount{
+                self.TB.mj_footer.endRefreshingWithNoMoreData()
+            }
+            else{
+                self.TB.mj_footer.endRefreshing()
+            }
             self.pageCount += 1
             self.TB.reloadData()
             self.TB.mj_footer.endRefreshing()
@@ -157,20 +146,21 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = modelArr[indexPath.row] as! toutiaoModel
         let VC = storyboard?.instantiateViewController(withIdentifier: "details") as! Details
-        if let link = model.link
+        if model.link != nil
         {
-            VC.webStr = link
             VC.tt = model.title
             DispatchQueue.global().async {
-                VC.shareUrl = model.link
-                VC.shareTitle = model.channelName!
+                VC.webStr = model.link
+                VC.channelName = model.channelName!
                 VC.shareDescr = model.title!
+                VC.date = model.pubDate
                 if model.imageurls?.count != 0{
                     let imgDic = model.imageurls?.firstObject as! NSDictionary
                     let str = imgDic.object(forKey: "url") as! String
                     let url = URL.init(string: str)
                     let img = UIImage.animatedImage(withAnimatedGIFURL: url)
                     VC.shareThumImage = img
+                    VC.picImg = str
                 }
             }
             self.navigationController?.pushViewController(VC, animated: true)
@@ -186,7 +176,17 @@ class toutiao: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
         }
     }
-    
+
+    override func viewDidDisappear(_ animated: Bool) {
+        self.TB.isHidden = true
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.TB.isHidden = false
+        self.view.theme_backgroundColor = ThemeColorPicker(colors: "#FFF", "#000")
+    }
+
+
+
 }
 
 

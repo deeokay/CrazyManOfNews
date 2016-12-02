@@ -7,13 +7,12 @@
 //
 
 import UIKit
-
+import SwiftTheme
 class ChannelCell: UITableViewCell {
 
     @IBOutlet var channel: UIButton!
     var event = { Void()}
     @IBAction func channelBtn(_ sender: AnyObject) {
-        print("执行闭包事件!")
         event()
     }
 

@@ -13,15 +13,15 @@ class PictruesChannel: UIViewController,UIPageViewControllerDelegate {
 
     var staticPic:Pictrues?
     var dynamic:Pictrues?
+    @IBOutlet weak var count: UIBarButtonItem!
     @IBOutlet var item: UINavigationItem!
-
     @IBAction func pageChange(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             pageViewControllers.setViewControllers([staticPic!], direction: UIPageViewControllerNavigationDirection.reverse, animated: true, completion: nil)
         case 1:
             if flowWarning{
-                let alert = UIAlertController.init(title: "大量X图流量会爆炸!", message: "前方高能", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController.init(title: "前方高能", message: "加载动态图请注意流量!!", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction.init(title: "朕刹车", style: UIAlertActionStyle.default, handler: { (action) in
                     self.pageViewControllers.setViewControllers([self.staticPic!], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
                     sender.selectedSegmentIndex = 0
@@ -41,6 +41,11 @@ class PictruesChannel: UIViewController,UIPageViewControllerDelegate {
         }
     }
     var flowWarning = true
+    func recieveCount(cout:Int) -> Void {
+        print("接收加载数量显示",cout)
+        self.count.title = "共\(cout)张图"
+    }
+
 
     @IBOutlet var picChannelNum: UISegmentedControl!
     var pageViewControllers: UIPageViewController!
@@ -50,9 +55,11 @@ class PictruesChannel: UIViewController,UIPageViewControllerDelegate {
         super.viewDidLoad()
         staticPic = storyboard?.instantiateViewController(withIdentifier: "Pictures") as? Pictrues
         staticPic?.url = "http://route.showapi.com/341-2"
+        staticPic?.superVC = self
         staticPic?.restorationIdentifier = vcArr[0]
         dynamic = storyboard?.instantiateViewController(withIdentifier: "Pictures") as? Pictrues
         dynamic?.url = "http://route.showapi.com/341-3"
+        dynamic?.superVC = self
         dynamic?.restorationIdentifier = vcArr[1]
         controllers.append(staticPic!)
         controllers.append(dynamic!)
@@ -62,45 +69,23 @@ class PictruesChannel: UIViewController,UIPageViewControllerDelegate {
         pageViewControllers.setViewControllers([staticPic!], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
         self.item.title = staticPic?.restorationIdentifier
     }
-    //    @available(iOS 5.0, *)
-    //    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-    //        if viewController == staticPic{
-    //            return dynamic
-    //        }
-    //        else{
-    //            return staticPic!
-    //        }
-    //
-    //    }
-    //    @available(iOS 5.0, *)
-    //    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-    //        if viewController == dynamic{
-    //            return staticPic
-    //        }
-    //        else{
-    //            return dynamic!
-    //        }
-    //    }
 
-    @IBAction func cleanCache(_ sender: Any) {
-        self.staticPic?.cv.reloadData()
-        self.dynamic?.cv.reloadData()
 
-    }
+    @IBAction func reloadCV(_ sender: Any) {
+        if self.pageViewControllers.viewControllers?.first == staticPic
+        {
+            staticPic?.cv.reloadData()
+        }
+        else{
+            dynamic?.cv.reloadData()
+        }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+}
 
-    //    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-    //        if finished && completed {
-    //            let tmpPageName = pageViewController.viewControllers?.first?.restorationIdentifier!
-    //            let index = vcArr.index(of: tmpPageName!)
-    //            self.picChannelNum.selectedSegmentIndex = index!
-    //        }
-    //    }
-    
-    
-    
+
+
 }

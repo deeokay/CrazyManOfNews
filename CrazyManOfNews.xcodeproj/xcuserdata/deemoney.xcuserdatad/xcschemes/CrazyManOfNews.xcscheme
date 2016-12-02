@@ -38,6 +38,16 @@
                ReferencedContainer = "container:CrazyManOfNews.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AE9FE5DB1DD5A4C9001DD247"
+               BuildableName = "CrazyManOfNewsTests.xctest"
+               BlueprintName = "CrazyManOfNewsTests"
+               ReferencedContainer = "container:CrazyManOfNews.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -71,6 +81,13 @@
             ReferencedContainer = "container:CrazyManOfNews.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "DISABLE"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

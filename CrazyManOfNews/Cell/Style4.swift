@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import SwiftTheme
 class Style4: UITableViewCell {
 
+    @IBOutlet var bgView: UIView!
     @IBOutlet var Title: UILabel!
     @IBOutlet var img1: UIImageView!
     @IBOutlet var img2: UIImageView!
@@ -19,6 +20,12 @@ class Style4: UITableViewCell {
     @IBOutlet var Date: UILabel!
     var model  =  toutiaoModel(){
         didSet{
+
+
+            img1.alpha = 0
+            img2.alpha = 0
+            img3.alpha = 0
+            bgView.theme_backgroundColor = ThemeColorPicker.init(colors: "#F1FBF8","#B8B8B8")
             Title.text = model.title
             subText.text = model.desc
             ChannelName.text = model.channelName
@@ -34,11 +41,22 @@ class Style4: UITableViewCell {
             let url1 = dic1.object(forKey: "url") as! NSString
             let url2 = dic2.object(forKey: "url") as! NSString
             let url3 = dic3.object(forKey: "url") as! NSString
-            img1.sd_setImage(with: URL.init(string: url1 as String))
-            img2.sd_setImage(with: URL.init(string: url2 as String))
-            img3.sd_setImage(with: URL.init(string: url3 as String))
-
-
+            img1.sd_setImage(with: URL.init(string: url1 as String), completed: {(image,error,cacheType,url) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.img1.alpha = 1
+                })
+            })
+            img2.sd_setImage(with: URL.init(string: url2 as String), completed: {(image,error,cacheType,url) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.img2.alpha = 1
+                })
+            })
+            img3.sd_setImage(with: URL.init(string: url3 as String), completed: {(image,error,cacheType,url) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.img3.alpha = 1
+                })
+            })
+            
         }
     }
     

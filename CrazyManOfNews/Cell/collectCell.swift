@@ -10,6 +10,8 @@ import UIKit
 
 class collectCell: UITableViewCell {
 
+    @IBOutlet var label: UILabel!
+    @IBOutlet var img: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

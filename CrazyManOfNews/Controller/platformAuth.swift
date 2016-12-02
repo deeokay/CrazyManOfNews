@@ -10,27 +10,21 @@ import UIKit
 
 class platformAuth: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var platformArray = NSMutableArray()
+    var platformType = [SSDKPlatformType]()
+    var superVC : mineViewController?
     @IBOutlet var TB: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let platformArray = NSArray.init(objects: SSDKPlatformType.typeQQ,SSDKPlatformType.typeSinaWeibo)
-        for i in 0..<platformArray.count{
+        platformType = [SSDKPlatformType.typeQQ,SSDKPlatformType.typeSinaWeibo]
+        for i in 0..<platformType.count{
             let dict = NSMutableDictionary.init(dictionary: self.dictWithPlatformName(platformType: i))
-            let tmp = platformArray.object(at: i) as! SSDKPlatformType
+            let tmp = platformType[i]
             dict.setValue(tmp.rawValue, forKey: "AuthPlatformTypeKey")
             self.platformArray.add(dict)
-            print(dict.allKeys,dict.allValues)
         }
-
-
-
-
-
-
-
-
     }
+
     func dictWithPlatformName(platformType:Int) -> NSMutableDictionary {
         var imageName = NSString.init()
         var platformName = NSString.init()
@@ -66,8 +60,6 @@ class platformAuth: UIViewController,UITableViewDelegate,UITableViewDataSource {
         cell.platformLabel.text = dict.object(forKey: "AuthPlatformNameKey") as! String?
         cell.platformType = Int(dict.object(forKey: "AuthPlatformTypeKey") as! UInt)
         cell.platformSwitch.isOn = self.checkIsLogin(platformType: SSDKPlatformType.init(rawValue: UInt(cell.platformType))!)
-
-        print(cell.platformType)
         cell.event = {
             self.switchAction(platformType: cell.platformType, platformSwitch: cell.platformSwitch)
         }
@@ -81,19 +73,22 @@ class platformAuth: UIViewController,UITableViewDelegate,UITableViewDataSource {
             ShareSDK.authorize(SSDKPlatformType.init(rawValue: UInt(platformType))!, settings: nil, onStateChanged:  { (state,usrinfo,err)  in
                 switch state{
                 case SSDKResponseState.success: print("授权成功")
+                UserDefaults.standard.set(platformType, forKey: currentPlatform)
+                self.superVC?.externalPlatformNum = (SSDKPlatformType.init(rawValue: UInt(platformType))?.rawValue)!
                 case SSDKResponseState.fail: print("授权失败,错误描述:\(err)")
                 case SSDKResponseState.cancel:  print("操作取消")
                 default:
                     break
                 }
-                })
+            })
         }
         else{
-            ShareSDK.cancelAuthorize(SSDKPlatformType.typeQQ)
+            ShareSDK.cancelAuthorize(SSDKPlatformType.init(rawValue: UInt.init(platformType))!)
+            UserDefaults.standard.set(0, forKey: currentPlatform)
         }
     }
     func checkIsLogin(platformType:SSDKPlatformType) -> Bool {
-        if  (ShareSDK.hasAuthorized(SSDKPlatformType.typeQQ))
+        if  (ShareSDK.hasAuthorized(platformType))
         {
             print("auth SUCCESS",platformType.rawValue)
             return true
@@ -105,31 +100,17 @@ class platformAuth: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
 
 
-    @IBAction func test(_ sender: AnyObject) {
-        // 1.创建分享参数
-        let shareParames = NSMutableDictionary()
-        shareParames.ssdkSetupShareParams(byText: "分享内容",
-                                          images : UIImage(named: "Ve.jpg"),
-                                          url : NSURL(string:"http://mob.com") as URL!,
-                                          title : "分享标题",
-                                          type : SSDKContentType.image)
-
-        //2.进行分享
-        ShareSDK.share(SSDKPlatformType.typeQQ, parameters: shareParames) { (state : SSDKResponseState, nil, entity : SSDKContentEntity?, error :Error?) in
-
-            switch state{
-
-            case SSDKResponseState.success: print("分享成功")
-            case SSDKResponseState.fail:    print("授权失败,错误描述:\(error)")
-            case SSDKResponseState.cancel:  print("操作取消")
-
-            default:
-                break
-            }
+    @IBAction func resignAll(_ sender: AnyObject) {
+        for i in platformType{
+            ShareSDK.cancelAuthorize(i)
         }
-
-
+        UserDefaults.standard.set(0, forKey: currentPlatform)
+        self.TB.reloadData()
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.TB.reloadData()
+    }
+
     
 }

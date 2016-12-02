@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftTheme
 class Style3: UITableViewCell {
     @IBOutlet var Title: UILabel!
     @IBOutlet var img1: UIImageView!
@@ -15,8 +15,14 @@ class Style3: UITableViewCell {
     @IBOutlet var subText: UILabel!
     @IBOutlet var ChannelName: UILabel!
     @IBOutlet var Date: UILabel!
+    @IBOutlet var bgView: UIView!
     var model  =  toutiaoModel(){
         didSet{
+            bgView.theme_backgroundColor = ThemeColorPicker.init(colors: "#F0F2F1","#B8B8B8")
+            img1.alpha = 0
+            img2.alpha = 0
+
+
             Title.text = model.title
             subText.text = model.desc
             ChannelName.text = model.channelName
@@ -32,10 +38,18 @@ class Style3: UITableViewCell {
             let url1 = dic1.object(forKey: "url") as! NSString
             let url2 = dic2.object(forKey: "url") as! NSString
             ////            let url3 = dic3.object(forKey: "url") as! URL
-            img1.sd_setImage(with: URL.init(string: url1 as String))
-            img2.sd_setImage(with: URL.init(string: url2 as String))
-            //            img3.sd_setImage(with: url3)
-            
+            img1.sd_setImage(with: URL.init(string: url1 as String), completed: {(image,error,cacheType,url) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.img1.alpha = 1
+                })
+            })
+            img2.sd_setImage(with: URL.init(string: url2 as String), completed: {(image,error,cacheType,url) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.img2.alpha = 1
+                })
+            })
+
+
         }
     }
     override func awakeFromNib() {

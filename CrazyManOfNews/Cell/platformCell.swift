@@ -12,7 +12,6 @@ class platformCell: UITableViewCell {
     var event = {Void()}
     @IBAction func switchAction(_ sender: AnyObject) {
         event()
-        print("判断开关中")
 
 
     }

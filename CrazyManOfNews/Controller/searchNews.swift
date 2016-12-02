@@ -15,10 +15,12 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
     var modelArr = NSMutableArray()
     @IBOutlet var TB: UITableView!
     @IBOutlet var sBar: UISearchBar!
-
     var appDelegate : AppDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
         self.TB.register(UINib.init(nibName: "Style1", bundle: nil), forCellReuseIdentifier: "Style1")
         self.TB.register(UINib.init(nibName: "Style2", bundle: nil), forCellReuseIdentifier: "Style2")
         self.TB.register(UINib.init(nibName: "Style3", bundle: nil), forCellReuseIdentifier: "Style3")
@@ -35,6 +37,7 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
         }
 
         TB.mj_header = MJRefreshHeader.init(refreshingBlock: {
+            self.TB.reloadData()
             self.TB.mj_header.endRefreshing()
             print("下拉刷新")
 
@@ -47,20 +50,15 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
 
 
     }
-    func testFun() -> Void {
-        self.TB.reloadData()
-        print("TEST REFRESH!")
-    }
-//MARK: 搜索
+    //MARK: 搜索
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         UIApplication.shared.keyWindow?.endEditing(true)
-
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchContent = sBar.text!
         modelArr.removeAllObjects()
-        print(searchContent)
+        self.pageCount = 1
         loadNews()
         UIApplication.shared.keyWindow?.endEditing(true)
 
@@ -77,7 +75,7 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
 
 
 
-    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -139,31 +137,38 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
     var searchContent = ""
     func loadNews() -> Void {
         let manager = AFHTTPSessionManager()
-        manager.requestSerializer.cachePolicy = .useProtocolCachePolicy
-        manager.requestSerializer.timeoutInterval = 5
         manager.responseSerializer = AFHTTPResponseSerializer()
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let urlString2 = NSString.init(format: "https://route.showapi.com/109-35?showapi_appid=25473&showapi_sign=b9d5bbc6dd6946a1a45d7ade6eb755df")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         manager.get(urlString2 as String, parameters: ["page":String(pageCount),"title":searchContent], progress: nil, success: {(task,data)  in
             //        request.requestPOST(url: urlString as String, dic: DIC! as NSDictionary, success: { (data) in
 
-                        let Data = try! JSONSerialization.jsonObject(with: data as! Data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+            let Data = try! JSONSerialization.jsonObject(with: data as! Data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
 
-                        let showapi_res_body = Data.value(forKey: "showapi_res_body") as! NSDictionary
-                        let  pagebean = showapi_res_body.object(forKey: "pagebean")  as! NSDictionary
-                        let contentlist = pagebean.object(forKey: "contentlist") as! NSArray
-                        for i in contentlist
-                        {
-                            let model = toutiaoModel()
-                            let tmp = i as! NSDictionary
-                            model.setValuesForKeys(tmp as! [String: AnyObject])
-                            self.modelArr.add(model)
-                        }
-            
-                        self.pageCount += 1
-                        self.TB.reloadData()
-                        self.TB.mj_footer.endRefreshing()
+            let showapi_res_body = Data.value(forKey: "showapi_res_body") as! NSDictionary
+            let  pagebean = showapi_res_body.object(forKey: "pagebean")  as! NSDictionary
+            let allPages = pagebean.object(forKey: "allPages") as! Int
+
+            let contentlist = pagebean.object(forKey: "contentlist") as! NSArray
+            for i in contentlist
+            {
+                let model = toutiaoModel()
+                let tmp = i as! NSDictionary
+                model.setValuesForKeys(tmp as! [String: AnyObject])
+                self.modelArr.add(model)
+            }
+
+            self.TB.reloadData()
+            if allPages == self.pageCount{
+                self.TB.mj_footer.endRefreshingWithNoMoreData()
+            }
+            else{
+                self.TB.mj_footer.endRefreshing()
+            }
+            self.pageCount += 1
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }, failure: {(task,error) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             print(error)
         })
     }
@@ -176,8 +181,8 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
             VC.webStr = link
             VC.tt = model.title
             DispatchQueue.global().async {
-                VC.shareUrl = model.link
-                VC.shareTitle = model.channelName!
+                VC.webStr = model.link
+                VC.channelName = model.channelName!
                 VC.shareDescr = model.title!
                 if model.imageurls?.count != 0{
                     let imgDic = model.imageurls?.firstObject as! NSDictionary
@@ -200,5 +205,8 @@ class searchNews: UIViewController,UITableViewDataSource,UITableViewDelegate,UIS
         }
     }
     
+    @IBAction func voiceSearch(_ sender: Any) {
+    }
+
 }
 
