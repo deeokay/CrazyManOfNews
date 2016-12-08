@@ -42,7 +42,6 @@ class PictruesChannel: UIViewController,UIPageViewControllerDelegate {
     }
     var flowWarning = true
     func recieveCount(cout:Int) -> Void {
-        print("接收加载数量显示",cout)
         self.count.title = "共\(cout)张图"
     }
 

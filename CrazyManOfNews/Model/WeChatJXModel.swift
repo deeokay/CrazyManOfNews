@@ -12,9 +12,9 @@ class WeChatJXModel: NSObject {
 
     var id : String?
     var title : String?
-    var source : String?
-    var firstImg : String?
-    var mark : String?
+    var des : String?
+    var picUrl : String?
+    var ctime : String?
     var url : String?
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         

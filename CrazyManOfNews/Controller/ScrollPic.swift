@@ -307,6 +307,13 @@ class ScrollPic: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
     @IBOutlet var likeBtn: UIBarButtonItem!
     @IBOutlet var toolBar: UIToolbar!
     @IBOutlet var isGif: UIBarButtonItem!
-    
+
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.toolBar.isUserInteractionEnabled = false
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.toolBar.isUserInteractionEnabled = true
+    }
+
     
 }

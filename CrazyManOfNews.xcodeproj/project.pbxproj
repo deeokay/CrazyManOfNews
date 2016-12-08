@@ -890,6 +890,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/ShareSDK3/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CrazyManOfNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -919,6 +920,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/ShareSDK3/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CrazyManOfNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

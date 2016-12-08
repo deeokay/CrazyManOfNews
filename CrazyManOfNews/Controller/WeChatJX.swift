@@ -16,7 +16,6 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet var TB: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadNews()
         appDelegate = UIApplication.shared.delegate as? AppDelegate
         AFNetworkReachabilityManager.shared().setReachabilityStatusChange { (status) in
             if status.rawValue == 0{
@@ -45,6 +44,8 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
             footer?.endRefreshing()
         }
         TB.mj_footer = footer
+        loadNews()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,41 +72,38 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     var pageCount = 1
 
+
     func loadNews() -> Void {
-        let urlString = "http://v.juhe.cn/weixin/query?key=c264d77453a6b6aa2d2668dcd594cbad&pno=%d"
-        let url = NSString.init(format: urlString as NSString, pageCount)
-        let dic = NSDictionary()
-        request.requestPOST(url: url as String, dic: dic, success: { (data) in
-            do {
-                let Data = try JSONSerialization.jsonObject(with: data , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-                let result = Data.value(forKey: "result") as! NSDictionary
-                let list = result.object(forKey: "list") as! NSArray
-                let totalPage = result.object(forKey: "totalPage") as! Int
-                for i in list
-                {
-                    let model = WeChatJXModel()
-                    let tmp = i as! NSDictionary
-                    model.setValuesForKeys(tmp as! [String: AnyObject])
-                    self.modelArr.add(model)
-                }
-                if totalPage == self.pageCount{
-                    self.TB.mj_footer.endRefreshingWithNoMoreData()
-                }
-                else{
-                    self.TB.mj_footer.endRefreshing()
-                }
-                self.pageCount += 1
-                self.TB.reloadData()
-                self.TB.mj_footer.endRefreshing()
+        let urlString = "https://route.showapi.com/181-1"
+        let DIC = appDelegate?.dic
+        DIC?.setValuesForKeys(["page":String(pageCount),"num":"50","rand":"0"])
 
-            } catch  {
-                print("解释错误或超时!")
+        request.requestPOST(url: urlString, dic: DIC! as NSDictionary, success: { (data) in
+            let Data = try! JSONSerialization.jsonObject(with: data , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+            let showapi_res_body = Data.value(forKey: "showapi_res_body") as! NSDictionary
+            let  pagebean = showapi_res_body.object(forKey: "newslist")  as! NSArray
+//            let allPages = pagebean.object(forKey: "allPages") as! Int
+            for i in pagebean
+            {
+                let model = WeChatJXModel()
+                let tmp = i as! NSDictionary
+                model.setValuesForKeys(tmp as! [String: AnyObject])
+                model.des = tmp.value(forKey: "description") as? String
+                self.modelArr.add(model)
             }
-
+//            if allPages == self.pageCount{
+//                self.TB.mj_footer.endRefreshingWithNoMoreData()
+//            }
+//            else{
+//                self.TB.mj_footer.endRefreshing()
+//            }
+            self.pageCount += 1
+            self.TB.reloadData()
+            self.TB.mj_footer.endRefreshing()
         }, fail: { (error) in
             print(error)
         }, Pro: { (pro) in
-            //            print(pro)
+            print(pro)
         })
     }
 
@@ -118,10 +116,10 @@ class WeChatJX: UIViewController,UITableViewDataSource,UITableViewDelegate {
             VC.tt = model.title!
             DispatchQueue.global().async {
                 VC.date = "来自微信精选"
-                VC.channelName = model.source!
+                VC.channelName = model.des!
                 VC.shareDescr = model.title!
-                VC.picImg = model.firstImg
-                VC.shareThumImage = UIImage.animatedImage(withAnimatedGIFURL: URL.init(string: model.firstImg!))
+                VC.picImg = model.picUrl
+                VC.shareThumImage = UIImage.animatedImage(withAnimatedGIFURL: URL.init(string: model.picUrl!))
             }
             self.navigationController?.pushViewController(VC, animated: true)
         }

@@ -87,17 +87,17 @@ class Pictrues: UIViewController,UICollectionViewDelegate,UICollectionViewDataSo
 
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("CV开始滑动!")
+//        print("CV开始滑动!")
         self.loadCell = false
     }
 
      func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if decelerate == false{
-            print("CV停止滑动并准备减速!")
+//            print("CV停止滑动并准备减速!")
             self.loadCell = true
         }
         else{
-            print("CV停止滑动并没有减速!")
+//            print("CV停止滑动并没有减速!")
             self.loadCell = true
         }
     }
@@ -116,7 +116,7 @@ class Pictrues: UIViewController,UICollectionViewDelegate,UICollectionViewDataSo
         cell.num.text = String(picArr.index(of: model))
 //        }
 
-        print(loadCell)
+//        print(loadCell)
         return cell
     }
 

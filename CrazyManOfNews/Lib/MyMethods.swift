@@ -17,7 +17,12 @@ class request{
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         manager.post(url, parameters: dic, progress: {(p) in
         }, success: { (task, data) in
-            success (data as! Data)
+            do {
+               try success (data as! Data)
+            } catch let err as NSError {
+                print("Error!!!",err)
+            }
+
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }) { (task, error) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false

@@ -11,6 +11,7 @@ import SDWebImage
 import SwiftTheme
 class WeChatCell: UITableViewCell {
 
+    @IBOutlet weak var ctime: UILabel!
     @IBOutlet var source: UILabel!
     @IBOutlet var img: UIImageView!
     @IBOutlet var Title: UILabel!
@@ -20,11 +21,12 @@ class WeChatCell: UITableViewCell {
     var model = WeChatJXModel(){
         didSet{
             img.alpha = 0
-            source.text = model.source
+            ctime.text = model.ctime
+            source.text = model.title
             source.theme_textColor = ThemeColorPicker.init(colors: "#000","#FFF")
-            bgView.theme_backgroundColor = ThemeColorPicker.init(colors: "#FFFFFF","#555555")
+            bgView.theme_backgroundColor = ThemeColorPicker.init(colors: "#FFFFF0","#555555")
             do {
-                let url = try URL.init(string: model.firstImg!)
+                let url = try URL.init(string: model.picUrl!)
                 img.sd_setImage(with: url, completed: {(image,error,cacheType,url) in
                     UIView.animate(withDuration: 0.5, animations: {
                         self.img.alpha = 1
@@ -35,7 +37,7 @@ class WeChatCell: UITableViewCell {
                 print("出现错误!",model.title!,err)
             }
 
-            Title.text = model.title
+            Title.text = model.des
 
         }
 
