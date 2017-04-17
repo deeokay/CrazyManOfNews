@@ -1,2 +1,1 @@
 # CrazyManOfNews
-# CrazyManOfNews
