@@ -1,0 +1,140 @@
+From 4cb602c7166f62c7add8f41a25d503eb30b0e1f8 Mon Sep 17 00:00:00 2001
+From: deeokay <qianjiehao@qq.com>
+Date: Fri, 7 Apr 2017 17:53:56 +0800
+Subject: [PATCH] Return V1.0.17
+
+---
+ Aimi-V1.1/Base.lproj/Main.storyboard |  9 ++++-----
+ Aimi-V1.1/Info.plist                 |  2 +-
+ Controller/Mishow.swift              |  2 +-
+ Controller/PersonalPreference.swift  |  2 +-
+ Controller/Tabbar.swift              | 18 +++++++++---------
+ 5 files changed, 16 insertions(+), 17 deletions(-)
+
+diff --git a/Aimi-V1.1/Base.lproj/Main.storyboard b/Aimi-V1.1/Base.lproj/Main.storyboard
+index 6d1e398..64a701f 100755
+--- a/Aimi-V1.1/Base.lproj/Main.storyboard
++++ b/Aimi-V1.1/Base.lproj/Main.storyboard
+@@ -615,7 +615,7 @@
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                         <subviews>
+                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="W06-WF-MMR">
+-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
++                                <rect key="frame" x="0.0" y="64" width="375" height="652"/>
+                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                 <connections>
+                                     <outlet property="dataSource" destination="beR-Fj-3xU" id="rTm-vL-sbs"/>
+@@ -623,7 +623,7 @@
+                                 </connections>
+                             </tableView>
+                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-sk-HuZ">
+-                                <rect key="frame" x="0.0" y="578" width="375" height="40"/>
++                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                 <subviews>
+                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="点此编辑内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faf-On-zTE">
+                                         <rect key="frame" x="4" y="4" width="313" height="32"/>
+@@ -2363,7 +2363,6 @@ Cgo
+                     <connections>
+                         <outlet property="tabbar" destination="vZr-kD-UyE" id="G2A-iT-UId"/>
+                         <segue destination="VKB-8Y-bxL" kind="relationship" relationship="viewControllers" id="wPs-7e-eBr"/>
+-                        <segue destination="hxi-FU-pRe" kind="relationship" relationship="viewControllers" id="Ljf-VN-qVQ"/>
+                         <segue destination="9Uc-0s-STb" kind="relationship" relationship="viewControllers" id="xww-1M-zj6"/>
+                         <segue destination="hP0-0L-9X4" kind="relationship" relationship="viewControllers" id="ydJ-pV-I1L"/>
+                     </connections>
+@@ -3071,7 +3070,7 @@ Cgo
+                                         <rect key="frame" x="0.0" y="232" width="375" height="44"/>
+                                         <autoresizingMask key="autoresizingMask"/>
+                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oAT-8s-gen" id="yNr-qH-hvk">
+-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
++                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                             <autoresizingMask key="autoresizingMask"/>
+                                             <subviews>
+                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="修改密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rfw-Lk-E7K">
+@@ -3088,7 +3087,7 @@ Cgo
+                                         <rect key="frame" x="0.0" y="276" width="375" height="44"/>
+                                         <autoresizingMask key="autoresizingMask"/>
+                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rIw-67-qSx" id="kgh-bi-yd2">
+-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
++                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                             <autoresizingMask key="autoresizingMask"/>
+                                             <subviews>
+                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="设置密保" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pdq-R9-e14">
+diff --git a/Aimi-V1.1/Info.plist b/Aimi-V1.1/Info.plist
+index be85f1d..ea34f4a 100644
+--- a/Aimi-V1.1/Info.plist
++++ b/Aimi-V1.1/Info.plist
+@@ -48,7 +48,7 @@
+ 		</dict>
+ 	</array>
+ 	<key>CFBundleVersion</key>
+-	<string>14</string>
++	<string>17</string>
+ 	<key>LSApplicationQueriesSchemes</key>
+ 	<array>
+ 		<string>wechat</string>
+diff --git a/Controller/Mishow.swift b/Controller/Mishow.swift
+index 36b995f..9df9226 100755
+--- a/Controller/Mishow.swift
++++ b/Controller/Mishow.swift
+@@ -68,7 +68,7 @@ class Mishow: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
+         self.CV.mj_footer = footer
+         let bar = self.tabBarController as! Tabbar
+         bar.action3 = {
+-            if bar.selectedIndex == 2{
++            if bar.selectedIndex == 1{
+                 if self.modelArr.count != 0{
+                     self.CV.scrollToItem(at: IndexPath.init(item: 0, section: 0), at: UICollectionViewScrollPosition.top, animated: false)
+                 }
+diff --git a/Controller/PersonalPreference.swift b/Controller/PersonalPreference.swift
+index 1f03769..fee4eae 100755
+--- a/Controller/PersonalPreference.swift
++++ b/Controller/PersonalPreference.swift
+@@ -22,7 +22,7 @@ class PersonalPreference: HSController,UITableViewDataSource,UITableViewDelegate
+         self.TB.register(UINib.init(nibName: "userCenter", bundle: nil), forCellReuseIdentifier: "user")
+         let bar = self.tabBarController as! Tabbar
+         bar.action4 = {
+-            if  bar.selectedIndex == 3{
++            if  bar.selectedIndex == 2{
+                 DeeSetView.setAnimate(view: self.TB, orginW: UIwidth * 0.7, orginH: UIheight * 0.7, pointX: UIwidth / 2, pointY: UIheight / 2, width: UIwidth, height: UIheight, key: "myPer")
+             }
+         }
+diff --git a/Controller/Tabbar.swift b/Controller/Tabbar.swift
+index ca693ae..e85a65c 100755
+--- a/Controller/Tabbar.swift
++++ b/Controller/Tabbar.swift
+@@ -26,23 +26,23 @@ class Tabbar: UITabBarController {
+ 
+         self.tabbar.items?[0].image = UIImage.init(named: "米圈")?.withRenderingMode(.alwaysOriginal)
+         self.tabbar.items?[0].selectedImage = UIImage.init(named: "米圈选中")?.withRenderingMode(.alwaysOriginal)
+-        self.tabbar.items?[1].image = UIImage.init(named: "米聊")?.withRenderingMode(.alwaysOriginal)
+-        self.tabbar.items?[1].selectedImage = UIImage.init(named: "米聊选中")?.withRenderingMode(.alwaysOriginal)
+-        self.tabbar.items?[2].image = UIImage.init(named: "米秀")?.withRenderingMode(.alwaysOriginal)
+-        self.tabbar.items?[2].selectedImage = UIImage.init(named: "米秀选中")?.withRenderingMode(.alwaysOriginal)
+-        self.tabbar.items?[3].image = UIImage.init(named: "米粉")?.withRenderingMode(.alwaysOriginal)
+-        self.tabbar.items?[3].selectedImage = UIImage.init(named: "米粉选中")?.withRenderingMode(.alwaysOriginal)
++//        self.tabbar.items?[1].image = UIImage.init(named: "米聊")?.withRenderingMode(.alwaysOriginal)
++//        self.tabbar.items?[1].selectedImage = UIImage.init(named: "米聊选中")?.withRenderingMode(.alwaysOriginal)
++        self.tabbar.items?[1].image = UIImage.init(named: "米秀")?.withRenderingMode(.alwaysOriginal)
++        self.tabbar.items?[1].selectedImage = UIImage.init(named: "米秀选中")?.withRenderingMode(.alwaysOriginal)
++        self.tabbar.items?[2].image = UIImage.init(named: "米粉")?.withRenderingMode(.alwaysOriginal)
++        self.tabbar.items?[2].selectedImage = UIImage.init(named: "米粉选中")?.withRenderingMode(.alwaysOriginal)
+         
+         self.tabbar.items?[0].setTitleTextAttributes([NSForegroundColorAttributeName : selectColor], for: UIControlState.selected)
++//        self.tabbar.items?[1].setTitleTextAttributes([NSForegroundColorAttributeName : selectColor], for: UIControlState.selected)
+         self.tabbar.items?[1].setTitleTextAttributes([NSForegroundColorAttributeName : selectColor], for: UIControlState.selected)
+         self.tabbar.items?[2].setTitleTextAttributes([NSForegroundColorAttributeName : selectColor], for: UIControlState.selected)
+-        self.tabbar.items?[3].setTitleTextAttributes([NSForegroundColorAttributeName : selectColor], for: UIControlState.selected)
+ 
+         self.tabbar.items?[0].setTitleTextAttributes([NSForegroundColorAttributeName : color], for: UIControlState.normal)
++//        self.tabbar.items?[1].setTitleTextAttributes([NSForegroundColorAttributeName : color], for: UIControlState.normal)
+         self.tabbar.items?[1].setTitleTextAttributes([NSForegroundColorAttributeName : color], for: UIControlState.normal)
+         self.tabbar.items?[2].setTitleTextAttributes([NSForegroundColorAttributeName : color], for: UIControlState.normal)
+-        self.tabbar.items?[3].setTitleTextAttributes([NSForegroundColorAttributeName : color], for: UIControlState.normal)
+-        self.tabbar.items?[1].badgeValue = Locale.cast(str: "热")
++//        self.tabbar.items?[1].badgeValue = Locale.cast(str: "热")
+ 
+ 
+ 
+-- 
+2.8.1
+

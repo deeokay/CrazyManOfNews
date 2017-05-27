@@ -1,0 +1,6 @@
+framework module CRMediaPickerController {
+  umbrella header "CRMediaPickerController-umbrella.h"
+
+  export *
+  module * { export * }
+}

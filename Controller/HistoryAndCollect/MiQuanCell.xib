@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XibMiQuanCell" rowHeight="130" id="6DK-C2-VAO" customClass="MiQuanCell" customModule="AimiHealth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6DK-C2-VAO" id="DY9-ZO-vHa">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJ6-mZ-wXJ">
+                        <rect key="frame" x="2" y="2" width="140" height="95.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="gW0-yz-xzf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkw-vi-hoK">
+                        <rect key="frame" x="150" y="2" width="226" height="95.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jJ6-mZ-wXJ" firstAttribute="leading" secondItem="DY9-ZO-vHa" secondAttribute="leading" constant="2" id="35t-Zh-yT2"/>
+                    <constraint firstItem="Vkw-vi-hoK" firstAttribute="leading" secondItem="jJ6-mZ-wXJ" secondAttribute="trailing" constant="8" id="Alc-NI-vrc"/>
+                    <constraint firstAttribute="bottom" secondItem="Vkw-vi-hoK" secondAttribute="bottom" constant="2" id="M6o-vp-e3c"/>
+                    <constraint firstItem="Vkw-vi-hoK" firstAttribute="top" secondItem="DY9-ZO-vHa" secondAttribute="top" constant="2" id="bTu-t4-G8b"/>
+                    <constraint firstItem="jJ6-mZ-wXJ" firstAttribute="top" secondItem="DY9-ZO-vHa" secondAttribute="top" constant="2" id="d77-hB-b4o"/>
+                    <constraint firstAttribute="bottom" secondItem="jJ6-mZ-wXJ" secondAttribute="bottom" constant="2" id="sO8-mN-2EA"/>
+                    <constraint firstAttribute="trailing" secondItem="Vkw-vi-hoK" secondAttribute="trailing" constant="2" id="yHB-Pz-grf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectTitleLabel" destination="Vkw-vi-hoK" id="SDO-O5-7zz"/>
+                <outlet property="collectionImageView" destination="jJ6-mZ-wXJ" id="tT3-bI-PMs"/>
+            </connections>
+            <point key="canvasLocation" x="-80" y="43"/>
+        </tableViewCell>
+    </objects>
+</document>

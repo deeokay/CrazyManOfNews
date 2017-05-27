@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="AimiWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEt-Si-z0M">
+                                <rect key="frame" x="0.0" y="262" width="160" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="HxE-j6-yBI"/>
+                                </constraints>
+                                <state key="normal" title="换下一套">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPage:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="X15-jN-MQ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exf-wi-gFF">
+                                <rect key="frame" x="160" y="262" width="160" height="38"/>
+                                <state key="normal" title="进入应用">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="h9j-oJ-Mu4"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Fo-sT-kpJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="262"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="g2T-Fq-8vV"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="9uv-Qh-DXq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QEt-Si-z0M" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" multiplier="0.5" id="0sm-PV-8Ys"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="QEt-Si-z0M" secondAttribute="bottom" id="HiU-Qn-76c"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="exf-wi-gFF" secondAttribute="bottom" id="LFx-eU-udD"/>
+                            <constraint firstItem="exf-wi-gFF" firstAttribute="width" secondItem="QEt-Si-z0M" secondAttribute="width" id="QHf-CG-bUn"/>
+                            <constraint firstItem="exf-wi-gFF" firstAttribute="height" secondItem="QEt-Si-z0M" secondAttribute="height" id="YLm-tw-DaY"/>
+                            <constraint firstItem="4Fo-sT-kpJ" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="e74-S6-cbA"/>
+                            <constraint firstItem="QEt-Si-z0M" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="fzg-c9-die"/>
+                            <constraint firstAttribute="trailing" secondItem="exf-wi-gFF" secondAttribute="trailing" id="gbV-zb-JKq"/>
+                            <constraint firstItem="4Fo-sT-kpJ" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="mpt-QZ-bSP"/>
+                            <constraint firstAttribute="trailing" secondItem="4Fo-sT-kpJ" secondAttribute="trailing" id="uNB-3q-bng"/>
+                            <constraint firstItem="exf-wi-gFF" firstAttribute="top" secondItem="4Fo-sT-kpJ" secondAttribute="bottom" id="yM6-bT-NXa"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
+                    <connections>
+                        <outlet property="Lcon" destination="HiU-Qn-76c" id="s66-ff-aaf"/>
+                        <outlet property="Rcon" destination="LFx-eU-udD" id="pVF-Fz-9dL"/>
+                        <outlet property="TB" destination="4Fo-sT-kpJ" id="YXG-sc-5Z5"/>
+                        <outlet property="goToApp" destination="exf-wi-gFF" id="gqc-vr-K3l"/>
+                        <outlet property="nextPage" destination="QEt-Si-z0M" id="ZyY-9I-ywE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25.600000000000001" y="35.982008995502248"/>
+        </scene>
+    </scenes>
+</document>

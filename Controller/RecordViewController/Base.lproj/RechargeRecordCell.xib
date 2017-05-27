@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RechargeRecord" rowHeight="139" id="KGk-i7-Jjw" customClass="RechargeRecordCell" customModule="AimiHealth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="444" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh7-1A-D09">
+                        <rect key="frame" x="10" y="10" width="424" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9c-iq-c4k">
+                        <rect key="frame" x="10" y="41" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获得米币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-xF-Idk">
+                        <rect key="frame" x="10" y="72" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充值方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-Of-GtR">
+                        <rect key="frame" x="10" y="103" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZl-Oe-DCh">
+                        <rect key="frame" x="222" y="41" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeP-xM-pLT">
+                        <rect key="frame" x="222" y="72" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asb-p7-PSY">
+                        <rect key="frame" x="222" y="103" width="212" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Asb-p7-PSY" firstAttribute="width" secondItem="bTO-Of-GtR" secondAttribute="width" id="4TB-9a-zJR"/>
+                    <constraint firstItem="VZl-Oe-DCh" firstAttribute="leading" secondItem="k9c-iq-c4k" secondAttribute="trailing" id="7BF-E7-u5G"/>
+                    <constraint firstItem="EeP-xM-pLT" firstAttribute="top" secondItem="VZl-Oe-DCh" secondAttribute="bottom" constant="10" id="95N-io-QXQ"/>
+                    <constraint firstAttribute="trailing" secondItem="VZl-Oe-DCh" secondAttribute="trailing" constant="10" id="9xJ-9l-eBs"/>
+                    <constraint firstItem="VZl-Oe-DCh" firstAttribute="top" secondItem="vh7-1A-D09" secondAttribute="bottom" constant="10" id="CSQ-5e-en4"/>
+                    <constraint firstItem="EeP-xM-pLT" firstAttribute="leading" secondItem="Ivx-xF-Idk" secondAttribute="trailing" id="CqG-zB-OZa"/>
+                    <constraint firstItem="VZl-Oe-DCh" firstAttribute="width" secondItem="k9c-iq-c4k" secondAttribute="width" id="HcR-2I-3hM"/>
+                    <constraint firstItem="Ivx-xF-Idk" firstAttribute="top" secondItem="k9c-iq-c4k" secondAttribute="bottom" constant="10" id="Hcz-1d-46z"/>
+                    <constraint firstAttribute="trailing" secondItem="vh7-1A-D09" secondAttribute="trailing" constant="10" id="J3T-ct-ThD"/>
+                    <constraint firstItem="bTO-Of-GtR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Kp2-cR-s4n"/>
+                    <constraint firstItem="Asb-p7-PSY" firstAttribute="leading" secondItem="bTO-Of-GtR" secondAttribute="trailing" id="Ncv-ZB-GmJ"/>
+                    <constraint firstItem="Asb-p7-PSY" firstAttribute="top" secondItem="EeP-xM-pLT" secondAttribute="bottom" constant="10" id="Rue-kh-bB6"/>
+                    <constraint firstAttribute="trailing" secondItem="Asb-p7-PSY" secondAttribute="trailing" constant="10" id="ZYn-a8-i3T"/>
+                    <constraint firstItem="Ivx-xF-Idk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bgA-7m-9No"/>
+                    <constraint firstAttribute="trailing" secondItem="EeP-xM-pLT" secondAttribute="trailing" constant="10" id="ff2-54-RFY"/>
+                    <constraint firstItem="vh7-1A-D09" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lby-pZ-4WT"/>
+                    <constraint firstItem="EeP-xM-pLT" firstAttribute="width" secondItem="Ivx-xF-Idk" secondAttribute="width" id="nrc-Z7-wNZ"/>
+                    <constraint firstItem="k9c-iq-c4k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tgh-g7-rDL"/>
+                    <constraint firstItem="vh7-1A-D09" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vmX-s3-LJr"/>
+                    <constraint firstItem="bTO-Of-GtR" firstAttribute="top" secondItem="Ivx-xF-Idk" secondAttribute="bottom" constant="10" id="xhs-z7-Iau"/>
+                    <constraint firstItem="k9c-iq-c4k" firstAttribute="top" secondItem="vh7-1A-D09" secondAttribute="bottom" constant="10" id="z06-bl-TNW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="vh7-1A-D09" id="TIr-IX-pwP"/>
+                <outlet property="miCoinLabel" destination="EeP-xM-pLT" id="aO6-r8-SjJ"/>
+                <outlet property="moneyLabel" destination="VZl-Oe-DCh" id="qlB-Yo-45T"/>
+                <outlet property="rechargeWayLabel" destination="Asb-p7-PSY" id="Ncn-oZ-4Dk"/>
+            </connections>
+            <point key="canvasLocation" x="-102" y="34.5"/>
+        </tableViewCell>
+    </objects>
+</document>

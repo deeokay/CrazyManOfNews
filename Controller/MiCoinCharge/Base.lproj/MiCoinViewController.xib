@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiCoinViewController" customModule="AimiHealth" customModuleProvider="target">
+            <connections>
+                <outlet property="downScrollView" destination="b05-ks-cGZ" id="h3e-qR-IPD"/>
+                <outlet property="miCoinNumberlabel" destination="zF7-w5-JEu" id="yDA-6t-vYp"/>
+                <outlet property="sanjiaoImageView" destination="VrB-S4-OZU" id="Qa6-4t-xc9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yueLabel" destination="gIk-YB-Mlx" id="Br3-cY-il3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6W-vN-PA1">
+                    <rect key="frame" x="0.0" y="64" width="375" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账户余额(米币):" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIk-YB-Mlx">
+                            <rect key="frame" x="0.0" y="8" width="375" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF7-w5-JEu">
+                            <rect key="frame" x="0.0" y="34" width="375" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u98-oc-Pa1">
+                            <rect key="frame" x="35" y="81" width="122" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="BMx-7L-hsu"/>
+                                <constraint firstAttribute="width" constant="122" id="Mjb-72-7d1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-13" minY="20" maxX="25" maxY="-27"/>
+                            <inset key="imageEdgeInsets" minX="37" minY="-20" maxX="-30" maxY="8"/>
+                            <state key="normal" title="获得米币" image="chongmibi"/>
+                            <connections>
+                                <action selector="useMiBi:" destination="-1" eventType="touchUpInside" id="kBA-gK-aTf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BD-yD-gzY">
+                            <rect key="frame" x="218" y="81" width="122" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="gnl-nM-4Pt"/>
+                                <constraint firstAttribute="width" constant="122" id="w1Q-UE-w7A"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-13" minY="20" maxX="25" maxY="-27"/>
+                            <inset key="imageEdgeInsets" minX="37" minY="-20" maxX="-30" maxY="8"/>
+                            <state key="normal" title="使用米币" image="task"/>
+                            <connections>
+                                <action selector="getMiBI:" destination="-1" eventType="touchUpInside" id="q9K-NS-Znr"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三角" translatesAutoresizingMaskIntoConstraints="NO" id="VrB-S4-OZU">
+                            <rect key="frame" x="82" y="164" width="29" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="NoK-Js-Lrc"/>
+                                <constraint firstAttribute="width" constant="29" id="ncV-K0-h2L"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.16470588235294117" green="0.65490196078431373" blue="0.95686274509803915" alpha="0.8983839897260274" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="VrB-S4-OZU" firstAttribute="leading" secondItem="N6W-vN-PA1" secondAttribute="leading" constant="82" id="5Vf-xe-kdc"/>
+                        <constraint firstAttribute="trailing" secondItem="4BD-yD-gzY" secondAttribute="trailing" constant="35" id="7Y8-Sr-1cg"/>
+                        <constraint firstItem="zF7-w5-JEu" firstAttribute="top" secondItem="gIk-YB-Mlx" secondAttribute="bottom" constant="8" id="AOG-kI-5HN"/>
+                        <constraint firstItem="zF7-w5-JEu" firstAttribute="leading" secondItem="N6W-vN-PA1" secondAttribute="leading" id="BFj-d1-VEs"/>
+                        <constraint firstAttribute="bottom" secondItem="VrB-S4-OZU" secondAttribute="bottom" id="NLz-rF-EmX"/>
+                        <constraint firstAttribute="height" constant="180" id="PVm-Hu-v9b"/>
+                        <constraint firstItem="u98-oc-Pa1" firstAttribute="leading" secondItem="N6W-vN-PA1" secondAttribute="leading" constant="35" id="TW6-g8-JaV"/>
+                        <constraint firstItem="4BD-yD-gzY" firstAttribute="top" secondItem="zF7-w5-JEu" secondAttribute="bottom" constant="18" id="Xc8-iJ-OSd"/>
+                        <constraint firstAttribute="trailing" secondItem="gIk-YB-Mlx" secondAttribute="trailing" id="dS6-bJ-6fb"/>
+                        <constraint firstItem="u98-oc-Pa1" firstAttribute="top" secondItem="zF7-w5-JEu" secondAttribute="bottom" constant="18" id="fxc-1C-n2y"/>
+                        <constraint firstItem="gIk-YB-Mlx" firstAttribute="leading" secondItem="N6W-vN-PA1" secondAttribute="leading" id="lms-mf-PFu"/>
+                        <constraint firstItem="gIk-YB-Mlx" firstAttribute="top" secondItem="N6W-vN-PA1" secondAttribute="top" constant="8" id="xvo-j3-I6o"/>
+                        <constraint firstAttribute="trailing" secondItem="zF7-w5-JEu" secondAttribute="trailing" id="zi0-XQ-yTt"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b05-ks-cGZ">
+                    <rect key="frame" x="0.0" y="244" width="375" height="423"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vHv-LP-GXM"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="N6W-vN-PA1" secondAttribute="trailing" id="A2h-8i-1cH"/>
+                <constraint firstAttribute="bottom" secondItem="b05-ks-cGZ" secondAttribute="bottom" id="ToH-1f-y9U"/>
+                <constraint firstItem="b05-ks-cGZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="URc-1m-y9s"/>
+                <constraint firstItem="N6W-vN-PA1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y7w-Td-fuA"/>
+                <constraint firstAttribute="trailing" secondItem="b05-ks-cGZ" secondAttribute="trailing" id="lGQ-Sf-tsp"/>
+                <constraint firstItem="b05-ks-cGZ" firstAttribute="top" secondItem="N6W-vN-PA1" secondAttribute="bottom" id="lLR-Iw-Kf4"/>
+                <constraint firstItem="N6W-vN-PA1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="mii-cA-4GH"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chongmibi" width="37" height="37"/>
+        <image name="task" width="37" height="37"/>
+        <image name="三角" width="58" height="32"/>
+    </resources>
+</document>

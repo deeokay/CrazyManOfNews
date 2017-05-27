@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiXiuViewController" customModule="Aimi_V1_1" customModuleProvider="target">
+            <connections>
+                <outlet property="checkBoxImageView" destination="BGf-WP-A0a" id="1V9-E0-VvR"/>
+                <outlet property="middleButton" destination="vdw-BK-uFc" id="tUf-Vm-qdm"/>
+                <outlet property="mixiuCollectionView" destination="qOz-TF-qS5" id="gyY-rD-VEL"/>
+                <outlet property="rightButton" destination="Tqz-la-87x" id="FZg-Fe-JN0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qOz-TF-qS5">
+                    <rect key="frame" x="0.0" y="96" width="375" height="527"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="4" id="fj1-hL-GLF">
+                        <size key="itemSize" width="120" height="120"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="2" maxX="10" maxY="8"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-BK-uFc">
+                    <rect key="frame" x="0.0" y="623" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="全 选"/>
+                    <connections>
+                        <action selector="middleAction:" destination="-1" eventType="touchUpInside" id="I34-AT-m4d"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqz-la-87x">
+                    <rect key="frame" x="187.5" y="623" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="删 除"/>
+                    <connections>
+                        <action selector="rightAction:" destination="-1" eventType="touchUpInside" id="R2V-0F-U42"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="用户协议2" translatesAutoresizingMaskIntoConstraints="NO" id="BGf-WP-A0a">
+                    <rect key="frame" x="20" y="635" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Mfq-wm-jiK"/>
+                        <constraint firstAttribute="width" constant="20" id="lc0-aP-5YN"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tqz-la-87x" firstAttribute="leading" secondItem="vdw-BK-uFc" secondAttribute="trailing" id="0Wh-Y4-JWQ"/>
+                <constraint firstAttribute="trailing" secondItem="Tqz-la-87x" secondAttribute="trailing" id="2lv-Dh-8CU"/>
+                <constraint firstItem="vdw-BK-uFc" firstAttribute="top" secondItem="qOz-TF-qS5" secondAttribute="bottom" id="41B-20-cjZ"/>
+                <constraint firstItem="BGf-WP-A0a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="66X-TS-dIt"/>
+                <constraint firstAttribute="bottom" secondItem="qOz-TF-qS5" secondAttribute="bottom" constant="44" id="8es-KV-JmJ"/>
+                <constraint firstItem="Tqz-la-87x" firstAttribute="top" secondItem="qOz-TF-qS5" secondAttribute="bottom" id="BAT-PD-f5Q"/>
+                <constraint firstItem="qOz-TF-qS5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BPp-Wf-iFJ"/>
+                <constraint firstItem="Tqz-la-87x" firstAttribute="width" secondItem="vdw-BK-uFc" secondAttribute="width" id="JEQ-qJ-RXX"/>
+                <constraint firstItem="vdw-BK-uFc" firstAttribute="top" secondItem="qOz-TF-qS5" secondAttribute="bottom" id="Tse-DP-sOU"/>
+                <constraint firstAttribute="bottom" secondItem="BGf-WP-A0a" secondAttribute="bottom" constant="12" id="ZOE-EG-yHx"/>
+                <constraint firstItem="vdw-BK-uFc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eEt-at-pkU"/>
+                <constraint firstItem="Tqz-la-87x" firstAttribute="leading" secondItem="vdw-BK-uFc" secondAttribute="trailing" id="eNf-aO-Q1x"/>
+                <constraint firstAttribute="bottom" secondItem="vdw-BK-uFc" secondAttribute="bottom" id="fQg-05-BuU"/>
+                <constraint firstItem="qOz-TF-qS5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="96" id="iD8-3I-ZyN"/>
+                <constraint firstAttribute="bottom" secondItem="vdw-BK-uFc" secondAttribute="bottom" id="rKI-28-S6N"/>
+                <constraint firstAttribute="bottom" secondItem="Tqz-la-87x" secondAttribute="bottom" id="wOi-TK-bOh"/>
+                <constraint firstAttribute="trailing" secondItem="qOz-TF-qS5" secondAttribute="trailing" id="xMf-lN-Dt3"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="用户协议2" width="16" height="16"/>
+    </resources>
+</document>

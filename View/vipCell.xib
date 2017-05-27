@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="vipCell" id="KGk-i7-Jjw" customClass="vipCell" customModule="AimiHealth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usN-Kg-Dbj">
+                        <rect key="frame" x="8" y="0.0" width="101.5" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-rM-Upd">
+                        <rect key="frame" x="109.5" y="0.0" width="101" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrJ-WU-XwZ">
+                        <rect key="frame" x="210.5" y="4" width="101.5" height="35.5"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="topUpVipClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mht-sE-wfM"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="usN-Kg-Dbj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="12g-Iq-CV6"/>
+                    <constraint firstAttribute="bottom" secondItem="hrJ-WU-XwZ" secondAttribute="bottom" constant="4" id="1Fn-Z0-enr"/>
+                    <constraint firstAttribute="bottom" secondItem="usN-Kg-Dbj" secondAttribute="bottom" constant="0.5" id="66j-NF-wjY"/>
+                    <constraint firstItem="hrJ-WU-XwZ" firstAttribute="width" secondItem="usN-Kg-Dbj" secondAttribute="width" id="6XJ-Yr-Vzi"/>
+                    <constraint firstAttribute="bottom" secondItem="OWU-rM-Upd" secondAttribute="bottom" constant="0.5" id="8JN-1F-3Mz"/>
+                    <constraint firstItem="OWU-rM-Upd" firstAttribute="width" secondItem="usN-Kg-Dbj" secondAttribute="width" id="A1d-EA-RUN"/>
+                    <constraint firstItem="OWU-rM-Upd" firstAttribute="leading" secondItem="usN-Kg-Dbj" secondAttribute="trailing" id="N6J-Kb-wsV"/>
+                    <constraint firstItem="OWU-rM-Upd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="S5l-ck-S8f"/>
+                    <constraint firstItem="hrJ-WU-XwZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Yff-Bk-A0h"/>
+                    <constraint firstItem="OWU-rM-Upd" firstAttribute="leading" secondItem="usN-Kg-Dbj" secondAttribute="trailing" id="YjW-MP-h9p"/>
+                    <constraint firstItem="usN-Kg-Dbj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="bPR-ty-CCf"/>
+                    <constraint firstItem="hrJ-WU-XwZ" firstAttribute="leading" secondItem="OWU-rM-Upd" secondAttribute="trailing" id="bzN-Q3-YdC"/>
+                    <constraint firstItem="hrJ-WU-XwZ" firstAttribute="leading" secondItem="OWU-rM-Upd" secondAttribute="trailing" id="jOm-lI-gxg"/>
+                    <constraint firstAttribute="trailing" secondItem="hrJ-WU-XwZ" secondAttribute="trailing" constant="8" id="xbW-e7-qnF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="enjoyDays" destination="OWU-rM-Upd" id="4to-Zh-FYH"/>
+                <outlet property="topUpVipBtn" destination="hrJ-WU-XwZ" id="zjq-k4-Rdr"/>
+                <outlet property="vipLevel" destination="usN-Kg-Dbj" id="pWd-6V-vKG"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.0" contentMode="scaleToFill" id="iN0-l3-epB" customClass="AdjustView" customModule="Aimi_V1_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="126"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeK-9Y-0Pj">
+                    <rect key="frame" x="0.0" y="82" width="374" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="PgQ-6x-whe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="D9d-oh-1zh"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnD-C3-wLe">
+                    <rect key="frame" x="20" y="0.0" width="334" height="82"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress" translatesAutoresizingMaskIntoConstraints="NO" id="NA9-9Z-rLw">
+                            <rect key="frame" x="20" y="26" width="304" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="BXa-8E-8NC"/>
+                            </constraints>
+                        </imageView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9W-TI-o5H">
+                            <rect key="frame" x="18" y="44" width="303" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="5tj-lh-otm"/>
+                            </constraints>
+                            <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="changeTextSize:" destination="iN0-l3-epB" eventType="valueChanged" id="zrR-wi-26L"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="w9W-TI-o5H" secondAttribute="trailing" constant="15" id="40R-I7-N5y"/>
+                        <constraint firstItem="NA9-9Z-rLw" firstAttribute="leading" secondItem="SnD-C3-wLe" secondAttribute="leading" constant="20" id="ZBh-yC-uhG"/>
+                        <constraint firstItem="w9W-TI-o5H" firstAttribute="leading" secondItem="SnD-C3-wLe" secondAttribute="leading" constant="20" id="buc-4r-667"/>
+                        <constraint firstAttribute="trailing" secondItem="NA9-9Z-rLw" secondAttribute="trailing" constant="10" id="qgM-ks-RiH"/>
+                        <constraint firstItem="NA9-9Z-rLw" firstAttribute="centerY" secondItem="SnD-C3-wLe" secondAttribute="centerY" id="uAa-bB-yOW"/>
+                        <constraint firstItem="w9W-TI-o5H" firstAttribute="centerY" secondItem="SnD-C3-wLe" secondAttribute="centerY" constant="18" id="zBa-lm-ySF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SnD-C3-wLe" secondAttribute="trailing" constant="20" id="4RQ-It-udD"/>
+                <constraint firstItem="SnD-C3-wLe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="JWs-i4-00S"/>
+                <constraint firstAttribute="trailing" secondItem="VeK-9Y-0Pj" secondAttribute="trailing" id="KLo-2B-HkR"/>
+                <constraint firstItem="VeK-9Y-0Pj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MfR-By-Fs1"/>
+                <constraint firstAttribute="bottom" secondItem="VeK-9Y-0Pj" secondAttribute="bottom" id="Tni-bX-Kpu"/>
+                <constraint firstItem="VeK-9Y-0Pj" firstAttribute="top" secondItem="SnD-C3-wLe" secondAttribute="bottom" id="Uvb-B8-lYA"/>
+                <constraint firstItem="SnD-C3-wLe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nVu-nU-adh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="progress" destination="w9W-TI-o5H" id="3va-Dv-mfh"/>
+            </connections>
+            <point key="canvasLocation" x="-7" y="-101"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="progress" width="288" height="28"/>
+    </resources>
+</document>

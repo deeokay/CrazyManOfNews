@@ -1,0 +1,1530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32852CA11EBD7A03003D29BA /* 爱米健康用户协议.doc in Resources */ = {isa = PBXBuildFile; fileRef = 32852BB61EBD7A02003D29BA /* 爱米健康用户协议.doc */; };
+		32852CA21EBD7A03003D29BA /* 播放按钮.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32852BB71EBD7A02003D29BA /* 播放按钮.gif */; };
+		32852CA31EBD7A03003D29BA /* AimiHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32852BBB1EBD7A02003D29BA /* AimiHealth.xcdatamodeld */; };
+		32852CA41EBD7A03003D29BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BBD1EBD7A02003D29BA /* AppDelegate.swift */; };
+		32852CA51EBD7A03003D29BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32852BBE1EBD7A02003D29BA /* Assets.xcassets */; };
+		32852CA61EBD7A03003D29BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32852BBF1EBD7A02003D29BA /* Info.plist */; };
+		32852CA71EBD7A03003D29BA /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32852BC01EBD7A02003D29BA /* Support.storyboard */; };
+		32852CB11EBD7A03003D29BA /* adjustTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BD31EBD7A02003D29BA /* adjustTextCell.swift */; };
+		32852CB21EBD7A03003D29BA /* AgreementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BD41EBD7A02003D29BA /* AgreementController.swift */; };
+		32852CB31EBD7A03003D29BA /* AIMI_Introduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BD51EBD7A02003D29BA /* AIMI_Introduce.swift */; };
+		32852CB41EBD7A03003D29BA /* CommentMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BD71EBD7A02003D29BA /* CommentMeViewController.swift */; };
+		32852CB51EBD7A03003D29BA /* CommentMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BD81EBD7A02003D29BA /* CommentMeViewController.xib */; };
+		32852CB61EBD7A03003D29BA /* commentMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BDA1EBD7A02003D29BA /* commentMeTableViewCell.swift */; };
+		32852CB71EBD7A03003D29BA /* commentMeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BDB1EBD7A02003D29BA /* commentMeTableViewCell.xib */; };
+		32852CB81EBD7A03003D29BA /* myCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BDC1EBD7A02003D29BA /* myCommentCell.swift */; };
+		32852CB91EBD7A03003D29BA /* myCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BDD1EBD7A02003D29BA /* myCommentCell.xib */; };
+		32852CBA1EBD7A03003D29BA /* StarMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BDE1EBD7A02003D29BA /* StarMeTableViewCell.swift */; };
+		32852CBB1EBD7A03003D29BA /* StarMeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BDF1EBD7A02003D29BA /* StarMeTableViewCell.xib */; };
+		32852CBC1EBD7A03003D29BA /* myCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE01EBD7A02003D29BA /* myCommentViewController.swift */; };
+		32852CBD1EBD7A03003D29BA /* myCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BE11EBD7A02003D29BA /* myCommentViewController.xib */; };
+		32852CBE1EBD7A03003D29BA /* StarMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE21EBD7A02003D29BA /* StarMeViewController.swift */; };
+		32852CBF1EBD7A03003D29BA /* StarMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BE31EBD7A02003D29BA /* StarMeViewController.xib */; };
+		32852CC01EBD7A03003D29BA /* CommentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE41EBD7A02003D29BA /* CommentDetails.swift */; };
+		32852CC11EBD7A03003D29BA /* ContentShieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE51EBD7A02003D29BA /* ContentShieldCell.swift */; };
+		32852CC21EBD7A03003D29BA /* ContentShieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BE61EBD7A02003D29BA /* ContentShieldCell.xib */; };
+		32852CC31EBD7A03003D29BA /* ContentShieldListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE71EBD7A02003D29BA /* ContentShieldListController.swift */; };
+		32852CC41EBD7A03003D29BA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE81EBD7A02003D29BA /* CustomButton.swift */; };
+		32852CC51EBD7A03003D29BA /* CustomNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BE91EBD7A02003D29BA /* CustomNav.swift */; };
+		32852CC61EBD7A03003D29BA /* EditMiTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BEA1EBD7A02003D29BA /* EditMiTalk.swift */; };
+		32852CC71EBD7A03003D29BA /* Function1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BEB1EBD7A02003D29BA /* Function1.swift */; };
+		32852CC81EBD7A03003D29BA /* Function2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BEC1EBD7A02003D29BA /* Function2.swift */; };
+		32852CC91EBD7A03003D29BA /* HideTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BED1EBD7A02003D29BA /* HideTabbarController.swift */; };
+		32852CCA1EBD7A03003D29BA /* MiXiuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BEF1EBD7A02003D29BA /* MiXiuViewController.xib */; };
+		32852CCB1EBD7A03003D29BA /* MiLiaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BF11EBD7A02003D29BA /* MiLiaoCell.swift */; };
+		32852CCC1EBD7A03003D29BA /* MiLiaoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BF21EBD7A02003D29BA /* MiLiaoCell.xib */; };
+		32852CCD1EBD7A03003D29BA /* MiLiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BF31EBD7A02003D29BA /* MiLiaoViewController.swift */; };
+		32852CCE1EBD7A03003D29BA /* MiLiaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BF41EBD7A02003D29BA /* MiLiaoViewController.xib */; };
+		32852CCF1EBD7A03003D29BA /* MiQuanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BF51EBD7A02003D29BA /* MiQuanCell.swift */; };
+		32852CD01EBD7A03003D29BA /* MiQuanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BF61EBD7A02003D29BA /* MiQuanCell.xib */; };
+		32852CD11EBD7A03003D29BA /* MiQuanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BF71EBD7A02003D29BA /* MiQuanViewController.swift */; };
+		32852CD21EBD7A03003D29BA /* MiXiuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BF81EBD7A02003D29BA /* MiXiuCell.swift */; };
+		32852CD31EBD7A03003D29BA /* MiXiuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BF91EBD7A02003D29BA /* MiXiuCell.xib */; };
+		32852CD41EBD7A03003D29BA /* MiXiuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BFA1EBD7A02003D29BA /* MiXiuViewController.swift */; };
+		32852CD51EBD7A03003D29BA /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BFB1EBD7A02003D29BA /* HistoryVC.swift */; };
+		32852CD61EBD7A03003D29BA /* HSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BFC1EBD7A02003D29BA /* HSController.swift */; };
+		32852CD71EBD7A03003D29BA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852BFD1EBD7A02003D29BA /* LoginController.swift */; };
+		32852CD81EBD7A03003D29BA /* ChangePhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852BFF1EBD7A02003D29BA /* ChangePhotosViewController.xib */; };
+		32852CD91EBD7A03003D29BA /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C011EBD7A02003D29BA /* RegisterViewController.xib */; };
+		32852CDA1EBD7A03003D29BA /* ChangePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C031EBD7A02003D29BA /* ChangePhotosViewController.swift */; };
+		32852CDB1EBD7A03003D29BA /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C041EBD7A02003D29BA /* PhotoCollectionViewCell.swift */; };
+		32852CDC1EBD7A03003D29BA /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C051EBD7A03003D29BA /* PhotoCollectionViewCell.xib */; };
+		32852CDD1EBD7A03003D29BA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C061EBD7A03003D29BA /* RegisterViewController.swift */; };
+		32852CDE1EBD7A03003D29BA /* MiCoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C081EBD7A03003D29BA /* MiCoinViewController.xib */; };
+		32852CDF1EBD7A03003D29BA /* MiCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C0A1EBD7A03003D29BA /* MiCoinViewController.swift */; };
+		32852CE01EBD7A03003D29BA /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C0B1EBD7A03003D29BA /* TasksViewController.swift */; };
+		32852CE11EBD7A03003D29BA /* TasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C0C1EBD7A03003D29BA /* TasksViewController.xib */; };
+		32852CE21EBD7A03003D29BA /* Miquan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C0D1EBD7A03003D29BA /* Miquan.swift */; };
+		32852CE31EBD7A03003D29BA /* MiquanDetail_SupuerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C0E1EBD7A03003D29BA /* MiquanDetail_SupuerVC.swift */; };
+		32852CE41EBD7A03003D29BA /* MiquanDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C0F1EBD7A03003D29BA /* MiquanDetails.swift */; };
+		32852CE51EBD7A03003D29BA /* MiquanDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C101EBD7A03003D29BA /* MiquanDetailsController.swift */; };
+		32852CE61EBD7A03003D29BA /* Mishow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C111EBD7A03003D29BA /* Mishow.swift */; };
+		32852CE71EBD7A03003D29BA /* MiTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C121EBD7A03003D29BA /* MiTalk.swift */; };
+		32852CE81EBD7A03003D29BA /* MiTalkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C131EBD7A03003D29BA /* MiTalkDetails.swift */; };
+		32852CE91EBD7A03003D29BA /* ChangePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C161EBD7A03003D29BA /* ChangePasswordController.xib */; };
+		32852CEA1EBD7A03003D29BA /* MiBaoChangePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C181EBD7A03003D29BA /* MiBaoChangePasswordController.xib */; };
+		32852CEB1EBD7A03003D29BA /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C1A1EBD7A03003D29BA /* ChangePasswordController.swift */; };
+		32852CEC1EBD7A03003D29BA /* MiBaoChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C1B1EBD7A03003D29BA /* MiBaoChangePasswordController.swift */; };
+		32852CED1EBD7A03003D29BA /* MyUplaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C1C1EBD7A03003D29BA /* MyUplaodCell.swift */; };
+		32852CEE1EBD7A03003D29BA /* MyUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C1D1EBD7A03003D29BA /* MyUpload.swift */; };
+		32852CEF1EBD7A03003D29BA /* MyUploadDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C1E1EBD7A03003D29BA /* MyUploadDetail.swift */; };
+		32852CF01EBD7A03003D29BA /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C1F1EBD7A03003D29BA /* PayViewController.swift */; };
+		32852CF11EBD7A03003D29BA /* PersonalPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C201EBD7A03003D29BA /* PersonalPreference.swift */; };
+		32852CF21EBD7A03003D29BA /* PicAndVideoCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C211EBD7A03003D29BA /* PicAndVideoCommentView.swift */; };
+		32852CF31EBD7A03003D29BA /* PicDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C221EBD7A03003D29BA /* PicDetail.swift */; };
+		32852CF41EBD7A03003D29BA /* PicDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C231EBD7A03003D29BA /* PicDetailCell.swift */; };
+		32852CF51EBD7A03003D29BA /* RechargeMiCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C241EBD7A03003D29BA /* RechargeMiCoins.swift */; };
+		32852CF61EBD7A03003D29BA /* RechargeRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C261EBD7A03003D29BA /* RechargeRecordCell.xib */; };
+		32852CF71EBD7A03003D29BA /* RechargeRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C281EBD7A03003D29BA /* RechargeRecordCell.swift */; };
+		32852CF81EBD7A03003D29BA /* rechargeRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C291EBD7A03003D29BA /* rechargeRecordController.swift */; };
+		32852CF91EBD7A03003D29BA /* rechargeRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C2A1EBD7A03003D29BA /* rechargeRecordController.xib */; };
+		32852CFA1EBD7A03003D29BA /* ConfigMiBaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C2C1EBD7A03003D29BA /* ConfigMiBaoViewController.xib */; };
+		32852CFB1EBD7A03003D29BA /* ConfigMiBaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C2E1EBD7A03003D29BA /* ConfigMiBaoViewController.swift */; };
+		32852CFC1EBD7A03003D29BA /* SeleDelParentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C2F1EBD7A03003D29BA /* SeleDelParentController.swift */; };
+		32852CFD1EBD7A03003D29BA /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C311EBD7A03003D29BA /* SettingTableViewController.swift */; };
+		32852CFE1EBD7A03003D29BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C321EBD7A03003D29BA /* SettingViewController.swift */; };
+		32852CFF1EBD7A03003D29BA /* ShowPic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C331EBD7A03003D29BA /* ShowPic.swift */; };
+		32852D001EBD7A03003D29BA /* SNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C341EBD7A03003D29BA /* SNController.swift */; };
+		32852D011EBD7A03003D29BA /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C351EBD7A03003D29BA /* Tabbar.swift */; };
+		32852D021EBD7A03003D29BA /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C361EBD7A03003D29BA /* testVC.swift */; };
+		32852D031EBD7A03003D29BA /* TopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C371EBD7A03003D29BA /* TopUpVC.swift */; };
+		32852D041EBD7A03003D29BA /* uploadPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C381EBD7A03003D29BA /* uploadPicCell.swift */; };
+		32852D051EBD7A03003D29BA /* UploadVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C391EBD7A03003D29BA /* UploadVideo.swift */; };
+		32852D061EBD7A03003D29BA /* UserAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C3A1EBD7A03003D29BA /* UserAgreement.swift */; };
+		32852D071EBD7A03003D29BA /* userFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C3B1EBD7A03003D29BA /* userFeedback.swift */; };
+		32852D081EBD7A03003D29BA /* UserShieldListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C3C1EBD7A03003D29BA /* UserShieldListController.swift */; };
+		32852D091EBD7A03003D29BA /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C3D1EBD7A03003D29BA /* VideoDetail.swift */; };
+		32852D0A1EBD7A03003D29BA /* launcher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32852C3E1EBD7A03003D29BA /* launcher.jpg */; };
+		32852D0B1EBD7A03003D29BA /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32852C461EBD7A03003D29BA /* libGDTMobSDK.a */; };
+		32852D0C1EBD7A03003D29BA /* AimiFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C471EBD7A03003D29BA /* AimiFunctions.swift */; };
+		32852D0D1EBD7A03003D29BA /* DeeShareMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C481EBD7A03003D29BA /* DeeShareMenu.swift */; };
+		32852D0E1EBD7A03003D29BA /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C4B1EBD7A03003D29BA /* IQNSArray+Sort.swift */; };
+		32852D0F1EBD7A03003D29BA /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C4C1EBD7A03003D29BA /* IQUIScrollView+Additions.swift */; };
+		32852D101EBD7A03003D29BA /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C4D1EBD7A03003D29BA /* IQUITextFieldView+Additions.swift */; };
+		32852D111EBD7A03003D29BA /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C4E1EBD7A03003D29BA /* IQUIView+Hierarchy.swift */; };
+		32852D121EBD7A03003D29BA /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C4F1EBD7A03003D29BA /* IQUIViewController+Additions.swift */; };
+		32852D131EBD7A03003D29BA /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C501EBD7A03003D29BA /* IQUIWindow+Hierarchy.swift */; };
+		32852D141EBD7A03003D29BA /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C521EBD7A03003D29BA /* IQKeyboardManagerConstants.swift */; };
+		32852D151EBD7A03003D29BA /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C531EBD7A03003D29BA /* IQKeyboardManagerConstantsInternal.swift */; };
+		32852D161EBD7A03003D29BA /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C541EBD7A03003D29BA /* IQKeyboardManager.swift */; };
+		32852D171EBD7A03003D29BA /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C561EBD7A03003D29BA /* IQKeyboardReturnKeyHandler.swift */; };
+		32852D181EBD7A03003D29BA /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C581EBD7A03003D29BA /* IQTextView.swift */; };
+		32852D191EBD7A03003D29BA /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C5A1EBD7A03003D29BA /* IQBarButtonItem.swift */; };
+		32852D1A1EBD7A03003D29BA /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C5B1EBD7A03003D29BA /* IQPreviousNextView.swift */; };
+		32852D1B1EBD7A03003D29BA /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C5C1EBD7A03003D29BA /* IQTitleBarButtonItem.swift */; };
+		32852D1C1EBD7A03003D29BA /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C5D1EBD7A03003D29BA /* IQToolbar.swift */; };
+		32852D1D1EBD7A03003D29BA /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C5E1EBD7A03003D29BA /* IQUIView+IQKeyboardToolbar.swift */; };
+		32852D1E1EBD7A03003D29BA /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32852C601EBD7A03003D29BA /* IQKeyboardManager.bundle */; };
+		32852D1F1EBD7A03003D29BA /* MyMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C611EBD7A03003D29BA /* MyMethods.swift */; };
+		32852D201EBD7A03003D29BA /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C621EBD7A03003D29BA /* Time.swift */; };
+		32852D211EBD7A03003D29BA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C631EBD7A03003D29BA /* UIView+Extension.swift */; };
+		32852D221EBD7A03003D29BA /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C641EBD7A03003D29BA /* UIViewController+HUD.swift */; };
+		32852D251EBD7A03003D29BA /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C681EBD7A03003D29BA /* ListData.swift */; };
+		32852D261EBD7A03003D29BA /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C691EBD7A03003D29BA /* MediaModel.swift */; };
+		32852D271EBD7A03003D29BA /* NSString+data.m in Sources */ = {isa = PBXBuildFile; fileRef = 32852C6B1EBD7A03003D29BA /* NSString+data.m */; };
+		32852D281EBD7A03003D29BA /* play.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32852C6C1EBD7A03003D29BA /* play.gif */; };
+		32852D291EBD7A03003D29BA /* AdjustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C6F1EBD7A03003D29BA /* AdjustView.swift */; };
+		32852D2A1EBD7A03003D29BA /* AdjustView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C701EBD7A03003D29BA /* AdjustView.xib */; };
+		32852D2B1EBD7A03003D29BA /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C711EBD7A03003D29BA /* Audio.swift */; };
+		32852D2C1EBD7A03003D29BA /* Audio.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C721EBD7A03003D29BA /* Audio.xib */; };
+		32852D2D1EBD7A03003D29BA /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C731EBD7A03003D29BA /* BottomView.swift */; };
+		32852D2E1EBD7A03003D29BA /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C741EBD7A03003D29BA /* BottomView.xib */; };
+		32852D2F1EBD7A03003D29BA /* CC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C751EBD7A03003D29BA /* CC.swift */; };
+		32852D301EBD7A03003D29BA /* CC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C761EBD7A03003D29BA /* CC.xib */; };
+		32852D311EBD7A03003D29BA /* CustomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C771EBD7A03003D29BA /* CustomMenu.swift */; };
+		32852D321EBD7A03003D29BA /* CustomMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C781EBD7A03003D29BA /* CustomMenu.xib */; };
+		32852D331EBD7A03003D29BA /* CustomMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C791EBD7A03003D29BA /* CustomMenuCell.swift */; };
+		32852D341EBD7A03003D29BA /* CustomMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C7A1EBD7A03003D29BA /* CustomMenuCell.xib */; };
+		32852D351EBD7A03003D29BA /* FourBtnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C7B1EBD7A03003D29BA /* FourBtnCell.swift */; };
+		32852D361EBD7A03003D29BA /* GDTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C7C1EBD7A03003D29BA /* GDTCell.swift */; };
+		32852D371EBD7A03003D29BA /* GDTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C7D1EBD7A03003D29BA /* GDTCell.xib */; };
+		32852D381EBD7A03003D29BA /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C7E1EBD7A03003D29BA /* HistoryCell.swift */; };
+		32852D391EBD7A03003D29BA /* LeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C7F1EBD7A03003D29BA /* LeftCell.swift */; };
+		32852D3A1EBD7A03003D29BA /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C801EBD7A03003D29BA /* LeftCell.xib */; };
+		32852D3B1EBD7A03003D29BA /* MiquanS2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C811EBD7A03003D29BA /* MiquanS2.swift */; };
+		32852D3C1EBD7A03003D29BA /* MiquanS2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C821EBD7A03003D29BA /* MiquanS2.xib */; };
+		32852D3D1EBD7A03003D29BA /* MiquanS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C831EBD7A03003D29BA /* MiquanS3.swift */; };
+		32852D3E1EBD7A03003D29BA /* MiquanS3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C841EBD7A03003D29BA /* MiquanS3.xib */; };
+		32852D3F1EBD7A03003D29BA /* MiquanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C851EBD7A03003D29BA /* MiquanTableViewCell.swift */; };
+		32852D401EBD7A03003D29BA /* MiquanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C861EBD7A03003D29BA /* MiquanTableViewCell.xib */; };
+		32852D411EBD7A03003D29BA /* MiTalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C871EBD7A03003D29BA /* MiTalkCell.swift */; };
+		32852D421EBD7A03003D29BA /* MiTalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C881EBD7A03003D29BA /* MiTalkCell.xib */; };
+		32852D431EBD7A03003D29BA /* MiTalkMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C891EBD7A03003D29BA /* MiTalkMenuCell.swift */; };
+		32852D441EBD7A03003D29BA /* MiTalkMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C8A1EBD7A03003D29BA /* MiTalkMenuCell.xib */; };
+		32852D451EBD7A03003D29BA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C8B1EBD7A03003D29BA /* Player.swift */; };
+		32852D461EBD7A03003D29BA /* Player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C8C1EBD7A03003D29BA /* Player.xib */; };
+		32852D471EBD7A03003D29BA /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C8D1EBD7A03003D29BA /* Report.swift */; };
+		32852D481EBD7A03003D29BA /* Report.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C8E1EBD7A03003D29BA /* Report.xib */; };
+		32852D491EBD7A03003D29BA /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C8F1EBD7A03003D29BA /* ReportCell.swift */; };
+		32852D4A1EBD7A03003D29BA /* ReportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C901EBD7A03003D29BA /* ReportCell.xib */; };
+		32852D4B1EBD7A03003D29BA /* RightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C911EBD7A03003D29BA /* RightCell.swift */; };
+		32852D4C1EBD7A03003D29BA /* RightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C921EBD7A03003D29BA /* RightCell.xib */; };
+		32852D4D1EBD7A03003D29BA /* SeleDelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C931EBD7A03003D29BA /* SeleDelView.swift */; };
+		32852D4E1EBD7A03003D29BA /* SeleDelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C941EBD7A03003D29BA /* SeleDelView.xib */; };
+		32852D4F1EBD7A03003D29BA /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C951EBD7A03003D29BA /* SettingTableViewCell.swift */; };
+		32852D501EBD7A03003D29BA /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C961EBD7A03003D29BA /* SettingTableViewCell.xib */; };
+		32852D511EBD7A03003D29BA /* TopUpMicoinsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C971EBD7A03003D29BA /* TopUpMicoinsCell.swift */; };
+		32852D521EBD7A03003D29BA /* TopUpMicoinsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C981EBD7A03003D29BA /* TopUpMicoinsCell.xib */; };
+		32852D531EBD7A03003D29BA /* userCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C991EBD7A03003D29BA /* userCenter.swift */; };
+		32852D541EBD7A03003D29BA /* userCenter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C9A1EBD7A03003D29BA /* userCenter.xib */; };
+		32852D551EBD7A03003D29BA /* vipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C9B1EBD7A03003D29BA /* vipCell.swift */; };
+		32852D561EBD7A03003D29BA /* vipCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C9C1EBD7A03003D29BA /* vipCell.xib */; };
+		32852D571EBD7A03003D29BA /* WriteComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C9D1EBD7A03003D29BA /* WriteComment.swift */; };
+		32852D581EBD7A03003D29BA /* WriteComment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852C9E1EBD7A03003D29BA /* WriteComment.xib */; };
+		32852D591EBD7A03003D29BA /* ZoneComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852C9F1EBD7A03003D29BA /* ZoneComment.swift */; };
+		32852D5A1EBD7A03003D29BA /* ZoneComment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852CA01EBD7A03003D29BA /* ZoneComment.xib */; };
+		32852D691EBDBB20003D29BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32852D671EBDBB20003D29BA /* LaunchScreen.storyboard */; };
+		32852D6A1EBDBB20003D29BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32852D681EBDBB20003D29BA /* Main.storyboard */; };
+		32852DEE1EBDBDDF003D29BA /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D7F1EBDBDDF003D29BA /* ChannelCell.swift */; };
+		32852DEF1EBDBDDF003D29BA /* collectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D801EBDBDDF003D29BA /* collectCell.swift */; };
+		32852DF01EBDBDDF003D29BA /* collectPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D811EBDBDDF003D29BA /* collectPicCell.swift */; };
+		32852DF11EBDBDDF003D29BA /* mineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D821EBDBDDF003D29BA /* mineCell.swift */; };
+		32852DF21EBDBDDF003D29BA /* PicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D831EBDBDDF003D29BA /* PicCell.swift */; };
+		32852DF31EBDBDDF003D29BA /* platformCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D841EBDBDDF003D29BA /* platformCell.swift */; };
+		32852DF41EBDBDDF003D29BA /* scrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D851EBDBDDF003D29BA /* scrollCell.swift */; };
+		32852DF51EBDBDDF003D29BA /* Style1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D861EBDBDDF003D29BA /* Style1.swift */; };
+		32852DF61EBDBDDF003D29BA /* Style2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D871EBDBDDF003D29BA /* Style2.swift */; };
+		32852DF71EBDBDDF003D29BA /* Style3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D881EBDBDDF003D29BA /* Style3.swift */; };
+		32852DF81EBDBDDF003D29BA /* Style4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D891EBDBDDF003D29BA /* Style4.swift */; };
+		32852DFA1EBDBDDF003D29BA /* WeChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D8B1EBDBDDF003D29BA /* WeChatCell.swift */; };
+		32852DFB1EBDBDDF003D29BA /* ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D8D1EBDBDDF003D29BA /* ChannelList.swift */; };
+		32852DFF1EBDBDDF003D29BA /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D911EBDBDDF003D29BA /* Details.swift */; };
+		32852E001EBDBDDF003D29BA /* IndexZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D921EBDBDDF003D29BA /* IndexZ.swift */; };
+		32852E011EBDBDDF003D29BA /* mineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D931EBDBDDF003D29BA /* mineViewController.swift */; };
+		32852E021EBDBDDF003D29BA /* OnboardPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D941EBDBDDF003D29BA /* OnboardPage1.swift */; };
+		32852E051EBDBDDF003D29BA /* platformAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D971EBDBDDF003D29BA /* platformAuth.swift */; };
+		32852E071EBDBDDF003D29BA /* searchNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D991EBDBDDF003D29BA /* searchNews.swift */; };
+		32852E091EBDBDDF003D29BA /* toutiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852D9B1EBDBDDF003D29BA /* toutiao.swift */; };
+		32852E461EBDBDE0003D29BA /* WeChatJX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DD91EBDBDDF003D29BA /* WeChatJX.swift */; };
+		32852E4A1EBDBDE0003D29BA /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DDF1EBDBDDF003D29BA /* PageModel.swift */; };
+		32852E4B1EBDBDE0003D29BA /* picModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DE01EBDBDDF003D29BA /* picModel.swift */; };
+		32852E4C1EBDBDE0003D29BA /* toutiaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DE11EBDBDDF003D29BA /* toutiaoModel.swift */; };
+		32852E4D1EBDBDE0003D29BA /* WeChatJXModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DE21EBDBDDF003D29BA /* WeChatJXModel.swift */; };
+		32852E4E1EBDBDE0003D29BA /* collectNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DE41EBDBDDF003D29BA /* collectNewsCell.swift */; };
+		32852E4F1EBDBDE0003D29BA /* collectNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852DE51EBDBDDF003D29BA /* collectNewsCell.xib */; };
+		32852E521EBDBDE0003D29BA /* preferencesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852DE81EBDBDDF003D29BA /* preferencesCell.swift */; };
+		32852E531EBDBDE0003D29BA /* preferencesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852DE91EBDBDDF003D29BA /* preferencesCell.xib */; };
+		32852E541EBDBDE0003D29BA /* Style1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852DEA1EBDBDDF003D29BA /* Style1.xib */; };
+		32852E551EBDBDE0003D29BA /* Style2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852DEB1EBDBDDF003D29BA /* Style2.xib */; };
+		32852E561EBDBDE0003D29BA /* Style3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852DEC1EBDBDDF003D29BA /* Style3.xib */; };
+		32852E571EBDBDE0003D29BA /* Style4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32852DED1EBDBDDF003D29BA /* Style4.xib */; };
+		32852E5B1EBDC699003D29BA /* Pictrues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852E581EBDC699003D29BA /* Pictrues.swift */; };
+		32852E5C1EBDC699003D29BA /* PictruesChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852E591EBDC699003D29BA /* PictruesChannel.swift */; };
+		32852E5D1EBDC699003D29BA /* ScrollPic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32852E5A1EBDC699003D29BA /* ScrollPic.swift */; };
+		B80B6C67B8532642B8CFA3AF /* Pods_AimiHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1251931B7A20781FCCA8FF75 /* Pods_AimiHealth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1251931B7A20781FCCA8FF75 /* Pods_AimiHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AimiHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32852B9B1EBD78AC003D29BA /* AimiHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AimiHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32852BB61EBD7A02003D29BA /* 爱米健康用户协议.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "爱米健康用户协议.doc"; sourceTree = "<group>"; };
+		32852BB71EBD7A02003D29BA /* 播放按钮.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "播放按钮.gif"; sourceTree = "<group>"; };
+		32852BBA1EBD7A02003D29BA /* AimiHealth-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AimiHealth-Bridging-Header.h"; sourceTree = "<group>"; };
+		32852BBC1EBD7A02003D29BA /* AimiHealth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AimiHealth.xcdatamodel; sourceTree = "<group>"; };
+		32852BBD1EBD7A02003D29BA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32852BBE1EBD7A02003D29BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32852BBF1EBD7A02003D29BA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32852BC01EBD7A02003D29BA /* Support.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		32852BD31EBD7A02003D29BA /* adjustTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adjustTextCell.swift; sourceTree = "<group>"; };
+		32852BD41EBD7A02003D29BA /* AgreementController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementController.swift; sourceTree = "<group>"; };
+		32852BD51EBD7A02003D29BA /* AIMI_Introduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIMI_Introduce.swift; sourceTree = "<group>"; };
+		32852BD71EBD7A02003D29BA /* CommentMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentMeViewController.swift; sourceTree = "<group>"; };
+		32852BD81EBD7A02003D29BA /* CommentMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentMeViewController.xib; sourceTree = "<group>"; };
+		32852BDA1EBD7A02003D29BA /* commentMeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMeTableViewCell.swift; sourceTree = "<group>"; };
+		32852BDB1EBD7A02003D29BA /* commentMeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = commentMeTableViewCell.xib; sourceTree = "<group>"; };
+		32852BDC1EBD7A02003D29BA /* myCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCommentCell.swift; sourceTree = "<group>"; };
+		32852BDD1EBD7A02003D29BA /* myCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myCommentCell.xib; sourceTree = "<group>"; };
+		32852BDE1EBD7A02003D29BA /* StarMeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarMeTableViewCell.swift; sourceTree = "<group>"; };
+		32852BDF1EBD7A02003D29BA /* StarMeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarMeTableViewCell.xib; sourceTree = "<group>"; };
+		32852BE01EBD7A02003D29BA /* myCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myCommentViewController.swift; sourceTree = "<group>"; };
+		32852BE11EBD7A02003D29BA /* myCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myCommentViewController.xib; sourceTree = "<group>"; };
+		32852BE21EBD7A02003D29BA /* StarMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarMeViewController.swift; sourceTree = "<group>"; };
+		32852BE31EBD7A02003D29BA /* StarMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarMeViewController.xib; sourceTree = "<group>"; };
+		32852BE41EBD7A02003D29BA /* CommentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentDetails.swift; sourceTree = "<group>"; };
+		32852BE51EBD7A02003D29BA /* ContentShieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentShieldCell.swift; sourceTree = "<group>"; };
+		32852BE61EBD7A02003D29BA /* ContentShieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentShieldCell.xib; sourceTree = "<group>"; };
+		32852BE71EBD7A02003D29BA /* ContentShieldListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentShieldListController.swift; sourceTree = "<group>"; };
+		32852BE81EBD7A02003D29BA /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		32852BE91EBD7A02003D29BA /* CustomNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNav.swift; sourceTree = "<group>"; };
+		32852BEA1EBD7A02003D29BA /* EditMiTalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMiTalk.swift; sourceTree = "<group>"; };
+		32852BEB1EBD7A02003D29BA /* Function1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function1.swift; sourceTree = "<group>"; };
+		32852BEC1EBD7A02003D29BA /* Function2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function2.swift; sourceTree = "<group>"; };
+		32852BED1EBD7A02003D29BA /* HideTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideTabbarController.swift; sourceTree = "<group>"; };
+		32852BF01EBD7A02003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MiXiuViewController.xib; sourceTree = "<group>"; };
+		32852BF11EBD7A02003D29BA /* MiLiaoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiLiaoCell.swift; sourceTree = "<group>"; };
+		32852BF21EBD7A02003D29BA /* MiLiaoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiLiaoCell.xib; sourceTree = "<group>"; };
+		32852BF31EBD7A02003D29BA /* MiLiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiLiaoViewController.swift; sourceTree = "<group>"; };
+		32852BF41EBD7A02003D29BA /* MiLiaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiLiaoViewController.xib; sourceTree = "<group>"; };
+		32852BF51EBD7A02003D29BA /* MiQuanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiQuanCell.swift; sourceTree = "<group>"; };
+		32852BF61EBD7A02003D29BA /* MiQuanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiQuanCell.xib; sourceTree = "<group>"; };
+		32852BF71EBD7A02003D29BA /* MiQuanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiQuanViewController.swift; sourceTree = "<group>"; };
+		32852BF81EBD7A02003D29BA /* MiXiuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiXiuCell.swift; sourceTree = "<group>"; };
+		32852BF91EBD7A02003D29BA /* MiXiuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiXiuCell.xib; sourceTree = "<group>"; };
+		32852BFA1EBD7A02003D29BA /* MiXiuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiXiuViewController.swift; sourceTree = "<group>"; };
+		32852BFB1EBD7A02003D29BA /* HistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		32852BFC1EBD7A02003D29BA /* HSController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSController.swift; sourceTree = "<group>"; };
+		32852BFD1EBD7A02003D29BA /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		32852C001EBD7A02003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangePhotosViewController.xib; sourceTree = "<group>"; };
+		32852C021EBD7A02003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RegisterViewController.xib; sourceTree = "<group>"; };
+		32852C031EBD7A02003D29BA /* ChangePhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePhotosViewController.swift; sourceTree = "<group>"; };
+		32852C041EBD7A02003D29BA /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		32852C051EBD7A03003D29BA /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		32852C061EBD7A03003D29BA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		32852C091EBD7A03003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MiCoinViewController.xib; sourceTree = "<group>"; };
+		32852C0A1EBD7A03003D29BA /* MiCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCoinViewController.swift; sourceTree = "<group>"; };
+		32852C0B1EBD7A03003D29BA /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		32852C0C1EBD7A03003D29BA /* TasksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasksViewController.xib; sourceTree = "<group>"; };
+		32852C0D1EBD7A03003D29BA /* Miquan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Miquan.swift; sourceTree = "<group>"; };
+		32852C0E1EBD7A03003D29BA /* MiquanDetail_SupuerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiquanDetail_SupuerVC.swift; sourceTree = "<group>"; };
+		32852C0F1EBD7A03003D29BA /* MiquanDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiquanDetails.swift; sourceTree = "<group>"; };
+		32852C101EBD7A03003D29BA /* MiquanDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiquanDetailsController.swift; sourceTree = "<group>"; };
+		32852C111EBD7A03003D29BA /* Mishow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mishow.swift; sourceTree = "<group>"; };
+		32852C121EBD7A03003D29BA /* MiTalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiTalk.swift; sourceTree = "<group>"; };
+		32852C131EBD7A03003D29BA /* MiTalkDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiTalkDetails.swift; sourceTree = "<group>"; };
+		32852C171EBD7A03003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangePasswordController.xib; sourceTree = "<group>"; };
+		32852C191EBD7A03003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MiBaoChangePasswordController.xib; sourceTree = "<group>"; };
+		32852C1A1EBD7A03003D29BA /* ChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
+		32852C1B1EBD7A03003D29BA /* MiBaoChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiBaoChangePasswordController.swift; sourceTree = "<group>"; };
+		32852C1C1EBD7A03003D29BA /* MyUplaodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUplaodCell.swift; sourceTree = "<group>"; };
+		32852C1D1EBD7A03003D29BA /* MyUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUpload.swift; sourceTree = "<group>"; };
+		32852C1E1EBD7A03003D29BA /* MyUploadDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUploadDetail.swift; sourceTree = "<group>"; };
+		32852C1F1EBD7A03003D29BA /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		32852C201EBD7A03003D29BA /* PersonalPreference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalPreference.swift; sourceTree = "<group>"; };
+		32852C211EBD7A03003D29BA /* PicAndVideoCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicAndVideoCommentView.swift; sourceTree = "<group>"; };
+		32852C221EBD7A03003D29BA /* PicDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicDetail.swift; sourceTree = "<group>"; };
+		32852C231EBD7A03003D29BA /* PicDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicDetailCell.swift; sourceTree = "<group>"; };
+		32852C241EBD7A03003D29BA /* RechargeMiCoins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeMiCoins.swift; sourceTree = "<group>"; };
+		32852C271EBD7A03003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RechargeRecordCell.xib; sourceTree = "<group>"; };
+		32852C281EBD7A03003D29BA /* RechargeRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechargeRecordCell.swift; sourceTree = "<group>"; };
+		32852C291EBD7A03003D29BA /* rechargeRecordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rechargeRecordController.swift; sourceTree = "<group>"; };
+		32852C2A1EBD7A03003D29BA /* rechargeRecordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = rechargeRecordController.xib; sourceTree = "<group>"; };
+		32852C2D1EBD7A03003D29BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfigMiBaoViewController.xib; sourceTree = "<group>"; };
+		32852C2E1EBD7A03003D29BA /* ConfigMiBaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigMiBaoViewController.swift; sourceTree = "<group>"; };
+		32852C2F1EBD7A03003D29BA /* SeleDelParentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleDelParentController.swift; sourceTree = "<group>"; };
+		32852C311EBD7A03003D29BA /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		32852C321EBD7A03003D29BA /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		32852C331EBD7A03003D29BA /* ShowPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPic.swift; sourceTree = "<group>"; };
+		32852C341EBD7A03003D29BA /* SNController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNController.swift; sourceTree = "<group>"; };
+		32852C351EBD7A03003D29BA /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		32852C361EBD7A03003D29BA /* testVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
+		32852C371EBD7A03003D29BA /* TopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopUpVC.swift; sourceTree = "<group>"; };
+		32852C381EBD7A03003D29BA /* uploadPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadPicCell.swift; sourceTree = "<group>"; };
+		32852C391EBD7A03003D29BA /* UploadVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadVideo.swift; sourceTree = "<group>"; };
+		32852C3A1EBD7A03003D29BA /* UserAgreement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgreement.swift; sourceTree = "<group>"; };
+		32852C3B1EBD7A03003D29BA /* userFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userFeedback.swift; sourceTree = "<group>"; };
+		32852C3C1EBD7A03003D29BA /* UserShieldListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserShieldListController.swift; sourceTree = "<group>"; };
+		32852C3D1EBD7A03003D29BA /* VideoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetail.swift; sourceTree = "<group>"; };
+		32852C3E1EBD7A03003D29BA /* launcher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launcher.jpg; sourceTree = "<group>"; };
+		32852C411EBD7A03003D29BA /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		32852C421EBD7A03003D29BA /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		32852C431EBD7A03003D29BA /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		32852C441EBD7A03003D29BA /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		32852C451EBD7A03003D29BA /* GDTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTTrack.h; sourceTree = "<group>"; };
+		32852C461EBD7A03003D29BA /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		32852C471EBD7A03003D29BA /* AimiFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AimiFunctions.swift; sourceTree = "<group>"; };
+		32852C481EBD7A03003D29BA /* DeeShareMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeShareMenu.swift; sourceTree = "<group>"; };
+		32852C4B1EBD7A03003D29BA /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		32852C4C1EBD7A03003D29BA /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		32852C4D1EBD7A03003D29BA /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		32852C4E1EBD7A03003D29BA /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		32852C4F1EBD7A03003D29BA /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		32852C501EBD7A03003D29BA /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
+		32852C521EBD7A03003D29BA /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		32852C531EBD7A03003D29BA /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		32852C541EBD7A03003D29BA /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		32852C551EBD7A03003D29BA /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
+		32852C561EBD7A03003D29BA /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		32852C581EBD7A03003D29BA /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		32852C5A1EBD7A03003D29BA /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		32852C5B1EBD7A03003D29BA /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		32852C5C1EBD7A03003D29BA /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		32852C5D1EBD7A03003D29BA /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		32852C5E1EBD7A03003D29BA /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		32852C601EBD7A03003D29BA /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		32852C611EBD7A03003D29BA /* MyMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMethods.swift; sourceTree = "<group>"; };
+		32852C621EBD7A03003D29BA /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		32852C631EBD7A03003D29BA /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		32852C641EBD7A03003D29BA /* UIViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		32852C681EBD7A03003D29BA /* ListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
+		32852C691EBD7A03003D29BA /* MediaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
+		32852C6A1EBD7A03003D29BA /* NSString+data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+data.h"; sourceTree = "<group>"; };
+		32852C6B1EBD7A03003D29BA /* NSString+data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+data.m"; sourceTree = "<group>"; };
+		32852C6C1EBD7A03003D29BA /* play.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = play.gif; sourceTree = "<group>"; };
+		32852C6F1EBD7A03003D29BA /* AdjustView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjustView.swift; sourceTree = "<group>"; };
+		32852C701EBD7A03003D29BA /* AdjustView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdjustView.xib; sourceTree = "<group>"; };
+		32852C711EBD7A03003D29BA /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		32852C721EBD7A03003D29BA /* Audio.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Audio.xib; sourceTree = "<group>"; };
+		32852C731EBD7A03003D29BA /* BottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		32852C741EBD7A03003D29BA /* BottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomView.xib; sourceTree = "<group>"; };
+		32852C751EBD7A03003D29BA /* CC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CC.swift; sourceTree = "<group>"; };
+		32852C761EBD7A03003D29BA /* CC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CC.xib; sourceTree = "<group>"; };
+		32852C771EBD7A03003D29BA /* CustomMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenu.swift; sourceTree = "<group>"; };
+		32852C781EBD7A03003D29BA /* CustomMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMenu.xib; sourceTree = "<group>"; };
+		32852C791EBD7A03003D29BA /* CustomMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMenuCell.swift; sourceTree = "<group>"; };
+		32852C7A1EBD7A03003D29BA /* CustomMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMenuCell.xib; sourceTree = "<group>"; };
+		32852C7B1EBD7A03003D29BA /* FourBtnCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourBtnCell.swift; sourceTree = "<group>"; };
+		32852C7C1EBD7A03003D29BA /* GDTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDTCell.swift; sourceTree = "<group>"; };
+		32852C7D1EBD7A03003D29BA /* GDTCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GDTCell.xib; sourceTree = "<group>"; };
+		32852C7E1EBD7A03003D29BA /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		32852C7F1EBD7A03003D29BA /* LeftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCell.swift; sourceTree = "<group>"; };
+		32852C801EBD7A03003D29BA /* LeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftCell.xib; sourceTree = "<group>"; };
+		32852C811EBD7A03003D29BA /* MiquanS2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiquanS2.swift; sourceTree = "<group>"; };
+		32852C821EBD7A03003D29BA /* MiquanS2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiquanS2.xib; sourceTree = "<group>"; };
+		32852C831EBD7A03003D29BA /* MiquanS3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiquanS3.swift; sourceTree = "<group>"; };
+		32852C841EBD7A03003D29BA /* MiquanS3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiquanS3.xib; sourceTree = "<group>"; };
+		32852C851EBD7A03003D29BA /* MiquanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiquanTableViewCell.swift; sourceTree = "<group>"; };
+		32852C861EBD7A03003D29BA /* MiquanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiquanTableViewCell.xib; sourceTree = "<group>"; };
+		32852C871EBD7A03003D29BA /* MiTalkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiTalkCell.swift; sourceTree = "<group>"; };
+		32852C881EBD7A03003D29BA /* MiTalkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiTalkCell.xib; sourceTree = "<group>"; };
+		32852C891EBD7A03003D29BA /* MiTalkMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiTalkMenuCell.swift; sourceTree = "<group>"; };
+		32852C8A1EBD7A03003D29BA /* MiTalkMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiTalkMenuCell.xib; sourceTree = "<group>"; };
+		32852C8B1EBD7A03003D29BA /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		32852C8C1EBD7A03003D29BA /* Player.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Player.xib; sourceTree = "<group>"; };
+		32852C8D1EBD7A03003D29BA /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		32852C8E1EBD7A03003D29BA /* Report.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Report.xib; sourceTree = "<group>"; };
+		32852C8F1EBD7A03003D29BA /* ReportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		32852C901EBD7A03003D29BA /* ReportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCell.xib; sourceTree = "<group>"; };
+		32852C911EBD7A03003D29BA /* RightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightCell.swift; sourceTree = "<group>"; };
+		32852C921EBD7A03003D29BA /* RightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightCell.xib; sourceTree = "<group>"; };
+		32852C931EBD7A03003D29BA /* SeleDelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeleDelView.swift; sourceTree = "<group>"; };
+		32852C941EBD7A03003D29BA /* SeleDelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeleDelView.xib; sourceTree = "<group>"; };
+		32852C951EBD7A03003D29BA /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		32852C961EBD7A03003D29BA /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		32852C971EBD7A03003D29BA /* TopUpMicoinsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopUpMicoinsCell.swift; sourceTree = "<group>"; };
+		32852C981EBD7A03003D29BA /* TopUpMicoinsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopUpMicoinsCell.xib; sourceTree = "<group>"; };
+		32852C991EBD7A03003D29BA /* userCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userCenter.swift; sourceTree = "<group>"; };
+		32852C9A1EBD7A03003D29BA /* userCenter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userCenter.xib; sourceTree = "<group>"; };
+		32852C9B1EBD7A03003D29BA /* vipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vipCell.swift; sourceTree = "<group>"; };
+		32852C9C1EBD7A03003D29BA /* vipCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = vipCell.xib; sourceTree = "<group>"; };
+		32852C9D1EBD7A03003D29BA /* WriteComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteComment.swift; sourceTree = "<group>"; };
+		32852C9E1EBD7A03003D29BA /* WriteComment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteComment.xib; sourceTree = "<group>"; };
+		32852C9F1EBD7A03003D29BA /* ZoneComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneComment.swift; sourceTree = "<group>"; };
+		32852CA01EBD7A03003D29BA /* ZoneComment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoneComment.xib; sourceTree = "<group>"; };
+		32852D5B1EBD7A4A003D29BA /* AimiHealth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AimiHealth.entitlements; sourceTree = "<group>"; };
+		32852D671EBDBB20003D29BA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32852D681EBDBB20003D29BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		32852D7F1EBDBDDF003D29BA /* ChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		32852D801EBDBDDF003D29BA /* collectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectCell.swift; sourceTree = "<group>"; };
+		32852D811EBDBDDF003D29BA /* collectPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectPicCell.swift; sourceTree = "<group>"; };
+		32852D821EBDBDDF003D29BA /* mineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mineCell.swift; sourceTree = "<group>"; };
+		32852D831EBDBDDF003D29BA /* PicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicCell.swift; sourceTree = "<group>"; };
+		32852D841EBDBDDF003D29BA /* platformCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = platformCell.swift; sourceTree = "<group>"; };
+		32852D851EBDBDDF003D29BA /* scrollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollCell.swift; sourceTree = "<group>"; };
+		32852D861EBDBDDF003D29BA /* Style1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style1.swift; sourceTree = "<group>"; };
+		32852D871EBDBDDF003D29BA /* Style2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style2.swift; sourceTree = "<group>"; };
+		32852D881EBDBDDF003D29BA /* Style3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style3.swift; sourceTree = "<group>"; };
+		32852D891EBDBDDF003D29BA /* Style4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style4.swift; sourceTree = "<group>"; };
+		32852D8B1EBDBDDF003D29BA /* WeChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatCell.swift; sourceTree = "<group>"; };
+		32852D8D1EBDBDDF003D29BA /* ChannelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelList.swift; sourceTree = "<group>"; };
+		32852D911EBDBDDF003D29BA /* Details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		32852D921EBDBDDF003D29BA /* IndexZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexZ.swift; sourceTree = "<group>"; };
+		32852D931EBDBDDF003D29BA /* mineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mineViewController.swift; sourceTree = "<group>"; };
+		32852D941EBDBDDF003D29BA /* OnboardPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardPage1.swift; sourceTree = "<group>"; };
+		32852D971EBDBDDF003D29BA /* platformAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = platformAuth.swift; sourceTree = "<group>"; };
+		32852D991EBDBDDF003D29BA /* searchNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchNews.swift; sourceTree = "<group>"; };
+		32852D9B1EBDBDDF003D29BA /* toutiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toutiao.swift; sourceTree = "<group>"; };
+		32852DD91EBDBDDF003D29BA /* WeChatJX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatJX.swift; sourceTree = "<group>"; };
+		32852DDF1EBDBDDF003D29BA /* PageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		32852DE01EBDBDDF003D29BA /* picModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = picModel.swift; sourceTree = "<group>"; };
+		32852DE11EBDBDDF003D29BA /* toutiaoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toutiaoModel.swift; sourceTree = "<group>"; };
+		32852DE21EBDBDDF003D29BA /* WeChatJXModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatJXModel.swift; sourceTree = "<group>"; };
+		32852DE41EBDBDDF003D29BA /* collectNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectNewsCell.swift; sourceTree = "<group>"; };
+		32852DE51EBDBDDF003D29BA /* collectNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = collectNewsCell.xib; sourceTree = "<group>"; };
+		32852DE81EBDBDDF003D29BA /* preferencesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preferencesCell.swift; sourceTree = "<group>"; };
+		32852DE91EBDBDDF003D29BA /* preferencesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferencesCell.xib; sourceTree = "<group>"; };
+		32852DEA1EBDBDDF003D29BA /* Style1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Style1.xib; sourceTree = "<group>"; };
+		32852DEB1EBDBDDF003D29BA /* Style2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Style2.xib; sourceTree = "<group>"; };
+		32852DEC1EBDBDDF003D29BA /* Style3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Style3.xib; sourceTree = "<group>"; };
+		32852DED1EBDBDDF003D29BA /* Style4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Style4.xib; sourceTree = "<group>"; };
+		32852E581EBDC699003D29BA /* Pictrues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pictrues.swift; sourceTree = "<group>"; };
+		32852E591EBDC699003D29BA /* PictruesChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictruesChannel.swift; sourceTree = "<group>"; };
+		32852E5A1EBDC699003D29BA /* ScrollPic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollPic.swift; sourceTree = "<group>"; };
+		3F4F87A395D23685EBE1C2A3 /* Pods-AimiHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimiHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-AimiHealth/Pods-AimiHealth.release.xcconfig"; sourceTree = "<group>"; };
+		7F47552DCC52F80B2D4E54CB /* Pods-AimiHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AimiHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AimiHealth/Pods-AimiHealth.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32852B981EBD78AC003D29BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80B6C67B8532642B8CFA3AF /* Pods_AimiHealth.framework in Frameworks */,
+				32852D0B1EBD7A03003D29BA /* libGDTMobSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32852B921EBD78AB003D29BA = {
+			isa = PBXGroup;
+			children = (
+				32852BB61EBD7A02003D29BA /* 爱米健康用户协议.doc */,
+				32852BB71EBD7A02003D29BA /* 播放按钮.gif */,
+				32852C6C1EBD7A03003D29BA /* play.gif */,
+				32852C3E1EBD7A03003D29BA /* launcher.jpg */,
+				32852BB91EBD7A02003D29BA /* AimiHealth */,
+				32852BD21EBD7A02003D29BA /* Controller */,
+				E5BE4426490189F474AD7086 /* Frameworks */,
+				32852D6B1EBDBC9A003D29BA /* GD */,
+				32852C3F1EBD7A03003D29BA /* Lib */,
+				32852C651EBD7A03003D29BA /* Model */,
+				766F0BC68794FF0182515C7A /* Pods */,
+				32852B9C1EBD78AC003D29BA /* Products */,
+				32852C6E1EBD7A03003D29BA /* View */,
+			);
+			sourceTree = "<group>";
+		};
+		32852B9C1EBD78AC003D29BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32852B9B1EBD78AC003D29BA /* AimiHealth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32852BB91EBD7A02003D29BA /* AimiHealth */ = {
+			isa = PBXGroup;
+			children = (
+				32852D5B1EBD7A4A003D29BA /* AimiHealth.entitlements */,
+				32852BBA1EBD7A02003D29BA /* AimiHealth-Bridging-Header.h */,
+				32852BBB1EBD7A02003D29BA /* AimiHealth.xcdatamodeld */,
+				32852BBD1EBD7A02003D29BA /* AppDelegate.swift */,
+				32852BBE1EBD7A02003D29BA /* Assets.xcassets */,
+				32852BBF1EBD7A02003D29BA /* Info.plist */,
+				32852D671EBDBB20003D29BA /* LaunchScreen.storyboard */,
+				32852D681EBDBB20003D29BA /* Main.storyboard */,
+				32852BC01EBD7A02003D29BA /* Support.storyboard */,
+			);
+			path = AimiHealth;
+			sourceTree = "<group>";
+		};
+		32852BD21EBD7A02003D29BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32852BD31EBD7A02003D29BA /* adjustTextCell.swift */,
+				32852BD41EBD7A02003D29BA /* AgreementController.swift */,
+				32852BD51EBD7A02003D29BA /* AIMI_Introduce.swift */,
+				32852BE41EBD7A02003D29BA /* CommentDetails.swift */,
+				32852BE51EBD7A02003D29BA /* ContentShieldCell.swift */,
+				32852BE71EBD7A02003D29BA /* ContentShieldListController.swift */,
+				32852BE81EBD7A02003D29BA /* CustomButton.swift */,
+				32852BE91EBD7A02003D29BA /* CustomNav.swift */,
+				32852BEA1EBD7A02003D29BA /* EditMiTalk.swift */,
+				32852BEB1EBD7A02003D29BA /* Function1.swift */,
+				32852BEC1EBD7A02003D29BA /* Function2.swift */,
+				32852BED1EBD7A02003D29BA /* HideTabbarController.swift */,
+				32852BFB1EBD7A02003D29BA /* HistoryVC.swift */,
+				32852BFC1EBD7A02003D29BA /* HSController.swift */,
+				32852BFD1EBD7A02003D29BA /* LoginController.swift */,
+				32852C0D1EBD7A03003D29BA /* Miquan.swift */,
+				32852C0E1EBD7A03003D29BA /* MiquanDetail_SupuerVC.swift */,
+				32852C0F1EBD7A03003D29BA /* MiquanDetails.swift */,
+				32852C101EBD7A03003D29BA /* MiquanDetailsController.swift */,
+				32852C111EBD7A03003D29BA /* Mishow.swift */,
+				32852C121EBD7A03003D29BA /* MiTalk.swift */,
+				32852C131EBD7A03003D29BA /* MiTalkDetails.swift */,
+				32852C1C1EBD7A03003D29BA /* MyUplaodCell.swift */,
+				32852C1D1EBD7A03003D29BA /* MyUpload.swift */,
+				32852C1E1EBD7A03003D29BA /* MyUploadDetail.swift */,
+				32852C1F1EBD7A03003D29BA /* PayViewController.swift */,
+				32852C201EBD7A03003D29BA /* PersonalPreference.swift */,
+				32852C211EBD7A03003D29BA /* PicAndVideoCommentView.swift */,
+				32852C221EBD7A03003D29BA /* PicDetail.swift */,
+				32852C231EBD7A03003D29BA /* PicDetailCell.swift */,
+				32852C241EBD7A03003D29BA /* RechargeMiCoins.swift */,
+				32852C2F1EBD7A03003D29BA /* SeleDelParentController.swift */,
+				32852C331EBD7A03003D29BA /* ShowPic.swift */,
+				32852C341EBD7A03003D29BA /* SNController.swift */,
+				32852C351EBD7A03003D29BA /* Tabbar.swift */,
+				32852C361EBD7A03003D29BA /* testVC.swift */,
+				32852C371EBD7A03003D29BA /* TopUpVC.swift */,
+				32852C381EBD7A03003D29BA /* uploadPicCell.swift */,
+				32852C391EBD7A03003D29BA /* UploadVideo.swift */,
+				32852C3A1EBD7A03003D29BA /* UserAgreement.swift */,
+				32852C3B1EBD7A03003D29BA /* userFeedback.swift */,
+				32852C3C1EBD7A03003D29BA /* UserShieldListController.swift */,
+				32852C3D1EBD7A03003D29BA /* VideoDetail.swift */,
+				32852BE61EBD7A02003D29BA /* ContentShieldCell.xib */,
+				32852BD61EBD7A02003D29BA /* Comment */,
+				32852BEE1EBD7A02003D29BA /* HistoryAndCollect */,
+				32852BFE1EBD7A02003D29BA /* LoginViewController */,
+				32852C071EBD7A03003D29BA /* MiCoinCharge */,
+				32852C141EBD7A03003D29BA /* MyAiMiViewController */,
+				32852C251EBD7A03003D29BA /* RecordViewController */,
+				32852C2B1EBD7A03003D29BA /* SecurityCenterViewController */,
+				32852C301EBD7A03003D29BA /* SetViewController */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		32852BD61EBD7A02003D29BA /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				32852BD71EBD7A02003D29BA /* CommentMeViewController.swift */,
+				32852BD81EBD7A02003D29BA /* CommentMeViewController.xib */,
+				32852BD91EBD7A02003D29BA /* MyCommentCell */,
+				32852BE01EBD7A02003D29BA /* myCommentViewController.swift */,
+				32852BE11EBD7A02003D29BA /* myCommentViewController.xib */,
+				32852BE21EBD7A02003D29BA /* StarMeViewController.swift */,
+				32852BE31EBD7A02003D29BA /* StarMeViewController.xib */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		32852BD91EBD7A02003D29BA /* MyCommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				32852BDA1EBD7A02003D29BA /* commentMeTableViewCell.swift */,
+				32852BDB1EBD7A02003D29BA /* commentMeTableViewCell.xib */,
+				32852BDC1EBD7A02003D29BA /* myCommentCell.swift */,
+				32852BDD1EBD7A02003D29BA /* myCommentCell.xib */,
+				32852BDE1EBD7A02003D29BA /* StarMeTableViewCell.swift */,
+				32852BDF1EBD7A02003D29BA /* StarMeTableViewCell.xib */,
+			);
+			path = MyCommentCell;
+			sourceTree = "<group>";
+		};
+		32852BEE1EBD7A02003D29BA /* HistoryAndCollect */ = {
+			isa = PBXGroup;
+			children = (
+				32852BEF1EBD7A02003D29BA /* MiXiuViewController.xib */,
+				32852BF11EBD7A02003D29BA /* MiLiaoCell.swift */,
+				32852BF21EBD7A02003D29BA /* MiLiaoCell.xib */,
+				32852BF31EBD7A02003D29BA /* MiLiaoViewController.swift */,
+				32852BF41EBD7A02003D29BA /* MiLiaoViewController.xib */,
+				32852BF51EBD7A02003D29BA /* MiQuanCell.swift */,
+				32852BF61EBD7A02003D29BA /* MiQuanCell.xib */,
+				32852BF71EBD7A02003D29BA /* MiQuanViewController.swift */,
+				32852BF81EBD7A02003D29BA /* MiXiuCell.swift */,
+				32852BF91EBD7A02003D29BA /* MiXiuCell.xib */,
+				32852BFA1EBD7A02003D29BA /* MiXiuViewController.swift */,
+			);
+			path = HistoryAndCollect;
+			sourceTree = "<group>";
+		};
+		32852BFE1EBD7A02003D29BA /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32852BFF1EBD7A02003D29BA /* ChangePhotosViewController.xib */,
+				32852C011EBD7A02003D29BA /* RegisterViewController.xib */,
+				32852C031EBD7A02003D29BA /* ChangePhotosViewController.swift */,
+				32852C041EBD7A02003D29BA /* PhotoCollectionViewCell.swift */,
+				32852C051EBD7A03003D29BA /* PhotoCollectionViewCell.xib */,
+				32852C061EBD7A03003D29BA /* RegisterViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		32852C071EBD7A03003D29BA /* MiCoinCharge */ = {
+			isa = PBXGroup;
+			children = (
+				32852C081EBD7A03003D29BA /* MiCoinViewController.xib */,
+				32852C0A1EBD7A03003D29BA /* MiCoinViewController.swift */,
+				32852C0B1EBD7A03003D29BA /* TasksViewController.swift */,
+				32852C0C1EBD7A03003D29BA /* TasksViewController.xib */,
+			);
+			path = MiCoinCharge;
+			sourceTree = "<group>";
+		};
+		32852C141EBD7A03003D29BA /* MyAiMiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32852C151EBD7A03003D29BA /* ChangePasswordViewController */,
+			);
+			path = MyAiMiViewController;
+			sourceTree = "<group>";
+		};
+		32852C151EBD7A03003D29BA /* ChangePasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32852C161EBD7A03003D29BA /* ChangePasswordController.xib */,
+				32852C181EBD7A03003D29BA /* MiBaoChangePasswordController.xib */,
+				32852C1A1EBD7A03003D29BA /* ChangePasswordController.swift */,
+				32852C1B1EBD7A03003D29BA /* MiBaoChangePasswordController.swift */,
+			);
+			path = ChangePasswordViewController;
+			sourceTree = "<group>";
+		};
+		32852C251EBD7A03003D29BA /* RecordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32852C261EBD7A03003D29BA /* RechargeRecordCell.xib */,
+				32852C281EBD7A03003D29BA /* RechargeRecordCell.swift */,
+				32852C291EBD7A03003D29BA /* rechargeRecordController.swift */,
+				32852C2A1EBD7A03003D29BA /* rechargeRecordController.xib */,
+			);
+			path = RecordViewController;
+			sourceTree = "<group>";
+		};
+		32852C2B1EBD7A03003D29BA /* SecurityCenterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32852C2C1EBD7A03003D29BA /* ConfigMiBaoViewController.xib */,
+				32852C2E1EBD7A03003D29BA /* ConfigMiBaoViewController.swift */,
+			);
+			path = SecurityCenterViewController;
+			sourceTree = "<group>";
+		};
+		32852C301EBD7A03003D29BA /* SetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				32852C311EBD7A03003D29BA /* SettingTableViewController.swift */,
+				32852C321EBD7A03003D29BA /* SettingViewController.swift */,
+			);
+			path = SetViewController;
+			sourceTree = "<group>";
+		};
+		32852C3F1EBD7A03003D29BA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				32852C401EBD7A03003D29BA /* ADL */,
+				32852C471EBD7A03003D29BA /* AimiFunctions.swift */,
+				32852C481EBD7A03003D29BA /* DeeShareMenu.swift */,
+				32852C491EBD7A03003D29BA /* IQKeyboardManagerSwift */,
+				32852C611EBD7A03003D29BA /* MyMethods.swift */,
+				32852C621EBD7A03003D29BA /* Time.swift */,
+				32852C631EBD7A03003D29BA /* UIView+Extension.swift */,
+				32852C641EBD7A03003D29BA /* UIViewController+HUD.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		32852C401EBD7A03003D29BA /* ADL */ = {
+			isa = PBXGroup;
+			children = (
+				32852C411EBD7A03003D29BA /* GDTMobBannerView.h */,
+				32852C421EBD7A03003D29BA /* GDTMobInterstitial.h */,
+				32852C431EBD7A03003D29BA /* GDTNativeAd.h */,
+				32852C441EBD7A03003D29BA /* GDTSplashAd.h */,
+				32852C451EBD7A03003D29BA /* GDTTrack.h */,
+				32852C461EBD7A03003D29BA /* libGDTMobSDK.a */,
+			);
+			path = ADL;
+			sourceTree = "<group>";
+		};
+		32852C491EBD7A03003D29BA /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				32852C4A1EBD7A03003D29BA /* Categories */,
+				32852C511EBD7A03003D29BA /* Constants */,
+				32852C541EBD7A03003D29BA /* IQKeyboardManager.swift */,
+				32852C551EBD7A03003D29BA /* IQKeyboardManagerSwift.h */,
+				32852C561EBD7A03003D29BA /* IQKeyboardReturnKeyHandler.swift */,
+				32852C571EBD7A03003D29BA /* IQTextView */,
+				32852C591EBD7A03003D29BA /* IQToolbar */,
+				32852C5F1EBD7A03003D29BA /* Resources */,
+			);
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		32852C4A1EBD7A03003D29BA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				32852C4B1EBD7A03003D29BA /* IQNSArray+Sort.swift */,
+				32852C4C1EBD7A03003D29BA /* IQUIScrollView+Additions.swift */,
+				32852C4D1EBD7A03003D29BA /* IQUITextFieldView+Additions.swift */,
+				32852C4E1EBD7A03003D29BA /* IQUIView+Hierarchy.swift */,
+				32852C4F1EBD7A03003D29BA /* IQUIViewController+Additions.swift */,
+				32852C501EBD7A03003D29BA /* IQUIWindow+Hierarchy.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		32852C511EBD7A03003D29BA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				32852C521EBD7A03003D29BA /* IQKeyboardManagerConstants.swift */,
+				32852C531EBD7A03003D29BA /* IQKeyboardManagerConstantsInternal.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		32852C571EBD7A03003D29BA /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				32852C581EBD7A03003D29BA /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		32852C591EBD7A03003D29BA /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				32852C5A1EBD7A03003D29BA /* IQBarButtonItem.swift */,
+				32852C5B1EBD7A03003D29BA /* IQPreviousNextView.swift */,
+				32852C5C1EBD7A03003D29BA /* IQTitleBarButtonItem.swift */,
+				32852C5D1EBD7A03003D29BA /* IQToolbar.swift */,
+				32852C5E1EBD7A03003D29BA /* IQUIView+IQKeyboardToolbar.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		32852C5F1EBD7A03003D29BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32852C601EBD7A03003D29BA /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32852C651EBD7A03003D29BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32852C681EBD7A03003D29BA /* ListData.swift */,
+				32852C691EBD7A03003D29BA /* MediaModel.swift */,
+				32852C6A1EBD7A03003D29BA /* NSString+data.h */,
+				32852C6B1EBD7A03003D29BA /* NSString+data.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32852C6E1EBD7A03003D29BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32852C6F1EBD7A03003D29BA /* AdjustView.swift */,
+				32852C701EBD7A03003D29BA /* AdjustView.xib */,
+				32852C711EBD7A03003D29BA /* Audio.swift */,
+				32852C721EBD7A03003D29BA /* Audio.xib */,
+				32852C731EBD7A03003D29BA /* BottomView.swift */,
+				32852C741EBD7A03003D29BA /* BottomView.xib */,
+				32852C751EBD7A03003D29BA /* CC.swift */,
+				32852C761EBD7A03003D29BA /* CC.xib */,
+				32852C771EBD7A03003D29BA /* CustomMenu.swift */,
+				32852C781EBD7A03003D29BA /* CustomMenu.xib */,
+				32852C791EBD7A03003D29BA /* CustomMenuCell.swift */,
+				32852C7A1EBD7A03003D29BA /* CustomMenuCell.xib */,
+				32852C7B1EBD7A03003D29BA /* FourBtnCell.swift */,
+				32852C7C1EBD7A03003D29BA /* GDTCell.swift */,
+				32852C7D1EBD7A03003D29BA /* GDTCell.xib */,
+				32852C7E1EBD7A03003D29BA /* HistoryCell.swift */,
+				32852C7F1EBD7A03003D29BA /* LeftCell.swift */,
+				32852C801EBD7A03003D29BA /* LeftCell.xib */,
+				32852C811EBD7A03003D29BA /* MiquanS2.swift */,
+				32852C821EBD7A03003D29BA /* MiquanS2.xib */,
+				32852C831EBD7A03003D29BA /* MiquanS3.swift */,
+				32852C841EBD7A03003D29BA /* MiquanS3.xib */,
+				32852C851EBD7A03003D29BA /* MiquanTableViewCell.swift */,
+				32852C861EBD7A03003D29BA /* MiquanTableViewCell.xib */,
+				32852C871EBD7A03003D29BA /* MiTalkCell.swift */,
+				32852C881EBD7A03003D29BA /* MiTalkCell.xib */,
+				32852C891EBD7A03003D29BA /* MiTalkMenuCell.swift */,
+				32852C8A1EBD7A03003D29BA /* MiTalkMenuCell.xib */,
+				32852C8B1EBD7A03003D29BA /* Player.swift */,
+				32852C8C1EBD7A03003D29BA /* Player.xib */,
+				32852C8D1EBD7A03003D29BA /* Report.swift */,
+				32852C8E1EBD7A03003D29BA /* Report.xib */,
+				32852C8F1EBD7A03003D29BA /* ReportCell.swift */,
+				32852C901EBD7A03003D29BA /* ReportCell.xib */,
+				32852C911EBD7A03003D29BA /* RightCell.swift */,
+				32852C921EBD7A03003D29BA /* RightCell.xib */,
+				32852C931EBD7A03003D29BA /* SeleDelView.swift */,
+				32852C941EBD7A03003D29BA /* SeleDelView.xib */,
+				32852C951EBD7A03003D29BA /* SettingTableViewCell.swift */,
+				32852C961EBD7A03003D29BA /* SettingTableViewCell.xib */,
+				32852C971EBD7A03003D29BA /* TopUpMicoinsCell.swift */,
+				32852C981EBD7A03003D29BA /* TopUpMicoinsCell.xib */,
+				32852C991EBD7A03003D29BA /* userCenter.swift */,
+				32852C9A1EBD7A03003D29BA /* userCenter.xib */,
+				32852C9B1EBD7A03003D29BA /* vipCell.swift */,
+				32852C9C1EBD7A03003D29BA /* vipCell.xib */,
+				32852C9D1EBD7A03003D29BA /* WriteComment.swift */,
+				32852C9E1EBD7A03003D29BA /* WriteComment.xib */,
+				32852C9F1EBD7A03003D29BA /* ZoneComment.swift */,
+				32852CA01EBD7A03003D29BA /* ZoneComment.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32852D6B1EBDBC9A003D29BA /* GD */ = {
+			isa = PBXGroup;
+			children = (
+				32852D7E1EBDBDDF003D29BA /* Cell */,
+				32852D8C1EBDBDDF003D29BA /* Controller */,
+				32852DDA1EBDBDDF003D29BA /* Model */,
+				32852DE31EBDBDDF003D29BA /* View */,
+			);
+			path = GD;
+			sourceTree = "<group>";
+		};
+		32852D7E1EBDBDDF003D29BA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				32852D7F1EBDBDDF003D29BA /* ChannelCell.swift */,
+				32852D801EBDBDDF003D29BA /* collectCell.swift */,
+				32852D811EBDBDDF003D29BA /* collectPicCell.swift */,
+				32852D821EBDBDDF003D29BA /* mineCell.swift */,
+				32852D831EBDBDDF003D29BA /* PicCell.swift */,
+				32852D841EBDBDDF003D29BA /* platformCell.swift */,
+				32852D851EBDBDDF003D29BA /* scrollCell.swift */,
+				32852D861EBDBDDF003D29BA /* Style1.swift */,
+				32852D871EBDBDDF003D29BA /* Style2.swift */,
+				32852D881EBDBDDF003D29BA /* Style3.swift */,
+				32852D891EBDBDDF003D29BA /* Style4.swift */,
+				32852D8B1EBDBDDF003D29BA /* WeChatCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		32852D8C1EBDBDDF003D29BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32852E581EBDC699003D29BA /* Pictrues.swift */,
+				32852E591EBDC699003D29BA /* PictruesChannel.swift */,
+				32852E5A1EBDC699003D29BA /* ScrollPic.swift */,
+				32852D8D1EBDBDDF003D29BA /* ChannelList.swift */,
+				32852D911EBDBDDF003D29BA /* Details.swift */,
+				32852D921EBDBDDF003D29BA /* IndexZ.swift */,
+				32852D931EBDBDDF003D29BA /* mineViewController.swift */,
+				32852D941EBDBDDF003D29BA /* OnboardPage1.swift */,
+				32852D971EBDBDDF003D29BA /* platformAuth.swift */,
+				32852D991EBDBDDF003D29BA /* searchNews.swift */,
+				32852D9B1EBDBDDF003D29BA /* toutiao.swift */,
+				32852DD91EBDBDDF003D29BA /* WeChatJX.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		32852DDA1EBDBDDF003D29BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32852DDF1EBDBDDF003D29BA /* PageModel.swift */,
+				32852DE01EBDBDDF003D29BA /* picModel.swift */,
+				32852DE11EBDBDDF003D29BA /* toutiaoModel.swift */,
+				32852DE21EBDBDDF003D29BA /* WeChatJXModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32852DE31EBDBDDF003D29BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32852DE41EBDBDDF003D29BA /* collectNewsCell.swift */,
+				32852DE51EBDBDDF003D29BA /* collectNewsCell.xib */,
+				32852DE81EBDBDDF003D29BA /* preferencesCell.swift */,
+				32852DE91EBDBDDF003D29BA /* preferencesCell.xib */,
+				32852DEA1EBDBDDF003D29BA /* Style1.xib */,
+				32852DEB1EBDBDDF003D29BA /* Style2.xib */,
+				32852DEC1EBDBDDF003D29BA /* Style3.xib */,
+				32852DED1EBDBDDF003D29BA /* Style4.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		766F0BC68794FF0182515C7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F47552DCC52F80B2D4E54CB /* Pods-AimiHealth.debug.xcconfig */,
+				3F4F87A395D23685EBE1C2A3 /* Pods-AimiHealth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5BE4426490189F474AD7086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1251931B7A20781FCCA8FF75 /* Pods_AimiHealth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32852B9A1EBD78AC003D29BA /* AimiHealth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32852BB01EBD78AC003D29BA /* Build configuration list for PBXNativeTarget "AimiHealth" */;
+			buildPhases = (
+				5852D0F439B7B58545623682 /* [CP] Check Pods Manifest.lock */,
+				32852B971EBD78AC003D29BA /* Sources */,
+				32852B981EBD78AC003D29BA /* Frameworks */,
+				32852B991EBD78AC003D29BA /* Resources */,
+				0DEC9FB19C63F0CF96E10205 /* [CP] Embed Pods Frameworks */,
+				BECE5B26FF99CF5003D21BBC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AimiHealth;
+			productName = AimiHealth;
+			productReference = 32852B9B1EBD78AC003D29BA /* AimiHealth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32852B931EBD78AB003D29BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Deeokay;
+				TargetAttributes = {
+					32852B9A1EBD78AC003D29BA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 78YK28GTZ6;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 32852B961EBD78AB003D29BA /* Build configuration list for PBXProject "AimiHealth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32852B921EBD78AB003D29BA;
+			productRefGroup = 32852B9C1EBD78AC003D29BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32852B9A1EBD78AC003D29BA /* AimiHealth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32852B991EBD78AC003D29BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32852D521EBD7A03003D29BA /* TopUpMicoinsCell.xib in Resources */,
+				32852CBF1EBD7A03003D29BA /* StarMeViewController.xib in Resources */,
+				32852D281EBD7A03003D29BA /* play.gif in Resources */,
+				32852CD91EBD7A03003D29BA /* RegisterViewController.xib in Resources */,
+				32852CBD1EBD7A03003D29BA /* myCommentViewController.xib in Resources */,
+				32852D561EBD7A03003D29BA /* vipCell.xib in Resources */,
+				32852D5A1EBD7A03003D29BA /* ZoneComment.xib in Resources */,
+				32852CCA1EBD7A03003D29BA /* MiXiuViewController.xib in Resources */,
+				32852CA11EBD7A03003D29BA /* 爱米健康用户协议.doc in Resources */,
+				32852D371EBD7A03003D29BA /* GDTCell.xib in Resources */,
+				32852D2E1EBD7A03003D29BA /* BottomView.xib in Resources */,
+				32852CD01EBD7A03003D29BA /* MiQuanCell.xib in Resources */,
+				32852D3A1EBD7A03003D29BA /* LeftCell.xib in Resources */,
+				32852CF61EBD7A03003D29BA /* RechargeRecordCell.xib in Resources */,
+				32852E551EBDBDE0003D29BA /* Style2.xib in Resources */,
+				32852CA21EBD7A03003D29BA /* 播放按钮.gif in Resources */,
+				32852CFA1EBD7A03003D29BA /* ConfigMiBaoViewController.xib in Resources */,
+				32852D2C1EBD7A03003D29BA /* Audio.xib in Resources */,
+				32852D321EBD7A03003D29BA /* CustomMenu.xib in Resources */,
+				32852CA51EBD7A03003D29BA /* Assets.xcassets in Resources */,
+				32852CEA1EBD7A03003D29BA /* MiBaoChangePasswordController.xib in Resources */,
+				32852D341EBD7A03003D29BA /* CustomMenuCell.xib in Resources */,
+				32852CD81EBD7A03003D29BA /* ChangePhotosViewController.xib in Resources */,
+				32852D3C1EBD7A03003D29BA /* MiquanS2.xib in Resources */,
+				32852D401EBD7A03003D29BA /* MiquanTableViewCell.xib in Resources */,
+				32852CDC1EBD7A03003D29BA /* PhotoCollectionViewCell.xib in Resources */,
+				32852E531EBDBDE0003D29BA /* preferencesCell.xib in Resources */,
+				32852CD31EBD7A03003D29BA /* MiXiuCell.xib in Resources */,
+				32852D501EBD7A03003D29BA /* SettingTableViewCell.xib in Resources */,
+				32852D421EBD7A03003D29BA /* MiTalkCell.xib in Resources */,
+				32852CA61EBD7A03003D29BA /* Info.plist in Resources */,
+				32852D581EBD7A03003D29BA /* WriteComment.xib in Resources */,
+				32852CBB1EBD7A03003D29BA /* StarMeTableViewCell.xib in Resources */,
+				32852CE11EBD7A03003D29BA /* TasksViewController.xib in Resources */,
+				32852D4C1EBD7A03003D29BA /* RightCell.xib in Resources */,
+				32852D541EBD7A03003D29BA /* userCenter.xib in Resources */,
+				32852D2A1EBD7A03003D29BA /* AdjustView.xib in Resources */,
+				32852D6A1EBDBB20003D29BA /* Main.storyboard in Resources */,
+				32852CB51EBD7A03003D29BA /* CommentMeViewController.xib in Resources */,
+				32852D4A1EBD7A03003D29BA /* ReportCell.xib in Resources */,
+				32852CA71EBD7A03003D29BA /* Support.storyboard in Resources */,
+				32852CB91EBD7A03003D29BA /* myCommentCell.xib in Resources */,
+				32852CF91EBD7A03003D29BA /* rechargeRecordController.xib in Resources */,
+				32852D3E1EBD7A03003D29BA /* MiquanS3.xib in Resources */,
+				32852D441EBD7A03003D29BA /* MiTalkMenuCell.xib in Resources */,
+				32852E571EBDBDE0003D29BA /* Style4.xib in Resources */,
+				32852D1E1EBD7A03003D29BA /* IQKeyboardManager.bundle in Resources */,
+				32852E4F1EBDBDE0003D29BA /* collectNewsCell.xib in Resources */,
+				32852CCE1EBD7A03003D29BA /* MiLiaoViewController.xib in Resources */,
+				32852CCC1EBD7A03003D29BA /* MiLiaoCell.xib in Resources */,
+				32852CC21EBD7A03003D29BA /* ContentShieldCell.xib in Resources */,
+				32852D461EBD7A03003D29BA /* Player.xib in Resources */,
+				32852CB71EBD7A03003D29BA /* commentMeTableViewCell.xib in Resources */,
+				32852CE91EBD7A03003D29BA /* ChangePasswordController.xib in Resources */,
+				32852D301EBD7A03003D29BA /* CC.xib in Resources */,
+				32852E561EBDBDE0003D29BA /* Style3.xib in Resources */,
+				32852D0A1EBD7A03003D29BA /* launcher.jpg in Resources */,
+				32852CDE1EBD7A03003D29BA /* MiCoinViewController.xib in Resources */,
+				32852E541EBDBDE0003D29BA /* Style1.xib in Resources */,
+				32852D4E1EBD7A03003D29BA /* SeleDelView.xib in Resources */,
+				32852D691EBDBB20003D29BA /* LaunchScreen.storyboard in Resources */,
+				32852D481EBD7A03003D29BA /* Report.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DEC9FB19C63F0CF96E10205 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AimiHealth/Pods-AimiHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5852D0F439B7B58545623682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BECE5B26FF99CF5003D21BBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AimiHealth/Pods-AimiHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32852B971EBD78AC003D29BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32852D201EBD7A03003D29BA /* Time.swift in Sources */,
+				32852D141EBD7A03003D29BA /* IQKeyboardManagerConstants.swift in Sources */,
+				32852D0E1EBD7A03003D29BA /* IQNSArray+Sort.swift in Sources */,
+				32852D3F1EBD7A03003D29BA /* MiquanTableViewCell.swift in Sources */,
+				32852CE31EBD7A03003D29BA /* MiquanDetail_SupuerVC.swift in Sources */,
+				32852D471EBD7A03003D29BA /* Report.swift in Sources */,
+				32852E021EBDBDDF003D29BA /* OnboardPage1.swift in Sources */,
+				32852CB61EBD7A03003D29BA /* commentMeTableViewCell.swift in Sources */,
+				32852DFF1EBDBDDF003D29BA /* Details.swift in Sources */,
+				32852D591EBD7A03003D29BA /* ZoneComment.swift in Sources */,
+				32852D071EBD7A03003D29BA /* userFeedback.swift in Sources */,
+				32852CD51EBD7A03003D29BA /* HistoryVC.swift in Sources */,
+				32852E5C1EBDC699003D29BA /* PictruesChannel.swift in Sources */,
+				32852D171EBD7A03003D29BA /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				32852DF71EBDBDDF003D29BA /* Style3.swift in Sources */,
+				32852E4D1EBDBDE0003D29BA /* WeChatJXModel.swift in Sources */,
+				32852CC81EBD7A03003D29BA /* Function2.swift in Sources */,
+				32852DF21EBDBDDF003D29BA /* PicCell.swift in Sources */,
+				32852D1F1EBD7A03003D29BA /* MyMethods.swift in Sources */,
+				32852DF31EBDBDDF003D29BA /* platformCell.swift in Sources */,
+				32852D4B1EBD7A03003D29BA /* RightCell.swift in Sources */,
+				32852E5B1EBDC699003D29BA /* Pictrues.swift in Sources */,
+				32852CC41EBD7A03003D29BA /* CustomButton.swift in Sources */,
+				32852D261EBD7A03003D29BA /* MediaModel.swift in Sources */,
+				32852D571EBD7A03003D29BA /* WriteComment.swift in Sources */,
+				32852CF81EBD7A03003D29BA /* rechargeRecordController.swift in Sources */,
+				32852D491EBD7A03003D29BA /* ReportCell.swift in Sources */,
+				32852CFD1EBD7A03003D29BA /* SettingTableViewController.swift in Sources */,
+				32852D111EBD7A03003D29BA /* IQUIView+Hierarchy.swift in Sources */,
+				32852D551EBD7A03003D29BA /* vipCell.swift in Sources */,
+				32852DFA1EBDBDDF003D29BA /* WeChatCell.swift in Sources */,
+				32852CB21EBD7A03003D29BA /* AgreementController.swift in Sources */,
+				32852D021EBD7A03003D29BA /* testVC.swift in Sources */,
+				32852DF81EBDBDDF003D29BA /* Style4.swift in Sources */,
+				32852CCB1EBD7A03003D29BA /* MiLiaoCell.swift in Sources */,
+				32852D4F1EBD7A03003D29BA /* SettingTableViewCell.swift in Sources */,
+				32852D311EBD7A03003D29BA /* CustomMenu.swift in Sources */,
+				32852D191EBD7A03003D29BA /* IQBarButtonItem.swift in Sources */,
+				32852CEC1EBD7A03003D29BA /* MiBaoChangePasswordController.swift in Sources */,
+				32852CCD1EBD7A03003D29BA /* MiLiaoViewController.swift in Sources */,
+				32852D1B1EBD7A03003D29BA /* IQTitleBarButtonItem.swift in Sources */,
+				32852DF61EBDBDDF003D29BA /* Style2.swift in Sources */,
+				32852D0C1EBD7A03003D29BA /* AimiFunctions.swift in Sources */,
+				32852D391EBD7A03003D29BA /* LeftCell.swift in Sources */,
+				32852D4D1EBD7A03003D29BA /* SeleDelView.swift in Sources */,
+				32852CB31EBD7A03003D29BA /* AIMI_Introduce.swift in Sources */,
+				32852D061EBD7A03003D29BA /* UserAgreement.swift in Sources */,
+				32852E521EBDBDE0003D29BA /* preferencesCell.swift in Sources */,
+				32852CB41EBD7A03003D29BA /* CommentMeViewController.swift in Sources */,
+				32852CBA1EBD7A03003D29BA /* StarMeTableViewCell.swift in Sources */,
+				32852CE81EBD7A03003D29BA /* MiTalkDetails.swift in Sources */,
+				32852E5D1EBDC699003D29BA /* ScrollPic.swift in Sources */,
+				32852E011EBDBDDF003D29BA /* mineViewController.swift in Sources */,
+				32852DF51EBDBDDF003D29BA /* Style1.swift in Sources */,
+				32852DFB1EBDBDDF003D29BA /* ChannelList.swift in Sources */,
+				32852D131EBD7A03003D29BA /* IQUIWindow+Hierarchy.swift in Sources */,
+				32852D211EBD7A03003D29BA /* UIView+Extension.swift in Sources */,
+				32852D431EBD7A03003D29BA /* MiTalkMenuCell.swift in Sources */,
+				32852CC91EBD7A03003D29BA /* HideTabbarController.swift in Sources */,
+				32852DF41EBDBDDF003D29BA /* scrollCell.swift in Sources */,
+				32852D151EBD7A03003D29BA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				32852D531EBD7A03003D29BA /* userCenter.swift in Sources */,
+				32852D121EBD7A03003D29BA /* IQUIViewController+Additions.swift in Sources */,
+				32852D511EBD7A03003D29BA /* TopUpMicoinsCell.swift in Sources */,
+				32852D1A1EBD7A03003D29BA /* IQPreviousNextView.swift in Sources */,
+				32852E071EBDBDDF003D29BA /* searchNews.swift in Sources */,
+				32852CDB1EBD7A03003D29BA /* PhotoCollectionViewCell.swift in Sources */,
+				32852D451EBD7A03003D29BA /* Player.swift in Sources */,
+				32852D051EBD7A03003D29BA /* UploadVideo.swift in Sources */,
+				32852CFB1EBD7A03003D29BA /* ConfigMiBaoViewController.swift in Sources */,
+				32852D351EBD7A03003D29BA /* FourBtnCell.swift in Sources */,
+				32852D3D1EBD7A03003D29BA /* MiquanS3.swift in Sources */,
+				32852CD61EBD7A03003D29BA /* HSController.swift in Sources */,
+				32852CBE1EBD7A03003D29BA /* StarMeViewController.swift in Sources */,
+				32852CE41EBD7A03003D29BA /* MiquanDetails.swift in Sources */,
+				32852CE01EBD7A03003D29BA /* TasksViewController.swift in Sources */,
+				32852DEE1EBDBDDF003D29BA /* ChannelCell.swift in Sources */,
+				32852CA41EBD7A03003D29BA /* AppDelegate.swift in Sources */,
+				32852D3B1EBD7A03003D29BA /* MiquanS2.swift in Sources */,
+				32852CE21EBD7A03003D29BA /* Miquan.swift in Sources */,
+				32852CC01EBD7A03003D29BA /* CommentDetails.swift in Sources */,
+				32852D291EBD7A03003D29BA /* AdjustView.swift in Sources */,
+				32852CC51EBD7A03003D29BA /* CustomNav.swift in Sources */,
+				32852E461EBDBDE0003D29BA /* WeChatJX.swift in Sources */,
+				32852D0F1EBD7A03003D29BA /* IQUIScrollView+Additions.swift in Sources */,
+				32852CE51EBD7A03003D29BA /* MiquanDetailsController.swift in Sources */,
+				32852CFC1EBD7A03003D29BA /* SeleDelParentController.swift in Sources */,
+				32852E091EBDBDDF003D29BA /* toutiao.swift in Sources */,
+				32852DEF1EBDBDDF003D29BA /* collectCell.swift in Sources */,
+				32852E4A1EBDBDE0003D29BA /* PageModel.swift in Sources */,
+				32852D0D1EBD7A03003D29BA /* DeeShareMenu.swift in Sources */,
+				32852D101EBD7A03003D29BA /* IQUITextFieldView+Additions.swift in Sources */,
+				32852CC61EBD7A03003D29BA /* EditMiTalk.swift in Sources */,
+				32852CB81EBD7A03003D29BA /* myCommentCell.swift in Sources */,
+				32852CD21EBD7A03003D29BA /* MiXiuCell.swift in Sources */,
+				32852CB11EBD7A03003D29BA /* adjustTextCell.swift in Sources */,
+				32852D161EBD7A03003D29BA /* IQKeyboardManager.swift in Sources */,
+				32852D1C1EBD7A03003D29BA /* IQToolbar.swift in Sources */,
+				32852D2B1EBD7A03003D29BA /* Audio.swift in Sources */,
+				32852CF11EBD7A03003D29BA /* PersonalPreference.swift in Sources */,
+				32852D331EBD7A03003D29BA /* CustomMenuCell.swift in Sources */,
+				32852E4C1EBDBDE0003D29BA /* toutiaoModel.swift in Sources */,
+				32852D2D1EBD7A03003D29BA /* BottomView.swift in Sources */,
+				32852CF41EBD7A03003D29BA /* PicDetailCell.swift in Sources */,
+				32852CD71EBD7A03003D29BA /* LoginController.swift in Sources */,
+				32852CEB1EBD7A03003D29BA /* ChangePasswordController.swift in Sources */,
+				32852E4E1EBDBDE0003D29BA /* collectNewsCell.swift in Sources */,
+				32852E051EBDBDDF003D29BA /* platformAuth.swift in Sources */,
+				32852CEE1EBD7A03003D29BA /* MyUpload.swift in Sources */,
+				32852CEF1EBD7A03003D29BA /* MyUploadDetail.swift in Sources */,
+				32852E4B1EBDBDE0003D29BA /* picModel.swift in Sources */,
+				32852CC71EBD7A03003D29BA /* Function1.swift in Sources */,
+				32852CDA1EBD7A03003D29BA /* ChangePhotosViewController.swift in Sources */,
+				32852D271EBD7A03003D29BA /* NSString+data.m in Sources */,
+				32852DF01EBDBDDF003D29BA /* collectPicCell.swift in Sources */,
+				32852CDD1EBD7A03003D29BA /* RegisterViewController.swift in Sources */,
+				32852CCF1EBD7A03003D29BA /* MiQuanCell.swift in Sources */,
+				32852CD41EBD7A03003D29BA /* MiXiuViewController.swift in Sources */,
+				32852D381EBD7A03003D29BA /* HistoryCell.swift in Sources */,
+				32852D041EBD7A03003D29BA /* uploadPicCell.swift in Sources */,
+				32852D251EBD7A03003D29BA /* ListData.swift in Sources */,
+				32852D221EBD7A03003D29BA /* UIViewController+HUD.swift in Sources */,
+				32852D181EBD7A03003D29BA /* IQTextView.swift in Sources */,
+				32852CF01EBD7A03003D29BA /* PayViewController.swift in Sources */,
+				32852CE61EBD7A03003D29BA /* Mishow.swift in Sources */,
+				32852D1D1EBD7A03003D29BA /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				32852CED1EBD7A03003D29BA /* MyUplaodCell.swift in Sources */,
+				32852D001EBD7A03003D29BA /* SNController.swift in Sources */,
+				32852CC31EBD7A03003D29BA /* ContentShieldListController.swift in Sources */,
+				32852D081EBD7A03003D29BA /* UserShieldListController.swift in Sources */,
+				32852D031EBD7A03003D29BA /* TopUpVC.swift in Sources */,
+				32852E001EBDBDDF003D29BA /* IndexZ.swift in Sources */,
+				32852CBC1EBD7A03003D29BA /* myCommentViewController.swift in Sources */,
+				32852D2F1EBD7A03003D29BA /* CC.swift in Sources */,
+				32852CC11EBD7A03003D29BA /* ContentShieldCell.swift in Sources */,
+				32852CA31EBD7A03003D29BA /* AimiHealth.xcdatamodeld in Sources */,
+				32852CE71EBD7A03003D29BA /* MiTalk.swift in Sources */,
+				32852D011EBD7A03003D29BA /* Tabbar.swift in Sources */,
+				32852CF51EBD7A03003D29BA /* RechargeMiCoins.swift in Sources */,
+				32852CDF1EBD7A03003D29BA /* MiCoinViewController.swift in Sources */,
+				32852DF11EBDBDDF003D29BA /* mineCell.swift in Sources */,
+				32852CFE1EBD7A03003D29BA /* SettingViewController.swift in Sources */,
+				32852CF71EBD7A03003D29BA /* RechargeRecordCell.swift in Sources */,
+				32852CF21EBD7A03003D29BA /* PicAndVideoCommentView.swift in Sources */,
+				32852D361EBD7A03003D29BA /* GDTCell.swift in Sources */,
+				32852D411EBD7A03003D29BA /* MiTalkCell.swift in Sources */,
+				32852CD11EBD7A03003D29BA /* MiQuanViewController.swift in Sources */,
+				32852CFF1EBD7A03003D29BA /* ShowPic.swift in Sources */,
+				32852D091EBD7A03003D29BA /* VideoDetail.swift in Sources */,
+				32852CF31EBD7A03003D29BA /* PicDetail.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		32852BEF1EBD7A02003D29BA /* MiXiuViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852BF01EBD7A02003D29BA /* Base */,
+			);
+			name = MiXiuViewController.xib;
+			sourceTree = "<group>";
+		};
+		32852BFF1EBD7A02003D29BA /* ChangePhotosViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C001EBD7A02003D29BA /* Base */,
+			);
+			name = ChangePhotosViewController.xib;
+			sourceTree = "<group>";
+		};
+		32852C011EBD7A02003D29BA /* RegisterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C021EBD7A02003D29BA /* Base */,
+			);
+			name = RegisterViewController.xib;
+			sourceTree = "<group>";
+		};
+		32852C081EBD7A03003D29BA /* MiCoinViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C091EBD7A03003D29BA /* Base */,
+			);
+			name = MiCoinViewController.xib;
+			sourceTree = "<group>";
+		};
+		32852C161EBD7A03003D29BA /* ChangePasswordController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C171EBD7A03003D29BA /* Base */,
+			);
+			name = ChangePasswordController.xib;
+			sourceTree = "<group>";
+		};
+		32852C181EBD7A03003D29BA /* MiBaoChangePasswordController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C191EBD7A03003D29BA /* Base */,
+			);
+			name = MiBaoChangePasswordController.xib;
+			sourceTree = "<group>";
+		};
+		32852C261EBD7A03003D29BA /* RechargeRecordCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C271EBD7A03003D29BA /* Base */,
+			);
+			name = RechargeRecordCell.xib;
+			sourceTree = "<group>";
+		};
+		32852C2C1EBD7A03003D29BA /* ConfigMiBaoViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32852C2D1EBD7A03003D29BA /* Base */,
+			);
+			name = ConfigMiBaoViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32852BAE1EBD78AC003D29BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32852BAF1EBD78AC003D29BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32852BB11EBD78AC003D29BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F47552DCC52F80B2D4E54CB /* Pods-AimiHealth.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AimiHealth/AimiHealth.entitlements;
+				DEVELOPMENT_TEAM = 78YK28GTZ6;
+				INFOPLIST_FILE = AimiHealth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Lib/ADL",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Graduation.project;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AimiHealth/AimiHealth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		32852BB21EBD78AC003D29BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F4F87A395D23685EBE1C2A3 /* Pods-AimiHealth.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AimiHealth/AimiHealth.entitlements;
+				DEVELOPMENT_TEAM = 78YK28GTZ6;
+				INFOPLIST_FILE = AimiHealth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Lib/ADL",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Graduation.project;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AimiHealth/AimiHealth-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32852B961EBD78AB003D29BA /* Build configuration list for PBXProject "AimiHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32852BAE1EBD78AC003D29BA /* Debug */,
+				32852BAF1EBD78AC003D29BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32852BB01EBD78AC003D29BA /* Build configuration list for PBXNativeTarget "AimiHealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32852BB11EBD78AC003D29BA /* Debug */,
+				32852BB21EBD78AC003D29BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		32852BBB1EBD7A02003D29BA /* AimiHealth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				32852BBC1EBD7A02003D29BA /* AimiHealth.xcdatamodel */,
+			);
+			currentVersion = 32852BBC1EBD7A02003D29BA /* AimiHealth.xcdatamodel */;
+			path = AimiHealth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 32852B931EBD78AB003D29BA /* Project object */;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Model+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Model+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:News+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:News+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Aimi+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:AimiHealth.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

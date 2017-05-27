@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k47-Jc-PdQ" customClass="SeleDelView" customModule="Aimi_V1_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-E9-lNW">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="全 选"/>
+                    <connections>
+                        <action selector="selectAction:" destination="k47-Jc-PdQ" eventType="touchUpInside" id="wkv-7J-vka"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-Ts-pVv">
+                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="删 除"/>
+                    <connections>
+                        <action selector="deleteAction:" destination="k47-Jc-PdQ" eventType="touchUpInside" id="uVu-Jw-tJA"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="用户协议2" translatesAutoresizingMaskIntoConstraints="NO" id="rlh-ko-pQM">
+                    <rect key="frame" x="20" y="12" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="SSG-zl-8hP"/>
+                        <constraint firstAttribute="width" constant="20" id="X7g-m5-1hZ"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1uL-Ts-pVv" secondAttribute="trailing" id="3n4-1i-V19"/>
+                <constraint firstAttribute="bottom" secondItem="gqf-E9-lNW" secondAttribute="bottom" id="Bp2-3g-WNi"/>
+                <constraint firstItem="rlh-ko-pQM" firstAttribute="leading" secondItem="k47-Jc-PdQ" secondAttribute="leading" constant="20" id="EYM-UD-eZG"/>
+                <constraint firstAttribute="height" constant="44" id="HWn-eJ-yJ2"/>
+                <constraint firstAttribute="bottom" secondItem="1uL-Ts-pVv" secondAttribute="bottom" id="L5W-8J-IPf"/>
+                <constraint firstItem="1uL-Ts-pVv" firstAttribute="top" secondItem="k47-Jc-PdQ" secondAttribute="top" id="Nrj-cj-Uco"/>
+                <constraint firstItem="1uL-Ts-pVv" firstAttribute="width" secondItem="gqf-E9-lNW" secondAttribute="width" id="ZJE-DH-gTa"/>
+                <constraint firstItem="gqf-E9-lNW" firstAttribute="leading" secondItem="k47-Jc-PdQ" secondAttribute="leading" id="bvq-3n-XAh"/>
+                <constraint firstItem="gqf-E9-lNW" firstAttribute="top" secondItem="k47-Jc-PdQ" secondAttribute="top" id="mUG-yZ-Jwu"/>
+                <constraint firstItem="1uL-Ts-pVv" firstAttribute="leading" secondItem="gqf-E9-lNW" secondAttribute="trailing" id="wYa-uw-mPR"/>
+                <constraint firstAttribute="bottom" secondItem="rlh-ko-pQM" secondAttribute="bottom" constant="12" id="xWJ-pa-2IF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkBoxImageView" destination="rlh-ko-pQM" id="7y0-5H-uLE"/>
+                <outlet property="deleteButton" destination="1uL-Ts-pVv" id="oAV-uH-nrK"/>
+                <outlet property="selectButton" destination="gqf-E9-lNW" id="k6G-Rz-EIB"/>
+            </connections>
+            <point key="canvasLocation" x="-178" y="96"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="用户协议2" width="16" height="16"/>
+    </resources>
+</document>
