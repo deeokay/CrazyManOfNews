@@ -61,7 +61,7 @@ class PicDetail: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         }
         UIApplication.shared.applicationSupportsShakeToEdit = true
         //        if !VIP && !DVIP{
-        checkAdCount()
+//        checkAdCount()
         //        }
         getCommentList()
         let dic = ["uid":UserDefaults.standard.integer(forKey: "uid"),"id":model.iid,"type":1] as NSDictionary
@@ -392,9 +392,6 @@ class PicDetail: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
         UIView.animate(withDuration: 0.3, animations: {
             cell.scView.contentSize = cell.img.frame.size
         })
-        
-        //            singleTap.require(toFail: doubleTap)
-        //        }
         cell.scView.zoomScale = 1
         let singleTap = UITapGestureRecognizer.init(target: self, action: #selector(self.singleTap(tap:)))
         cell.scView.addGestureRecognizer(singleTap)

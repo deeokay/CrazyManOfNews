@@ -207,51 +207,51 @@ class ScrollPic: UIViewController,UICollectionViewDelegate,UICollectionViewDataS
 
     //MARK: 初始化行标和工具栏
     func solveRow(row:Int) -> Void {
-        self.navigationItem.title = "第\(row + 1)张 / 共\(self.superVC!.picArr.count)张"
-        let model = self.superVC?.picArr.object(at: row) as! picModel
-        if model.isGif{
-            self.isGif.tintColor = UIColor.blue
-        }
-        self.unlikeBtn.tintColor = UIColor.lightGray
-        self.likeBtn.tintColor = UIColor.lightGray
-        self.unlikeBtn.isEnabled = true
-        self.likeBtn.isEnabled = true
-        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Model")
-        let entity = NSEntityDescription.entity(forEntityName: "Model", in: context!)
-        request.entity = entity
-        let arr = try! context?.fetch(request)
-        for i in arr!{
-            let tmp = i as! Model
-            if tmp.id == model.id!{
-                if tmp.isLike{
-                    self.unlikeBtn.isEnabled = false
-                    self.likeBtn.tintColor = UIColor.black
-                    self.likeBtn.isEnabled = true
-                }
-                else{
-                    self.unlikeBtn.isEnabled = true
-                    self.unlikeBtn.tintColor = UIColor.black
-                    self.likeBtn.isEnabled = false
-                }
-                continue
-            }
-        }
-        let cell = self.VC.visibleCells.first as! scrollCell
-        self.cellImg = cell.img
-        cell.imgTitle.text = model.title
-        cell.scView.contentSize = CGSize.init(width: cell.img.frame.width, height: cell.img.frame.height)
-        let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.doubleTap(tap:)))
-        tap.numberOfTapsRequired = 2
-        self.event = {
-            if cell.scView.zoomScale == 2{
-                cell.scView.contentSize = CGSize.init(width: cell.img.frame.width, height: cell.img.frame.height)
-                cell.scView.zoomScale = 1
-            }
-            else{
-                cell.scView.zoomScale = 2
-            }
-        }
-        cell.img.addGestureRecognizer(tap)
+//        self.navigationItem.title = "第\(row + 1)张 / 共\(self.superVC!.picArr.count)张"
+//        let model = self.superVC?.picArr.object(at: row) as! picModel
+//        if model.isGif{
+//            self.isGif.tintColor = UIColor.blue
+//        }
+//        self.unlikeBtn.tintColor = UIColor.lightGray
+//        self.likeBtn.tintColor = UIColor.lightGray
+//        self.unlikeBtn.isEnabled = true
+//        self.likeBtn.isEnabled = true
+//        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Model")
+//        let entity = NSEntityDescription.entity(forEntityName: "Model", in: context!)
+//        request.entity = entity
+//        let arr = try! context?.fetch(request)
+//        for i in arr!{
+//            let tmp = i as! Model
+//            if tmp.id == model.id!{
+//                if tmp.isLike{
+//                    self.unlikeBtn.isEnabled = false
+//                    self.likeBtn.tintColor = UIColor.black
+//                    self.likeBtn.isEnabled = true
+//                }
+//                else{
+//                    self.unlikeBtn.isEnabled = true
+//                    self.unlikeBtn.tintColor = UIColor.black
+//                    self.likeBtn.isEnabled = false
+//                }
+//                continue
+//            }
+//        }
+//        let cell = self.VC.visibleCells.first as! scrollCell
+//        self.cellImg = cell.img
+//        cell.imgTitle.text = model.title
+//        cell.scView.contentSize = CGSize.init(width: cell.img.frame.width, height: cell.img.frame.height)
+//        let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.doubleTap(tap:)))
+//        tap.numberOfTapsRequired = 2
+//        self.event = {
+//            if cell.scView.zoomScale == 2{
+//                cell.scView.contentSize = CGSize.init(width: cell.img.frame.width, height: cell.img.frame.height)
+//                cell.scView.zoomScale = 1
+//            }
+//            else{
+//                cell.scView.zoomScale = 2
+//            }
+//        }
+//        cell.img.addGestureRecognizer(tap)
     }
 
 

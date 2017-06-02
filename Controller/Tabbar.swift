@@ -24,11 +24,10 @@ class Tabbar: UITabBarController {
         let selectColor = UIColor.init(red: 82/255, green: 171/255, blue: 244/255, alpha: 1)//选中999999
         
         
-        let tabBarTitles = ["新闻","媒体","图库","我的"]
-        let pic = ["米圈","米秀","米聊","米粉"]
+        let tabBarTitles = ["新闻","媒体","我的"]
+        let pic = ["米圈","米秀","米粉"]
 
         for (index, title) in tabBarTitles.enumerated() {
-            print("LLLLLL",pic[index])
             self.tabbar.items?[index].image = UIImage.init(named: pic[index])?.withRenderingMode(.alwaysOriginal)
             self.tabbar.items?[index].selectedImage = UIImage.init(named: pic[index] + "选中")?.withRenderingMode(.alwaysOriginal)
             self.tabbar.items?[index].setTitleTextAttributes([NSForegroundColorAttributeName : color], for: UIControlState.normal)
@@ -166,19 +165,19 @@ class Tabbar: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        switch item.tag {
-        case 11:
-            action1()
-        case 12:
-            action2()
-        case 13:
-            action3()
-        case 14:
-            action4()
-        case 15:
-            action5()
-        default:
-            break
-        }
+//        switch item.tag {
+//        case 11:
+//            action1()
+//        case 12:
+//            action2()
+//        case 13:
+//            action3()
+//        case 14:
+//            action4()
+//        case 15:
+//            action5()
+//        default:
+//            break
+//        }
     }
 }

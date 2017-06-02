@@ -124,12 +124,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GDTSplashAdDelegate,JPUSHR
             print("注册成功!",num,str ?? "登录UUID")
         }
         
-        
+        _ = AimiData.CreatCoredata()
         NotificationCenter.default.addObserver(forName: NSNotification.Name.jpfNetworkDidReceiveMessage, object: nil, queue: OperationQueue.main) { (not) in
             print("收到推送自定义的内容")
             let model = JPush_APNS()
             model.mj_setKeyValues(not.userInfo)
-            let ex = model.extras
             JPUSHService.setBadge(UIApplication.shared.applicationIconBadgeNumber + model.badge)
             if #available(iOS 10.0, *){
                 

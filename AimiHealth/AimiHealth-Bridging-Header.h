@@ -11,9 +11,9 @@
 #define APPID  "25473"
 #define SECRET   "b9d5bbc6dd6946a1a45d7ade6eb755df"
 
-#define AimiChannel 15
+#define AimiChannel 8
 #define APP_URL "https://appsto.re/cn/lou7hb.i"
-#define AISubMIversion "v1.2.1"
+#define AISubMIversion "v1.0"
 #define AIMIversion "v1.1"
 #define MishowCache_videos "MishowCache_videos"
 #define MishowCache_pictures "MishowCache_pictures"

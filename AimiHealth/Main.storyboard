@@ -13,7 +13,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mishow-->
+        <!--图片/视频-->
         <scene sceneID="jzJ-I9-D4Q">
             <objects>
                 <viewController storyboardIdentifier="Mishow" id="tel-9b-SlI" customClass="Mishow" customModule="AimiHealth" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,8 +25,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jak-Ti-m38">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jak-Ti-m38">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="xlq-2y-iBr">
                                     <size key="itemSize" width="278" height="303"/>
@@ -124,23 +125,15 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Jak-Ti-m38" firstAttribute="leading" secondItem="NB2-Ar-aFD" secondAttribute="leading" id="BT1-e2-QzJ"/>
-                            <constraint firstItem="Wth-KC-AK1" firstAttribute="top" secondItem="Jak-Ti-m38" secondAttribute="bottom" constant="-44" id="Hxo-Oy-CsA"/>
-                            <constraint firstAttribute="trailing" secondItem="Jak-Ti-m38" secondAttribute="trailing" id="ZO5-Zf-Cd9"/>
-                            <constraint firstItem="Jak-Ti-m38" firstAttribute="top" secondItem="hlN-4K-DEa" secondAttribute="bottom" id="iEr-Vs-PFs"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PVO-h6-DSe"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="图片/视频" id="PVO-h6-DSe"/>
                     <connections>
                         <outlet property="CV" destination="Jak-Ti-m38" id="zBq-Tt-FZz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoH-ax-7zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="-1088.9055472263869"/>
+            <point key="canvasLocation" x="1005.6" y="-1089.8050974512744"/>
         </scene>
         <!--Video Detail-->
         <scene sceneID="04v-dj-DWq">
@@ -440,7 +433,7 @@
             </objects>
             <point key="canvasLocation" x="6554" y="-332"/>
         </scene>
-        <!-- -->
+        <!--个人中心-->
         <scene sceneID="GOB-pi-L5Y">
             <objects>
                 <viewController storyboardIdentifier="PersonalPreference" id="aoL-tj-Y8N" customClass="PersonalPreference" customModule="AimiHealth" customModuleProvider="target" sceneMemberID="viewController">
@@ -573,7 +566,7 @@
                             <constraint firstAttribute="trailing" secondItem="ua0-T8-Rmx" secondAttribute="trailing" id="ZSi-xg-Okf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title=" " id="v78-wo-884">
+                    <navigationItem key="navigationItem" title="个人中心" id="v78-wo-884">
                         <barButtonItem key="backBarButtonItem" title=" " id="aGJ-3t-9Sg"/>
                     </navigationItem>
                     <connections>
@@ -2325,7 +2318,6 @@ Cgo
                         <outlet property="tabbar" destination="vZr-kD-UyE" id="G2A-iT-UId"/>
                         <segue destination="KR2-KO-TsF" kind="relationship" relationship="viewControllers" id="uS4-Av-nVU"/>
                         <segue destination="9Uc-0s-STb" kind="relationship" relationship="viewControllers" id="xww-1M-zj6"/>
-                        <segue destination="6Lo-Fx-qWy" kind="relationship" relationship="viewControllers" id="h7p-6s-ns0"/>
                         <segue destination="hP0-0L-9X4" kind="relationship" relationship="viewControllers" id="ydJ-pV-I1L"/>
                     </connections>
                 </tabBarController>
@@ -2355,17 +2347,17 @@ Cgo
             </objects>
             <point key="canvasLocation" x="176.81159420289856" y="-1792.663043478261"/>
         </scene>
-        <!--米秀-->
+        <!--媒体-->
         <scene sceneID="Oxu-pl-HYf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Uc-0s-STb" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" tag="12" title="米秀" id="QX7-lb-waU"/>
+                    <tabBarItem key="tabBarItem" tag="12" title="媒体" id="QX7-lb-waU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="s5v-HP-3pm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="s5v-HP-3pm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -2377,19 +2369,19 @@ Cgo
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJb-ae-vm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.81159420289856" y="-1086.6847826086957"/>
+            <point key="canvasLocation" x="177" y="-1089"/>
         </scene>
-        <!--米粉-->
+        <!--个人-->
         <scene sceneID="YgD-mZ-x04">
             <objects>
                 <navigationController id="hP0-0L-9X4" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" tag="13" title="米粉" id="uJw-QM-WaZ"/>
+                    <tabBarItem key="tabBarItem" tag="13" title="个人" id="uJw-QM-WaZ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T9O-xf-wnO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="T9O-xf-wnO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -3577,7 +3569,7 @@ Cgo
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4R-yA-8xK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942.0289855072465" y="-1088.3152173913045"/>
+            <point key="canvasLocation" x="1942" y="-1090"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZIj-Py-UkD">
@@ -3715,7 +3707,7 @@ Cgo
                 <navigationController storyboardIdentifier="index" automaticallyAdjustsScrollViewInsets="NO" id="KR2-KO-TsF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="14" title="新闻" id="MOV-kH-yK6"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleToFill" misplaced="YES" id="mcV-5v-SIK">
+                    <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleToFill" id="mcV-5v-SIK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3892,12 +3884,6 @@ Cgo
                                     <action selector="shareContent:" destination="dP6-fJ-Aww" id="cCv-f7-ElB"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="bookmarks" id="tZd-Q7-n0T">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="mark:" destination="dP6-fJ-Aww" id="83H-q5-Gnc"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem systemItem="refresh" id="9Ve-P9-Ejl">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -4047,7 +4033,7 @@ Cgo
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lx7-1t-MMB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <segue destination="Ymn-Ns-rja" kind="embed" id="5Ju-42-dfO"/>
                                 </connections>
@@ -4422,7 +4408,7 @@ Cgo
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Lo-Fx-qWy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="15" title="图库" id="LXr-Gi-JCU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xWN-1w-lLR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xWN-1w-lLR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

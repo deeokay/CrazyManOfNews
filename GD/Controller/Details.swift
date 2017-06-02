@@ -63,7 +63,7 @@ class Details: UIViewController,UIWebViewDelegate {
     var shareType = SSDKContentType.webPage
     @IBAction func shareContent(_ sender: AnyObject) {
         if shareThumImage == nil{
-            shareThumImage = UIImage.init(named:"V3")
+            shareThumImage = UIImage.init(named:"flash")
         }
         menu.shareDic = DeeShareMenu.shareContent(shareThumImage: &shareThumImage!, shareTitle: channelName!, shareDescr: shareDescr!, url: webStr!, shareType: shareType)
         menu.stateHandler = DeeShareMenu.stateHandle(controller: self, success: { 

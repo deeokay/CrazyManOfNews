@@ -11,7 +11,7 @@ import pop
 import TabPageViewController
 import MJRefresh
 import Kingfisher
-class PersonalPreference: HSController,UITableViewDataSource,UITableViewDelegate,GDTMobBannerViewDelegate {
+class PersonalPreference: UIViewController,UITableViewDataSource,UITableViewDelegate,GDTMobBannerViewDelegate {
     
     var banner = GDTMobBannerView()
     @IBOutlet weak var TB: UITableView!
@@ -42,9 +42,6 @@ class PersonalPreference: HSController,UITableViewDataSource,UITableViewDelegate
         self.TB.mj_header = header
         
     }
-    override var prefersStatusBarHidden: Bool{
-        return true
-    }
     
     func bannerViewFail(toReceived error: Error!) {
         print(error)
@@ -56,7 +53,6 @@ class PersonalPreference: HSController,UITableViewDataSource,UITableViewDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +60,6 @@ class PersonalPreference: HSController,UITableViewDataSource,UITableViewDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.tabBarController?.tabBar.isHidden = false
         if !UserDefaults.standard.bool(forKey: "VIP"){
             self.banner.loadAdAndShow()

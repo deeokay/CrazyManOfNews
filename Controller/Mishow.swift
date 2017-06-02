@@ -226,9 +226,7 @@ class Mishow: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         }
     }
 
-    override var prefersStatusBarHidden: Bool{
-        return true
-    }
+
     
     var picPageCount = 1
     var requestPic = false

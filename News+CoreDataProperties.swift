@@ -2,7 +2,7 @@
 //  News+CoreDataProperties.swift
 //  
 //
-//  Created by Deeokay on 2017/5/6.
+//  Created by Deeokay on 2017/6/2.
 //
 //
 
